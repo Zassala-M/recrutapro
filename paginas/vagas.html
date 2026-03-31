@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vagas — Recruta-Pro</title>
+    <meta name="description" content="Encontre sua próxima oportunidade de emprego no RecrutaPro.">
+    <meta name="author" content="Zassala Mário">
+    <meta property="og:title" content="Vagas — Recruta-Pro">
+    <meta property="og:description" content="Explore centenas de vagas em empresas inovadoras.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Estilos da página -->
+    <link rel="stylesheet" href="../css/vagas.css">
+</head>
+
+<body>
+
+    <!-- ========== CABEÇALHO ========== -->
+    <header class="cabecalho" id="cabecalho">
+        <div class="container">
+            <div class="cabecalho_interno">
+
+                <!-- Logo -->
+                <a href="../index.html" class="cabecalho_logo">
+                    <div class="logo_icone">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="logo_texto">Recruta<span class="logo_destaque">Pro</span></span>
+                </a>
+
+                <!-- Navegação Desktop -->
+                <nav class="cabecalho_nav" id="nav_desktop">
+                    <a href="../index.html" class="nav_link">Início</a>
+                    <a href="vagas.html" class="nav_link nav_link_ativo">Vagas</a>
+                    <a href="#" class="nav_link">Sobre</a>
+                </nav>
+
+                <!-- Botões Desktop -->
+                <div class="cabecalho_acoes" id="acoes_desktop">
+                    <a href="#" class="btn_fantasma">Sou Candidato</a>
+                    <a href="#" class="btn_primario">Sou Empresa</a>
+                </div>
+
+                <!-- Botão Menu Mobile -->
+                <button class="cabecalho_menu_btn" id="btn_menu_mobile" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars" id="icone_menu"></i>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="menu_mobile" id="menu_mobile">
+            <nav class="menu_mobile_nav">
+                <a href="../index.html" class="nav_link">Início</a>
+                <a href="vagas.html" class="nav_link nav_link_ativo">Vagas</a>
+                <a href="#" class="nav_link">Sobre</a>
+            </nav>
+            <div class="menu_mobile_acoes">
+                <a href="#" class="btn_fantasma btn_bloco">Sou Candidato</a>
+                <a href="#" class="btn_primario btn_bloco">Sou Empresa</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+    <main class="pagina_principal">
+        <div class="container">
+
+            <!-- Título da página -->
+            <div class="pagina_cabecalho">
+                <h1 class="pagina_titulo">Encontre sua Próxima Oportunidade</h1>
+                <p class="pagina_subtitulo" id="contador_vagas">Explore 4 vagas disponíveis em empresas inovadoras</p>
+            </div>
+
+            <!-- ========== BARRA DE BUSCA E FILTROS ========== -->
+            <div class="busca_painel">
+                <div class="busca_linha">
+
+                    <!-- Campo de busca -->
+                    <div class="busca_campo_wrapper">
+                        <i class="fa-solid fa-magnifying-glass busca_icone"></i>
+                        <input
+                            type="text"
+                            id="campo_busca"
+                            class="campo_texto busca_input"
+                            placeholder="Buscar por cargo, empresa ou palavras-chave..."
+                            autocomplete="off"
+                        >
+                    </div>
+
+                    <!-- Botão filtros mobile -->
+                    <button class="btn_contorno btn_filtros_mobile" id="btn_filtros_mobile">
+                        <i class="fa-solid fa-sliders"></i>
+                        Filtros
+                    </button>
+
+                    <!-- Selects (desktop) -->
+                    <div class="filtros_selects" id="filtros_selects">
+                        <select class="campo_select" id="filtro_modalidade">
+                            <option value="todos">Todas modalidades</option>
+                            <option value="Remoto">Remoto</option>
+                            <option value="Presencial">Presencial</option>
+                            <option value="Híbrido">Híbrido</option>
+                        </select>
+                        <select class="campo_select" id="filtro_tipo">
+                            <option value="todos">Todos os tipos</option>
+                            <option value="CLT">CLT</option>
+                            <option value="PJ">PJ</option>
+                            <option value="Estágio">Estágio</option>
+                            <option value="Freelance">Freelance</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Filtros expandidos mobile -->
+                <div class="filtros_mobile_expandidos" id="filtros_mobile_expandidos">
+                    <select class="campo_select" id="filtro_modalidade_mobile">
+                        <option value="todos">Todas modalidades</option>
+                        <option value="Remoto">Remoto</option>
+                        <option value="Presencial">Presencial</option>
+                        <option value="Híbrido">Híbrido</option>
+                    </select>
+                    <select class="campo_select" id="filtro_tipo_mobile">
+                        <option value="todos">Todos os tipos</option>
+                        <option value="CLT">CLT</option>
+                        <option value="PJ">PJ</option>
+                        <option value="Estágio">Estágio</option>
+                        <option value="Freelance">Freelance</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Contador de resultados -->
+            <div class="resultados_contador">
+                <p class="resultados_texto" id="texto_resultados">4 vagas encontradas</p>
+            </div>
+
+            <!-- ========== LISTA DE VAGAS ========== -->
+            <div class="vagas_lista" id="vagas_lista">
+
+                <article class="vaga_card cartao_hover" data-modalidade="Híbrido" data-tipo="CLT">
+                    <div class="vaga_card_topo">
+                        <div class="vaga_info">
+
+                            <!-- Título e status -->
+                            <div class="vaga_titulo_linha">
+                                <a href="#" class="vaga_titulo_link">Desenvolvedor(a) Full Stack Senior</a>
+                                <span class="status_emblema status_ativa">Ativa</span>
+                            </div>
+
+                            <!-- Empresa -->
+                            <div class="vaga_empresa">
+                                <i class="fa-solid fa-building"></i>
+                                <span>TechFlow Solutions</span>
+                            </div>
+
+                            <!-- Descrição -->
+                            <p class="vaga_descricao">
+                                Buscamos um desenvolvedor full stack experiente para liderar projetos de alta complexidade e mentorear o time de desenvolvimento.
+                            </p>
+
+                            <!-- Metadados -->
+                            <div class="vaga_meta">
+                                <div class="vaga_meta_item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Luanda, LA</span>
+                                </div>
+                                <div class="vaga_meta_item">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>Híbrido</span>
+                                </div>
+                                <div class="vaga_meta_item">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>CLT</span>
+                                </div>
+                                <div class="vaga_meta_item vaga_meta_salario">
+                                    <i class="fa-solid fa-sack-dollar"></i>
+                                    <span>$ 15.000 - $ 22.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Ações -->
+                        <div class="vaga_acoes">
+                            <a href="#" class="btn_contorno btn_pequeno">Ver Detalhes</a>
+                            <button class="btn_primario btn_pequeno">Candidatar-se</button>
+                        </div>
+                    </div>
+
+                    <!-- Tags de requisitos -->
+                    <div class="vaga_tags">
+                        <span class="tag_requisito">Experiência mínima de...</span>
+                        <span class="tag_requisito">Domínio de React,...</span>
+                        <span class="tag_requisito">Experiência com bancos...</span>
+                        <span class="tag_mais">+2 mais</span>
+                    </div>
+                </article>
+
+                <article class="vaga_card cartao_hover" data-modalidade="Remoto" data-tipo="CLT">
+                    <div class="vaga_card_topo">
+                        <div class="vaga_info">
+
+                            <div class="vaga_titulo_linha">
+                                <a href="#" class="vaga_titulo_link">Product Designer Pleno</a>
+                                <span class="status_emblema status_ativa">Ativa</span>
+                            </div>
+
+                            <div class="vaga_empresa">
+                                <i class="fa-solid fa-building"></i>
+                                <span>TechFlow Solutions</span>
+                            </div>
+
+                            <p class="vaga_descricao">
+                                Procuramos um designer de produto para criar experiências incríveis em nossos produtos digitais.
+                            </p>
+
+                            <div class="vaga_meta">
+                                <div class="vaga_meta_item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Luanda, LA</span>
+                                </div>
+                                <div class="vaga_meta_item">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>Remoto</span>
+                                </div>
+                                <div class="vaga_meta_item">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>CLT</span>
+                                </div>
+                                <div class="vaga_meta_item vaga_meta_salario">
+                                    <i class="fa-solid fa-sack-dollar"></i>
+                                    <span>$ 8.000 - $ 12.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vaga_acoes">
+                            <a href="#" class="btn_contorno btn_pequeno">Ver Detalhes</a>
+                            <button class="btn_primario btn_pequeno">Candidatar-se</button>
+                        </div>
+                    </div>
+
+                    <div class="vaga_tags">
+                        <span class="tag_requisito">Experiência de 3+...</span>
+                        <span class="tag_requisito">Portfólio com cases...</span>
+                        <span class="tag_requisito">Domínio do Figma...</span>
+                        <span class="tag_mais">+2 mais</span>
+                    </div>
+                </article>
+
+                <article class="vaga_card cartao_hover" data-modalidade="Presencial" data-tipo="CLT">
+                    <div class="vaga_card_topo">
+                        <div class="vaga_info">
+
+                            <div class="vaga_titulo_linha">
+                                <a href="#" class="vaga_titulo_link">Analista de Marketing Digital</a>
+                                <span class="status_emblema status_ativa">Ativa</span>
+                            </div>
+
+                            <div class="vaga_empresa">
+                                <i class="fa-solid fa-building"></i>
+                                <span>Inova Digital</span>
+                            </div>
+
+                            <p class="vaga_descricao">
+                                Vaga para profissional de marketing digital focado em performance e growth.
+                            </p>
+
+                            <div class="vaga_meta">
+                                <div class="vaga_meta_item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Uige, UE</span>
+                                </div>
+                                <div class="vaga_meta_item">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>Presencial</span>
+                                </div>
+                                <div class="vaga_meta_item">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>CLT</span>
+                                </div>
+                                <div class="vaga_meta_item vaga_meta_salario">
+                                    <i class="fa-solid fa-sack-dollar"></i>
+                                    <span>$ 5.000 - $ 8.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vaga_acoes">
+                            <a href="#" class="btn_contorno btn_pequeno">Ver Detalhes</a>
+                            <button class="btn_primario btn_pequeno">Candidatar-se</button>
+                        </div>
+                    </div>
+
+                    <div class="vaga_tags">
+                        <span class="tag_requisito">Experiência com Google...</span>
+                        <span class="tag_requisito">Conhecimento em Google...</span>
+                        <span class="tag_requisito">Experiência com SEO...</span>
+                        <span class="tag_mais">+2 mais</span>
+                    </div>
+                </article>
+
+               
+                <article class="vaga_card cartao_hover" data-modalidade="Híbrido" data-tipo="CLT">
+                    <div class="vaga_card_topo">
+                        <div class="vaga_info">
+
+                            <div class="vaga_titulo_linha">
+                                <a href="#" class="vaga_titulo_link">Analista Financeiro Sênior</a>
+                                <span class="status_emblema status_ativa">Ativa</span>
+                            </div>
+
+                            <div class="vaga_empresa">
+                                <i class="fa-solid fa-building"></i>
+                                <span>FinanceHub</span>
+                            </div>
+
+                            <p class="vaga_descricao">
+                                Oportunidade para analista financeiro experiente em modelagem e análise de dados.
+                            </p>
+
+                            <div class="vaga_meta">
+                                <div class="vaga_meta_item">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                    <span>Luanda, LA</span>
+                                </div>
+                                <div class="vaga_meta_item">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                    <span>Híbrido</span>
+                                </div>
+                                <div class="vaga_meta_item">
+                                    <i class="fa-regular fa-clock"></i>
+                                    <span>CLT</span>
+                                </div>
+                                <div class="vaga_meta_item vaga_meta_salario">
+                                    <i class="fa-solid fa-sack-dollar"></i>
+                                    <span>$ 12.000 - $ 18.000</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="vaga_acoes">
+                            <a href="#" class="btn_contorno btn_pequeno">Ver Detalhes</a>
+                            <button class="btn_primario btn_pequeno">Candidatar-se</button>
+                        </div>
+                    </div>
+
+                    <div class="vaga_tags">
+                        <span class="tag_requisito">Formação em Economia,...</span>
+                        <span class="tag_requisito">Experiência de 5+...</span>
+                        <span class="tag_requisito">Excel avançado e...</span>
+                        <span class="tag_mais">+2 mais</span>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Estado vazio (sem resultados) -->
+            <div class="sem_resultados" id="sem_resultados">
+                <i class="fa-solid fa-magnifying-glass sem_resultados_icone"></i>
+                <h3 class="sem_resultados_titulo">Nenhuma vaga encontrada</h3>
+                <p class="sem_resultados_descricao">Tente ajustar os filtros ou use outros termos de busca.</p>
+                <button class="btn_primario" id="btn_limpar_filtros">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    Limpar filtros
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========== RODAPÉ ========== -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape_grade">
+
+                <!-- Marca -->
+                <div class="rodape_coluna">
+                    <a href="../index.html" class="rodape_logo">
+                        <div class="logo_icone">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="logo_texto">Recruta<span class="logo_destaque">Pro</span></span>
+                    </a>
+                    <p class="rodape_descricao">A plataforma completa para gestão de recrutamento e seleção.</p>
+                </div>
+
+                <!-- Para Empresas -->
+                <div class="rodape_coluna">
+                    <h4 class="rodape_titulo_coluna">Para Empresas</h4>
+                    <ul class="rodape_lista">
+                        <li><a href="#" class="rodape_link">Criar Conta</a></li>
+                        <li><a href="#" class="rodape_link">Dashboard</a></li>
+                        <li><a href="#" class="rodape_link">Preços</a></li>
+                    </ul>
+                </div>
+
+                <!-- Para Candidatos -->
+                <div class="rodape_coluna">
+                    <h4 class="rodape_titulo_coluna">Para Candidatos</h4>
+                    <ul class="rodape_lista">
+                        <li><a href="#" class="rodape_link">Criar Perfil</a></li>
+                        <li><a href="vagas.html" class="rodape_link">Buscar Vagas</a></li>
+                        <li><a href="#" class="rodape_link">Minhas Candidaturas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contato -->
+                <div class="rodape_coluna">
+                    <h4 class="rodape_titulo_coluna">Contato</h4>
+                    <ul class="rodape_lista">
+                        <li><a href="mailto:contato@recrutapro.com.br" class="rodape_link">contato@recrutapro.com.ao</a></li>
+                        <li class="rodape_info">(+244) 939 894 626</li>
+                        <li class="rodape_info">Golf 2, Luanda - Angola</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="rodape_conteudo">
+                © 2026 RecrutaPro. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/vagas.js"></script>
+</body>
+
+</html>

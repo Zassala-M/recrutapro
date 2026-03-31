@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recruta-Pro</title>
+    <meta name="description" content="A plataforma completa para gestão de recrutamento e seleção.">
+    <meta name="author" content="Zassala Mário">
+    <meta property="og:title" content="Recruta Pro">
+    <meta property="og:description" content="A plataforma completa para gestão de recrutamento e seleção.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Estilos principais -->
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+
+    <!-- ========== CABECALHO ========== -->
+    <header class="cabecalho" id="cabecalho">
+        <div class="container">
+            <div class="cabecalho_interno">
+
+                <!-- Logo -->
+                <a href="index.html" class="cabecalho_logo">
+                    <div class="logo_icone">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="logo_texto">Recruta<span class="logo_destaque">Pro</span></span>
+                </a>
+
+                <!-- Navegação Desktop -->
+                <nav class="cabecalho_nav" id="nav_desktop">
+                    <a href="index.html" class="nav_link">Início</a>
+                    <a href="paginas/vagas.html" class="nav_link">Vagas</a>
+                    <a href="#" class="nav_link">Sobre</a>
+                </nav>
+
+                <!-- Botões Desktop -->
+                <div class="cabecalho_acoes" id="acoes_desktop">
+                    <a href="#" class="btn_fantasma">Sou Candidato</a>
+                    <a href="#" class="btn_primario">Sou Empresa</a>
+                </div>
+
+                <!-- Botão Menu Mobile -->
+                <button class="cabecalho_menu_btn" id="btn_menu_mobile" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars" id="icone_menu"></i>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="menu_mobile" id="menu_mobile">
+            <nav class="menu_mobile_nav">
+                <a href="index.html" class="nav_link">Início</a>
+                <a href="paginas/vagas.html" class="nav_link">Vagas</a>
+                <a href="#" class="nav_link">Sobre</a>
+            </nav>
+            <div class="menu_mobile_acoes">
+                <a href="#" class="btn_fantasma btn_bloco">Sou Candidato</a>
+                <a href="#" class="btn_primario btn_bloco">Sou Empresa</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero_secao">
+        <div class="container">
+            <div class="hero_grade">
+
+                <!-- Hero: Texto -->
+                <div class="hero_conteudo">
+                    <h1 class="hero_titulo">
+                        Recrutamento
+                        <span class="texto_gradiente destaque_bloco">Inteligente</span>
+                        para Empresas Modernas
+                    </h1>
+                    <p class="hero_descricao">
+                        Conecte-se aos melhores talentos do mercado. Simplifique seu processo seletivo com
+                        fluxos personalizáveis e métricas em tempo real.
+                    </p>
+                    <div class="hero_botoes">
+                        <a href="#" class="btn_primario btn_grande">
+                            Comece Gratuitamente
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="btn_contorno btn_borda_claro">
+                            Explorar Vagas
+                        </a>
+                    </div>
+                    <div class="hero_selos">
+                        <div class="hero_selo_item">
+                            <i class="fa-solid fa-circle-check icone_primario"></i>
+                            <span>Sem taxa de setup</span>
+                        </div>
+                        <div class="hero_selo_item">
+                            <i class="fa-solid fa-circle-check icone_primario"></i>
+                            <span>14 dias grátis</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero: Card Mockup -->
+                <div class="hero_card_wrapper">
+                    <div class="hero_card">
+                        <!-- Dots decorativos -->
+                        <div class="hero_card_dots">
+                            <span class="ponto ponto_vermelho"></span>
+                            <span class="ponto ponto_amarelo"></span>
+                            <span class="ponto ponto_verde"></span>
+                        </div>
+
+                        <!-- Conteúdo mockup -->
+                        <div class="hero_card_corpo">
+                            <div class="mockup_cabecalho">
+                                <div class="mockup_icone_box">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                                <div class="mockup_cabecalho_textos">
+                                    <div class="mockup_linha mockup_linha_larga"></div>
+                                    <div class="mockup_linha mockup_linha_media"></div>
+                                </div>
+                            </div>
+
+                            <div class="mockup_stats">
+                                <div class="mockup_stat_item">
+                                    <div class="mockup_stat_numero"></div>
+                                    <div class="mockup_linha mockup_linha_curta"></div>
+                                </div>
+                                <div class="mockup_stat_item">
+                                    <div class="mockup_stat_numero"></div>
+                                    <div class="mockup_linha mockup_linha_curta"></div>
+                                </div>
+                                <div class="mockup_stat_item">
+                                    <div class="mockup_stat_numero"></div>
+                                    <div class="mockup_linha mockup_linha_curta"></div>
+                                </div>
+                            </div>
+
+                            <div class="mockup_lista">
+                                <div class="mockup_lista_item">
+                                    <div class="mockup_avatar"></div>
+                                    <div class="mockup_lista_textos">
+                                        <div class="mockup_linha mockup_linha_media"></div>
+                                        <div class="mockup_linha mockup_linha_larga"></div>
+                                    </div>
+                                    <div class="mockup_badge_verde"></div>
+                                </div>
+                                <div class="mockup_lista_item">
+                                    <div class="mockup_avatar"></div>
+                                    <div class="mockup_lista_textos">
+                                        <div class="mockup_linha mockup_linha_media"></div>
+                                        <div class="mockup_linha mockup_linha_larga"></div>
+                                    </div>
+                                    <div class="mockup_badge_verde"></div>
+                                </div>
+                                <div class="mockup_lista_item">
+                                    <div class="mockup_avatar"></div>
+                                    <div class="mockup_lista_textos">
+                                        <div class="mockup_linha mockup_linha_media"></div>
+                                        <div class="mockup_linha mockup_linha_larga"></div>
+                                    </div>
+                                    <div class="mockup_badge_verde"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Badges flutuantes -->
+                    <div class="badge_flutuante badge_flutuante_topo">
+                        +23 candidaturas hoje
+                    </div>
+                    <div class="badge_flutuante badge_flutuante_baixo">
+                        <i class="fa-solid fa-users icone_primario"></i>
+                        1.2k talentos online
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== NUMEROS / STATS ========== -->
+    <section class="numeros_secao">
+        <div class="container">
+            <div class="numeros_grade">
+                <div class="numero_item">
+                    <p class="numero_valor texto_gradiente">500+</p>
+                    <p class="numero_label">Empresas Parceiras</p>
+                </div>
+                <div class="numero_item">
+                    <p class="numero_valor texto_gradiente">50k+</p>
+                    <p class="numero_label">Candidatos Cadastrados</p>
+                </div>
+                <div class="numero_item">
+                    <p class="numero_valor texto_gradiente">10k+</p>
+                    <p class="numero_label">Contratações Realizadas</p>
+                </div>
+                <div class="numero_item">
+                    <p class="numero_valor texto_gradiente">98%</p>
+                    <p class="numero_label">Satisfação dos Clientes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FUNCIONALIDADES ========== -->
+    <section class="funcionalidades_secao">
+        <div class="container">
+            <div class="secao_cabecalho">
+                <h2 class="secao_titulo">Por que escolher o <span class="texto_gradiente">RecrutaPro</span>?</h2>
+                <p class="secao_subtitulo">Ferramentas poderosas para transformar seu processo de recrutamento</p>
+            </div>
+            <div class="funcionalidades_grade">
+
+                <div class="funcionalidade_card cartao_hover">
+                    <div class="funcionalidade_icone sombra_brilho">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h3 class="funcionalidade_titulo">Processo Ágil</h3>
+                    <p class="funcionalidade_descricao">Automatize etapas do recrutamento e reduza o tempo de contratação em até 50%.</p>
+                </div>
+
+                <div class="funcionalidade_card cartao_hover">
+                    <div class="funcionalidade_icone sombra_brilho">
+                        <i class="fa-solid fa-sliders"></i>
+                    </div>
+                    <h3 class="funcionalidade_titulo">Fluxo Personalizável</h3>
+                    <p class="funcionalidade_descricao">Crie etapas personalizadas para cada vaga e acompanhe candidatos em tempo real.</p>
+                </div>
+
+                <div class="funcionalidade_card cartao_hover">
+                    <div class="funcionalidade_icone sombra_brilho">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="funcionalidade_titulo">Métricas Detalhadas</h3>
+                    <p class="funcionalidade_descricao">Dashboard completo com insights sobre suas vagas e candidaturas.</p>
+                </div>
+
+                <div class="funcionalidade_card cartao_hover">
+                    <div class="funcionalidade_icone sombra_brilho">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h3 class="funcionalidade_titulo">Dados Seguros</h3>
+                    <p class="funcionalidade_descricao">Proteção total dos dados de candidatos e empresas com criptografia avançada.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PARA EMPRESAS E CANDIDATOS ========== -->
+    <section class="publico_secao">
+        <div class="container">
+            <div class="publico_grade">
+
+                <!-- Para Empresas -->
+                <div class="publico_card cartao_hover">
+                    <div class="publico_icone_box publico_icone_escuro">
+                        <i class="fa-solid fa-building-columns"></i>
+                    </div>
+                    <h3 class="publico_titulo">Para Empresas</h3>
+                    <ul class="publico_lista">
+                        <li class="publico_lista_item">
+                            <i class="fa-solid fa-circle-check icone_sucesso"></i>
+                            <span>Publique vagas ilimitadas</span>
+                        </li>
+                        <li class="publico_lista_item">
+                            <i class="fa-solid fa-circle-check icone_sucesso"></i>
+                            <span>Gerencie candidaturas em um só lugar</span>
+                        </li>
+                        <li class="publico_lista_item">
+                            <i class="fa-solid fa-circle-check icone_sucesso"></i>
+                            <span>Crie fluxos de seleção personalizados</span>
+                        </li>
+                        <li class="publico_lista_item">
+                            <i class="fa-solid fa-circle-check icone_sucesso"></i>
+                            <span>Acesse métricas detalhadas</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn_secundario btn_bloco">
+                        Cadastrar Empresa
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <!-- Para Candidatos -->
+                <div class="publico_card publico_card_destaque cartao_hover">
+                    <div class="publico_icone_box gradiente_primario sombra_brilho">
+                        <i class="fa-solid fa-users"></i>
+                    </div>
+                    <h3 class="publico_titulo">Para Candidatos</h3>
+                    <ul class="publico_lista">
+                        <li class="publico_lista_item">
+                            <i class="fa-solid fa-circle-check icone_primario"></i>
+                            <span>Acesse milhares de vagas</span>
+                        </li>
+                        <li class="publico_lista_item">
+                            <i class="fa-solid fa-circle-check icone_primario"></i>
+                            <span>Acompanhe suas candidaturas</span>
+                        </li>
+                        <li class="publico_lista_item">
+                            <i class="fa-solid fa-circle-check icone_primario"></i>
+                            <span>Receba feedback em cada etapa</span>
+                        </li>
+                        <li class="publico_lista_item">
+                            <i class="fa-solid fa-circle-check icone_primario"></i>
+                            <span>Encontre o emprego dos sonhos</span>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn_primario btn_bloco">
+                        Criar Perfil
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DEPOIMENTOS ========== -->
+    <section class="depoimentos_secao">
+        <div class="container">
+            <div class="secao_cabecalho">
+                <h2 class="secao_titulo">O que dizem nossos <span class="texto_gradiente">usuários</span></h2>
+                <p class="secao_subtitulo">Histórias reais de empresas e candidatos que transformaram seu processo de recrutamento</p>
+            </div>
+            <div class="depoimentos_grade">
+
+                <!-- Depoimento 1 -->
+                <div class="depoimento_card cartao_hover">
+                    <div class="depoimento_estrelas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="depoimento_texto">"Reduzimos o tempo de contratação em 60% e a qualidade dos candidatos melhorou muito. Plataforma incrível!"</p>
+                    <div class="depoimento_autor">
+                        <div class="depoimento_avatar">SC</div>
+                        <div>
+                            <p class="depoimento_nome">Sandra Cafala</p>
+                            <p class="depoimento_cargo">RH Manager - TechCorp</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="depoimento_card cartao_hover">
+                    <div class="depoimento_estrelas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="depoimento_texto">"A visibilidade do pipeline de candidatos é excepcional. Consigo tomar decisões muito mais rápidas."</p>
+                    <div class="depoimento_autor">
+                        <div class="depoimento_avatar">IS</div>
+                        <div>
+                            <p class="depoimento_nome">Ivandro Silva</p>
+                            <p class="depoimento_cargo">Gerente de Pessoas - StartupXYZ</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="depoimento_card cartao_hover">
+                    <div class="depoimento_estrelas">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="depoimento_texto">"Encontrei meu emprego dos sonhos através da plataforma. O processo foi super transparente."</p>
+                    <div class="depoimento_autor">
+                        <div class="depoimento_avatar">PJ</div>
+                        <div>
+                            <p class="depoimento_nome">Pedro João</p>
+                            <p class="depoimento_cargo">Desenvolvedor Full Stack</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA FINAL ========== -->
+    <section class="cta_secao gradiente_hero">
+        <div class="container">
+            <div class="cta_conteudo">
+                <h2 class="cta_titulo">Pronto para transformar seu recrutamento?</h2>
+                <p class="cta_descricao">Junte-se a milhares de empresas e candidatos que já confiam no RecrutaPro</p>
+                <div class="cta_botoes">
+                    <a href="#" class="btn_primario btn_grande">
+                        Começar Agora
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    <a href="#" class="btn_contorno btn_borda_claro_cta">
+                        Ver Demo
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== RODAPE ========== -->
+    <footer class="rodape">
+        <div class="container">
+            <div class="rodape_grade">
+
+                <!-- Coluna: Marca -->
+                <div class="rodape_coluna">
+                    <a href="/" class="rodape_logo">
+                        <div class="logo_icone">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <span class="logo_texto">Recruta<span class="logo_destaque">Pro</span></span>
+                    </a>
+                    <p class="rodape_descricao">A plataforma completa para gestão de recrutamento e seleção.</p>
+                </div>
+
+                <!-- Coluna: Para Empresas -->
+                <div class="rodape_coluna">
+                    <h4 class="rodape_titulo_coluna">Para Empresas</h4>
+                    <ul class="rodape_lista">
+                        <li><a href="#" class="rodape_link">Criar Conta</a></li>
+                        <li><a href="#" class="rodape_link">Dashboard</a></li>
+                        <li><a href="#" class="rodape_link">Preços</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna: Para Candidatos -->
+                <div class="rodape_coluna">
+                    <h4 class="rodape_titulo_coluna">Para Candidatos</h4>
+                    <ul class="rodape_lista">
+                        <li><a href="#" class="rodape_link">Criar Perfil</a></li>
+                        <li><a href="#" class="rodape_link">Buscar Vagas</a></li>
+                        <li><a href="#" class="rodape_link">Minhas Candidaturas</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna: Contato -->
+                <div class="rodape_coluna">
+                    <h4 class="rodape_titulo_coluna">Contato</h4>
+                    <ul class="rodape_lista">
+                        <li><a href="mailto:contato@recrutapro.com.br" class="rodape_link">contato@recrutapro.com.ao</a></li>
+                        <li class="rodape_info">(+244) 939 894 626</li>
+                        <li class="rodape_info">Golf 2, Luanda - Angola</li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Rodapé inferior -->
+            <div class="rodape_conteudo">
+                © 2026 RecrutaPro. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
