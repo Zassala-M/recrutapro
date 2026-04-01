@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Perfil — Recruta Pro</title>
+    <meta name="description" content="Crie seu perfil no RecrutaPro e encontre a vaga ideal para você.">
+    <meta name="author" content="Zassala Mário">
+    <meta property="og:title" content="Criar Perfil — Recruta Pro">
+    <meta property="og:description" content="Cadastre-se e encontre a vaga ideal para você.">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Estilos da página -->
+    <link rel="stylesheet" href="../css/criar_perfil.css">
+</head>
+
+<body>
+
+    <!-- ========== CABEÇALHO ========== -->
+    <header class="cabecalho" id="cabecalho">
+        <div class="container">
+            <div class="cabecalho_interno">
+
+                <!-- Logo -->
+                <a href="../index.html" class="cabecalho_logo">
+                    <div class="logo_icone">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="logo_texto">Recruta<span class="logo_destaque">Pro</span></span>
+                </a>
+
+                <!-- Navegação Desktop -->
+                <nav class="cabecalho_nav">
+                    <a href="../index.html" class="nav_link">Início</a>
+                    <a href="vagas.html" class="nav_link">Vagas</a>
+                    <a href="#" class="nav_link">Sobre</a>
+                </nav>
+
+                <!-- Botões Desktop -->
+                <div class="cabecalho_acoes">
+                    <a href="criar_perfil.html" class="btn_fantasma nav_ativo">Sou Candidato</a>
+                    <a href="#" class="btn_primario">Sou Empresa</a>
+                </div>
+
+                <!-- Botão Menu Mobile -->
+                <button class="cabecalho_menu_btn" id="btn_menu_mobile" aria-label="Abrir menu">
+                    <i class="fa-solid fa-bars" id="icone_menu"></i>
+                </button>
+
+            </div>
+        </div>
+
+        <!-- Menu Mobile -->
+        <div class="menu_mobile" id="menu_mobile">
+            <nav class="menu_mobile_nav">
+                <a href="../index.html" class="nav_link">Início</a>
+                <a href="vagas.html" class="nav_link">Vagas</a>
+                <a href="#" class="nav_link">Sobre</a>
+            </nav>
+            <div class="menu_mobile_acoes">
+                <a href="criar_perfil.html" class="btn_fantasma btn_bloco">Sou Candidato</a>
+                <a href="#" class="btn_primario btn_bloco">Sou Empresa</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+    <main class="pagina_principal">
+        <div class="container">
+            <div class="formulario_wrapper">
+
+                <!-- Link voltar -->
+                <a href="../index.html" class="link_voltar">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Voltar ao início
+                </a>
+
+                <!-- ---- Card do formulário ---- -->
+                <div class="formulario_card">
+
+                    <!-- Cabeçalho do card -->
+                    <div class="formulario_cabecalho">
+                        <div class="formulario_icone_box">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+                        <h1 class="formulario_titulo">Crie seu Perfil</h1>
+                        <p class="formulario_subtitulo">Cadastre-se e encontre a vaga ideal para você</p>
+                    </div>
+
+                    <!-- ---- Formulário ---- -->
+                    <form class="formulario" id="formulario_cadastro" novalidate>
+
+                        <div class="campos_grade">
+
+                            <!-- Nome Completo -->
+                            <div class="campo_grupo campo_coluna_dupla">
+                                <label class="campo_label" for="campo_nome">
+                                    Nome Completo <span class="campo_obrigatorio">*</span>
+                                </label>
+                                <input type="text" id="campo_nome" name="nome" class="campo_texto"
+                                    placeholder="Ex: Zassala Mário Domingos Bunga" autocomplete="name" required>
+                                <span class="campo_erro" id="erro_nome"></span>
+                            </div>
+
+                            <!-- E-mail -->
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="campo_email">
+                                    E-mail <span class="campo_obrigatorio">*</span>
+                                </label>
+                                <input type="email" id="campo_email" name="email" class="campo_texto"
+                                    placeholder="seunome@gmail.com" autocomplete="email" required>
+                                <span class="campo_erro" id="erro_email"></span>
+                            </div>
+
+                            <!-- Telefone -->
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="campo_telefone">
+                                    Telefone <span class="campo_obrigatorio">*</span>
+                                </label>
+                                <input type="tel" id="campo_telefone" name="telefone" class="campo_texto"
+                                    placeholder="(+244) 999 999 999" autocomplete="tel" required>
+                                <span class="campo_erro" id="erro_telefone"></span>
+                            </div>
+
+                            <!-- Senha -->
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="campo_senha">
+                                    Senha <span class="campo_obrigatorio">*</span>
+                                </label>
+                                <div class="campo_senha_wrapper">
+                                    <input type="password" id="campo_senha" name="senha"
+                                        class="campo_texto campo_com_icone_dir" placeholder="Mínimo 8 caracteres"
+                                        autocomplete="new-password" required>
+                                    <button type="button" class="campo_senha_toggle" id="toggle_senha"
+                                        aria-label="Mostrar senha">
+                                        <i class="fa-regular fa-eye" id="icone_toggle_senha"></i>
+                                    </button>
+                                </div>
+                                <div class="forca_senha_barra" id="forca_senha_barra">
+                                    <div class="forca_senha_progresso" id="forca_senha_progresso"></div>
+                                </div>
+                                <span class="forca_senha_texto" id="forca_senha_texto"></span>
+                                <span class="campo_erro" id="erro_senha"></span>
+                            </div>
+
+                            <!-- Confirmar Senha -->
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="campo_confirmar_senha">
+                                    Confirmar Senha <span class="campo_obrigatorio">*</span>
+                                </label>
+                                <div class="campo_senha_wrapper">
+                                    <input type="password" id="campo_confirmar_senha" name="confirmarSenha"
+                                        class="campo_texto campo_com_icone_dir" placeholder="Repita a senha"
+                                        autocomplete="new-password" required>
+                                    <button type="button" class="campo_senha_toggle" id="toggle_confirmar_senha"
+                                        aria-label="Mostrar senha">
+                                        <i class="fa-regular fa-eye" id="icone_toggle_confirmar"></i>
+                                    </button>
+                                </div>
+                                <span class="campo_erro" id="erro_confirmar_senha"></span>
+                            </div>
+
+                            <!-- Endereço -->
+                            <div class="campo_grupo campo_coluna_dupla">
+                                <label class="campo_label" for="campo_endereco">Endereço</label>
+                                <input type="text" id="campo_endereco" name="endereco" class="campo_texto"
+                                    placeholder="Bairro, Província" autocomplete="address-level2">
+                            </div>
+
+                            <!-- Formação Acadêmica -->
+                            <div class="campo_grupo campo_coluna_dupla">
+                                <label class="campo_label" for="campo_formacao">
+                                    Formação Acadêmica <span class="campo_obrigatorio">*</span>
+                                </label>
+                                <input type="text" id="campo_formacao" name="formacao" class="campo_texto"
+                                    placeholder="Ex: Bacharel em Engenharia Informática - IPGEST (2025)" required>
+                                <span class="campo_erro" id="erro_formacao"></span>
+                            </div>
+
+                            <!-- Experiência Profissional -->
+                            <div class="campo_grupo campo_coluna_dupla">
+                                <label class="campo_label" for="campo_experiencia">
+                                    Experiência Profissional <span class="campo_obrigatorio">*</span>
+                                </label>
+                                <textarea id="campo_experiencia" name="experiencia" class="campo_texto campo_textarea"
+                                    placeholder="Descreva brevemente sua experiência profissional, tecnologias que domina e áreas de interesse..."
+                                    required></textarea>
+                                <span class="campo_erro" id="erro_experiencia"></span>
+                            </div>
+
+                            <!-- Upload do Currículo -->
+                            <div class="campo_grupo campo_coluna_dupla">
+                                <label class="campo_label">Upload do Currículo</label>
+
+                                <div class="upload_zona" id="upload_zona" role="button" tabindex="0"
+                                    aria-label="Clique ou arraste um arquivo para fazer upload">
+                                    <input type="file" id="campo_arquivo" name="arquivo" accept=".pdf,.doc,.docx"
+                                        class="upload_input_oculto">
+                                    <i class="fa-solid fa-cloud-arrow-up upload_icone" id="upload_icone_principal"></i>
+                                    <p class="upload_texto">
+                                        Arraste seu currículo ou
+                                        <span class="upload_link">clique para selecionar</span>
+                                    </p>
+                                    <p class="upload_info">PDF, DOC ou DOCX até 5MB</p>
+                                    <p class="upload_nome_arquivo" id="upload_nome_arquivo"></p>
+                                </div>
+
+                                <div class="campo_grupo_interno">
+                                    <label class="campo_label_sm" for="campo_curriculo_link">
+                                        <i class="fa-solid fa-link campo_label_icone"></i>
+                                        Ou cole o link do seu currículo (LinkedIn, Drive, etc)
+                                    </label>
+                                    <input type="url" id="campo_curriculo_link" name="curriculo" class="campo_texto"
+                                        placeholder="https://linkedin.com/in/seu-perfil">
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- /campos_grade -->
+
+                        <!-- Termos -->
+                        <div class="termos_grupo">
+                            <label class="termos_label">
+                                <input type="checkbox" id="campo_termos" name="termos" class="termos_checkbox" required>
+                                <span class="termos_texto">
+                                    Li e concordo com os
+                                    <a href="#" class="termos_link">Termos de Uso</a>
+                                    e
+                                    <a href="#" class="termos_link">Política de Privacidade</a>
+                                </span>
+                            </label>
+                            <span class="campo_erro" id="erro_termos"></span>
+                        </div>
+
+                        <!-- Botão submit -->
+                        <button type="submit" class="btn_primario btn_bloco btn_grande" id="btn_submit">
+                            <span id="btn_submit_texto">Criar Perfil</span>
+                            <i class="fa-solid fa-arrow-right" id="icone_submit"></i>
+                        </button>
+
+                        <!-- Link login -->
+                        <p class="formulario_rodape_texto">
+                            Já possui uma conta?
+                            <a href="#" class="formulario_link">Fazer login</a>
+                        </p>
+
+                    </form>
+                    <!-- /formulario -->
+
+                    <!-- Benefícios -->
+                    <div class="beneficios_bloco">
+                        <p class="beneficios_titulo">Com seu perfil, você poderá:</p>
+                        <div class="beneficios_grade">
+                            <div class="beneficio_item">
+                                <i class="fa-solid fa-circle-check beneficio_icone"></i>
+                                <span>Candidatar-se a vagas</span>
+                            </div>
+                            <div class="beneficio_item">
+                                <i class="fa-solid fa-circle-check beneficio_icone"></i>
+                                <span>Acompanhar processos</span>
+                            </div>
+                            <div class="beneficio_item">
+                                <i class="fa-solid fa-circle-check beneficio_icone"></i>
+                                <span>Receber notificações</span>
+                            </div>
+                            <div class="beneficio_item">
+                                <i class="fa-solid fa-circle-check beneficio_icone"></i>
+                                <span>Salvar vagas favoritas</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /formulario_card -->
+
+            </div>
+        </div>
+    </main>
+
+    <script src="../js/criar_perfil.js"></script>
+</body>
+
+</html>

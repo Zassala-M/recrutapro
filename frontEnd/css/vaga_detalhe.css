@@ -1,0 +1,875 @@
+/* ============================================================
+   vaga_detalhe.css — RecrutaPro / Detalhe da Vaga
+   Estilos completos sem Bootstrap ou Tailwind.
+   Nomenclatura em português no padrão snake_case.
+   ============================================================ */
+
+/* ---- Variáveis de design ---- */
+:root {
+    --fundo: hsl(210, 20%, 98%);
+    --primeiro_plano: hsl(222, 47%, 11%);
+
+    --cartao: hsl(0, 0%, 100%);
+
+    --primario: hsl(172, 66%, 40%);
+    --primario_frente: hsl(0, 0%, 100%);
+
+    --secundario: hsl(215, 28%, 17%);
+    --secundario_frente: hsl(210, 40%, 98%);
+
+    --mudo: hsl(214, 32%, 91%);
+    --mudo_frente: hsl(215, 16%, 47%);
+
+    --acento: hsl(172, 66%, 95%);
+    --acento_frente: hsl(172, 66%, 30%);
+
+    --sucesso: hsl(142, 71%, 45%);
+    --sucesso_frente: hsl(0, 0%, 100%);
+    --aviso: hsl(38, 92%, 50%);
+    --destructivo: hsl(0, 84%, 60%);
+
+    --borda: hsl(214, 32%, 91%);
+    --raio: 0.75rem;
+
+    --gradiente_primario: linear-gradient(135deg, hsl(172, 66%, 40%) 0%, hsl(199, 89%, 48%) 100%);
+
+    --sombra_sm: 0 1px 2px 0 hsl(222 47% 11% / 0.05);
+    --sombra_md: 0 4px 6px -1px hsl(222 47% 11% / 0.1), 0 2px 4px -2px hsl(222 47% 11% / 0.1);
+    --sombra_lg: 0 10px 15px -3px hsl(222 47% 11% / 0.1), 0 4px 6px -4px hsl(222 47% 11% / 0.1);
+    --sombra_brilho: 0 0 40px -10px hsl(172 66% 40% / 0.4);
+}
+
+/* ---- Reset ---- */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background-color: var(--fundo);
+    color: var(--primeiro_plano);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+img, svg, video { display: block; max-width: 100%; }
+button { cursor: pointer; background: none; font-family: inherit; border: none; }
+
+/* ---- Container ---- */
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* ============================================================
+   UTILITÁRIOS
+   ============================================================ */
+
+.btn_bloco {
+    width: 100%;
+    justify-content: center;
+}
+
+.icone_primario { color: var(--primario); }
+.icone_sucesso  { color: var(--sucesso); }
+
+/* ============================================================
+   BOTÕES
+   ============================================================ */
+
+.btn_primario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--raio);
+    background: var(--gradiente_primario);
+    color: var(--primario_frente);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    box-shadow: var(--sombra_md);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+    border: none;
+    white-space: nowrap;
+}
+
+.btn_primario:hover {
+    box-shadow: var(--sombra_brilho);
+    transform: scale(1.02);
+}
+
+.btn_primario:active {
+    transform: scale(0.98);
+}
+
+.btn_contorno {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: var(--raio);
+    border: 1.5px solid var(--borda);
+    color: var(--primeiro_plano);
+    font-weight: 600;
+    font-size: 0.9375rem;
+    background: transparent;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.btn_contorno:hover {
+    border-color: var(--primario);
+    background-color: var(--acento);
+}
+
+.btn_contorno.btn_pequeno {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
+
+.btn_fantasma {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: var(--raio);
+    color: var(--mudo_frente);
+    font-weight: 500;
+    background: transparent;
+    border: none;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+}
+
+.btn_fantasma:hover {
+    background-color: var(--acento);
+    color: var(--primeiro_plano);
+}
+
+/* ============================================================
+   CABEÇALHO
+   ============================================================ */
+
+.cabecalho {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 50;
+    background-color: var(--cartao);
+    box-shadow: var(--sombra_md);
+    transition: box-shadow 0.3s ease;
+}
+
+.cabecalho_interno {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 4rem;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .cabecalho_interno { height: 5rem; }
+}
+
+/* Logo */
+.cabecalho_logo,
+.rodape_logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.logo_icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 0.75rem;
+    background: var(--gradiente_primario);
+    box-shadow: var(--sombra_brilho);
+    color: #fff;
+    font-size: 1rem;
+    transition: transform 0.2s ease;
+    flex-shrink: 0;
+}
+
+.cabecalho_logo:hover .logo_icone { transform: scale(1.05); }
+
+.logo_texto {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--primeiro_plano);
+}
+
+.logo_destaque { color: var(--primario); }
+
+/* Nav Desktop */
+.cabecalho_nav {
+    display: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .cabecalho_nav { display: flex; }
+}
+
+.nav_link {
+    font-weight: 500;
+    color: var(--mudo_frente);
+    transition: color 0.2s ease;
+}
+
+.nav_link:hover,
+.nav_link_ativo { color: var(--primario); }
+
+/* Ações Desktop */
+.cabecalho_acoes {
+    display: none;
+    align-items: center;
+    gap: 1rem;
+}
+
+@media (min-width: 768px) {
+    .cabecalho_acoes { display: flex; }
+}
+
+/* Botão menu mobile */
+.cabecalho_menu_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+    color: var(--primeiro_plano);
+    font-size: 1.25rem;
+    border-radius: var(--raio);
+    border: none;
+    background: none;
+    transition: background-color 0.2s;
+}
+
+.cabecalho_menu_btn:hover { background-color: var(--mudo); }
+
+@media (min-width: 768px) {
+    .cabecalho_menu_btn { display: none; }
+}
+
+/* Menu Mobile */
+.menu_mobile {
+    display: none;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem 1.5rem;
+    border-top: 1px solid var(--borda);
+    background-color: var(--cartao);
+    animation: deslizar_baixo 0.25s ease;
+}
+
+.menu_mobile.aberto { display: flex; }
+
+.menu_mobile_nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.menu_mobile_nav .nav_link {
+    display: block;
+    padding: 0.625rem 0.75rem;
+    border-radius: var(--raio);
+    font-size: 1rem;
+}
+
+.menu_mobile_nav .nav_link:hover { background-color: var(--mudo); }
+
+.menu_mobile_acoes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    margin-top: 0.75rem;
+    padding-top: 0.75rem;
+    border-top: 1px solid var(--borda);
+}
+
+@keyframes deslizar_baixo {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ============================================================
+   PÁGINA PRINCIPAL
+   ============================================================ */
+
+.pagina_principal {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+
+@media (min-width: 768px) {
+    .pagina_principal { padding-top: 7rem; }
+}
+
+/* Link voltar */
+.link_voltar {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--mudo_frente);
+    font-weight: 500;
+    font-size: 0.9375rem;
+    margin-bottom: 2rem;
+    transition: color 0.2s ease;
+    border-radius: var(--raio);
+    padding: 0.25rem 0.5rem;
+    margin-left: -0.5rem;
+}
+
+.link_voltar:hover { color: var(--primeiro_plano); }
+
+/* ---- Grade principal ---- */
+.detalhe_grade {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .detalhe_grade {
+        grid-template-columns: 1fr 360px;
+        align-items: start;
+    }
+}
+
+/* ---- Coluna principal ---- */
+.detalhe_coluna_principal {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ---- Sidebar ---- */
+.detalhe_sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* ============================================================
+   CARDS GERAIS
+   ============================================================ */
+
+.vaga_card {
+    background-color: var(--cartao);
+    border-radius: var(--raio);
+    border: 1px solid var(--borda);
+    padding: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .vaga_card { padding: 2rem; }
+}
+
+/* ---- Cabeçalho da vaga ---- */
+.vaga_cabecalho_bloco {
+    margin-bottom: 1.5rem;
+}
+
+.vaga_titulo_grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.vaga_titulo_linha {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.vaga_titulo {
+    font-size: clamp(1.375rem, 3vw, 1.875rem);
+    font-weight: 700;
+    color: var(--primeiro_plano);
+    line-height: 1.2;
+}
+
+/* Status emblemas */
+.status_emblema {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 9999px;
+    padding: 0.25rem 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    white-space: nowrap;
+    flex-shrink: 0;
+    align-self: flex-start;
+    margin-top: 0.25rem;
+}
+
+.status_ativa {
+    background-color: hsl(142, 71%, 45%, 0.1);
+    color: var(--sucesso);
+}
+
+.status_inativa {
+    background-color: var(--mudo);
+    color: var(--mudo_frente);
+}
+
+.status_pausada {
+    background-color: hsl(38, 92%, 50%, 0.1);
+    color: var(--aviso);
+}
+
+.vaga_empresa_linha {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--mudo_frente);
+}
+
+.vaga_empresa_icone { font-size: 1rem; }
+
+.vaga_empresa_nome {
+    font-size: 1.125rem;
+    font-weight: 500;
+}
+
+/* ---- Meta grade (localidade / modalidade / tipo / salário) ---- */
+.vaga_meta_grade {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem 1.5rem;
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 640px) {
+    .vaga_meta_grade {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.vaga_meta_item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--mudo_frente);
+    font-size: 0.9375rem;
+}
+
+.vaga_meta_item i { font-size: 1rem; flex-shrink: 0; }
+
+.vaga_meta_salario {
+    color: var(--primario);
+    font-weight: 600;
+}
+
+/* ---- Stats secundárias ---- */
+.vaga_stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.vaga_stat_item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--mudo_frente);
+}
+
+.vaga_stat_item i { font-size: 0.875rem; }
+
+/* ============================================================
+   SEÇÕES DE CONTEÚDO
+   ============================================================ */
+
+.secao_titulo {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--primeiro_plano);
+    margin-bottom: 1rem;
+}
+
+.secao_texto {
+    color: var(--mudo_frente);
+    line-height: 1.7;
+}
+
+/* ---- Lista com ícones ---- */
+.lista_icone {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.lista_icone_item {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    color: var(--mudo_frente);
+    line-height: 1.55;
+}
+
+.lista_icone_simbolo {
+    font-size: 1.0625rem;
+    margin-top: 0.125rem;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   PROCESSO / TRILHA DE ETAPAS
+   ============================================================ */
+
+.processo_trilha {
+    display: flex;
+    align-items: flex-start;
+    overflow-x: auto;
+    padding-bottom: 0.5rem;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.processo_trilha::-webkit-scrollbar { display: none; }
+
+.processo_etapa {
+    display: flex;
+    align-items: flex-start;
+    flex: 1;
+    min-width: 70px;
+}
+
+.processo_etapa_ultima {
+    flex: 0 0 auto;
+}
+
+.processo_etapa_coluna {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Passo (círculo numerado) */
+.processo_passo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    font-size: 0.875rem;
+    font-weight: 600;
+    flex-shrink: 0;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.processo_passo_pendente {
+    background-color: var(--mudo);
+    color: var(--mudo_frente);
+}
+
+.processo_passo_atual {
+    background-color: var(--primario);
+    color: var(--primario_frente);
+}
+
+.processo_passo_concluido {
+    background-color: var(--sucesso);
+    color: var(--sucesso_frente);
+}
+
+/* Rótulo da etapa */
+.processo_etapa_label {
+    font-size: 0.6875rem;
+    text-align: center;
+    color: var(--mudo_frente);
+    white-space: nowrap;
+    max-width: 5rem;
+    line-height: 1.3;
+}
+
+/* Conector horizontal entre etapas */
+.processo_conector {
+    flex: 1;
+    height: 2px;
+    background-color: var(--mudo);
+    margin: 1rem 0.375rem 0;
+    min-width: 1rem;
+}
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.sidebar_card {
+    background-color: var(--cartao);
+    border-radius: var(--raio);
+    border: 1px solid var(--borda);
+    padding: 1.5rem;
+}
+
+.sidebar_card_fixo {
+    /* Em telas grandes, fica sticky abaixo do cabecalho */
+}
+
+@media (min-width: 1024px) {
+    .sidebar_card_fixo {
+        position: sticky;
+        top: 6.5rem;
+    }
+}
+
+.sidebar_card_acento {
+    background-color: hsl(172, 66%, 95%, 0.5);
+    border-color: hsl(172, 66%, 80%);
+}
+
+.sidebar_titulo {
+    font-size: 1.0625rem;
+    font-weight: 600;
+    color: var(--primeiro_plano);
+    margin-bottom: 0.75rem;
+}
+
+.sidebar_titulo_sm {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primeiro_plano);
+    margin-bottom: 0.5rem;
+}
+
+.sidebar_descricao {
+    font-size: 0.875rem;
+    color: var(--mudo_frente);
+    margin-bottom: 1.25rem;
+    line-height: 1.55;
+}
+
+.sidebar_aviso {
+    font-size: 0.75rem;
+    color: var(--mudo_frente);
+    text-align: center;
+    margin-top: 0.75rem;
+}
+
+/* Perfil da empresa */
+.empresa_perfil {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.empresa_logo_box {
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--secundario);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--secundario_frente);
+    font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.empresa_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+}
+
+.empresa_nome {
+    font-weight: 600;
+    color: var(--primeiro_plano);
+    font-size: 0.9375rem;
+}
+
+.empresa_setor {
+    font-size: 0.8125rem;
+    color: var(--mudo_frente);
+}
+
+.empresa_detalhes {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.empresa_detalhe_item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    color: var(--mudo_frente);
+}
+
+.empresa_detalhe_item i {
+    font-size: 0.875rem;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   BARRA CANDIDATURA MOBILE (sticky no bottom)
+   ============================================================ */
+
+.barra_candidatura_mobile {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 40;
+    background-color: var(--cartao);
+    border-top: 1px solid var(--borda);
+    box-shadow: 0 -4px 12px hsl(222 47% 11% / 0.08);
+    padding: 0.75rem 1.5rem;
+    animation: subir_barra 0.3s ease;
+}
+
+@keyframes subir_barra {
+    from { transform: translateY(100%); opacity: 0; }
+    to   { transform: translateY(0);    opacity: 1; }
+}
+
+.barra_candidatura_mobile.visivel {
+    display: block;
+}
+
+.barra_candidatura_mobile_interna {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.barra_candidatura_mobile_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.125rem;
+    min-width: 0;
+}
+
+.barra_candidatura_mobile_titulo {
+    font-weight: 600;
+    font-size: 0.9375rem;
+    color: var(--primeiro_plano);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.barra_candidatura_mobile_empresa {
+    font-size: 0.8125rem;
+    color: var(--mudo_frente);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Oculta a sidebar de candidatura em mobile (usa a barra fixa) */
+@media (max-width: 1023px) {
+    #sidebar_candidatura {
+        display: none;
+    }
+}
+
+/* ============================================================
+   RODAPÉ
+   ============================================================ */
+
+.rodape {
+    background-color: var(--secundario);
+    padding: 3rem 0;
+    margin-top: 0;
+}
+
+.rodape_grade {
+    display: grid;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+    .rodape_grade { grid-template-columns: repeat(4, 1fr); }
+}
+
+.rodape_coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Logo no rodapé — texto branco */
+.rodape_logo_texto {
+    color: var(--secundario_frente) !important;
+}
+
+.rodape_descricao {
+    font-size: 0.875rem;
+    color: hsl(210, 40%, 98%, 0.6);
+    line-height: 1.6;
+}
+
+.rodape_titulo_coluna {
+    font-weight: 600;
+    color: var(--secundario_frente);
+    margin-bottom: 0.25rem;
+}
+
+.rodape_lista {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.rodape_link {
+    font-size: 0.875rem;
+    color: hsl(210, 40%, 98%, 0.6);
+    transition: color 0.2s ease;
+}
+
+.rodape_link:hover { color: var(--primario); }
+
+.rodape_info {
+    font-size: 0.875rem;
+    color: hsl(210, 40%, 98%, 0.6);
+}
+
+.rodape_conteudo {
+    padding-top: 2rem;
+    border-top: 1px solid hsl(210, 40%, 98%, 0.1);
+    text-align: center;
+    font-size: 0.875rem;
+    color: hsl(210, 40%, 98%, 0.4);
+}
