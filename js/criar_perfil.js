@@ -15,38 +15,38 @@ document.addEventListener('DOMContentLoaded', function () {
     /* ----------------------------------------------------------
        REFERÊNCIAS DOM
     ---------------------------------------------------------- */
-    const cabecalho           = document.getElementById('cabecalho');
-    const btnMenuMobile       = document.getElementById('btn_menu_mobile');
-    const menuMobile          = document.getElementById('menu_mobile');
-    const iconeMenu           = document.getElementById('icone_menu');
+    const cabecalho = document.getElementById('cabecalho');
+    const btnMenuMobile = document.getElementById('btn_menu_mobile');
+    const menuMobile = document.getElementById('menu_mobile');
+    const iconeMenu = document.getElementById('icone_menu');
 
-    const formulario          = document.getElementById('formulario_cadastro');
-    const btnSubmit           = document.getElementById('btn_submit');
-    const btnSubmitTexto      = document.getElementById('btn_submit_texto');
-    const iconeSubmit         = document.getElementById('icone_submit');
+    const formulario = document.getElementById('formulario_cadastro');
+    const btnSubmit = document.getElementById('btn_submit');
+    const btnSubmitTexto = document.getElementById('btn_submit_texto');
+    const iconeSubmit = document.getElementById('icone_submit');
 
-    const campoNome           = document.getElementById('campo_nome');
-    const campoEmail          = document.getElementById('campo_email');
-    const campoTelefone       = document.getElementById('campo_telefone');
-    const campoSenha          = document.getElementById('campo_senha');
+    const campoNome = document.getElementById('campo_nome');
+    const campoEmail = document.getElementById('campo_email');
+    const campoTelefone = document.getElementById('campo_telefone');
+    const campoSenha = document.getElementById('campo_senha');
     const campoConfirmarSenha = document.getElementById('campo_confirmar_senha');
-    const campoFormacao       = document.getElementById('campo_formacao');
-    const campoExperiencia    = document.getElementById('campo_experiencia');
-    const campoTermos         = document.getElementById('campo_termos');
+    const campoFormacao = document.getElementById('campo_formacao');
+    const campoExperiencia = document.getElementById('campo_experiencia');
+    const campoTermos = document.getElementById('campo_termos');
 
-    const toggleSenha         = document.getElementById('toggle_senha');
-    const iconeToggleSenha    = document.getElementById('icone_toggle_senha');
-    const toggleConfirmar     = document.getElementById('toggle_confirmar_senha');
-    const iconeToggleConfirmar= document.getElementById('icone_toggle_confirmar');
+    const toggleSenha = document.getElementById('toggle_senha');
+    const iconeToggleSenha = document.getElementById('icone_toggle_senha');
+    const toggleConfirmar = document.getElementById('toggle_confirmar_senha');
+    const iconeToggleConfirmar = document.getElementById('icone_toggle_confirmar');
 
-    const forcaBarra          = document.getElementById('forca_senha_barra');
-    const forcaProgresso      = document.getElementById('forca_senha_progresso');
-    const forcaTexto          = document.getElementById('forca_senha_texto');
+    const forcaBarra = document.getElementById('forca_senha_barra');
+    const forcaProgresso = document.getElementById('forca_senha_progresso');
+    const forcaTexto = document.getElementById('forca_senha_texto');
 
-    const uploadZona          = document.getElementById('upload_zona');
-    const campoArquivo        = document.getElementById('campo_arquivo');
-    const uploadNomeArquivo   = document.getElementById('upload_nome_arquivo');
-    const uploadIcone         = document.getElementById('upload_icone_principal');
+    const uploadZona = document.getElementById('upload_zona');
+    const campoArquivo = document.getElementById('campo_arquivo');
+    const uploadNomeArquivo = document.getElementById('upload_nome_arquivo');
+    const uploadIcone = document.getElementById('upload_icone_principal');
 
     /* ----------------------------------------------------------
        MENU MOBILE
@@ -54,8 +54,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (btnMenuMobile && menuMobile) {
         btnMenuMobile.addEventListener('click', function () {
             const estaAberto = menuMobile.classList.toggle('aberto');
-            iconeMenu.classList.toggle('fa-bars',  !estaAberto);
-            iconeMenu.classList.toggle('fa-xmark',  estaAberto);
+            iconeMenu.classList.toggle('fa-bars', !estaAberto);
+            iconeMenu.classList.toggle('fa-xmark', estaAberto);
             btnMenuMobile.setAttribute('aria-label', estaAberto ? 'Fechar menu' : 'Abrir menu');
         });
 
@@ -83,13 +83,13 @@ document.addEventListener('DOMContentLoaded', function () {
         btn.addEventListener('click', function () {
             const visivel = campo.type === 'text';
             campo.type = visivel ? 'password' : 'text';
-            icone.classList.toggle('fa-eye',       visivel);
+            icone.classList.toggle('fa-eye', visivel);
             icone.classList.toggle('fa-eye-slash', !visivel);
             btn.setAttribute('aria-label', visivel ? 'Mostrar senha' : 'Ocultar senha');
         });
     }
 
-    criarToggleSenha(toggleSenha,   campoSenha,          iconeToggleSenha);
+    criarToggleSenha(toggleSenha, campoSenha, iconeToggleSenha);
     criarToggleSenha(toggleConfirmar, campoConfirmarSenha, iconeToggleConfirmar);
 
     /* ----------------------------------------------------------
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function () {
     ---------------------------------------------------------- */
     function calcularForcaSenha(senha) {
         let pontos = 0;
-        if (senha.length >= 8)  pontos++;
+        if (senha.length >= 8) pontos++;
         if (senha.length >= 12) pontos++;
         if (/[A-Z]/.test(senha)) pontos++;
         if (/[0-9]/.test(senha)) pontos++;
@@ -115,7 +115,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 forcaBarra.classList.remove('visivel');
                 forcaTexto.classList.remove('visivel');
                 forcaProgresso.className = 'forca_senha_progresso';
-                forcaTexto.className     = 'forca_senha_texto';
+                forcaTexto.className = 'forca_senha_texto';
                 return;
             }
 
@@ -124,24 +124,35 @@ document.addEventListener('DOMContentLoaded', function () {
             forcaTexto.classList.add('visivel');
 
             forcaProgresso.className = 'forca_senha_progresso nivel_' + nivel;
-            forcaTexto.className     = 'forca_senha_texto visivel nivel_' + nivel;
-            forcaTexto.textContent   = 'Senha ' + nivelTextos[nivel];
+            forcaTexto.className = 'forca_senha_texto visivel nivel_' + nivel;
+            forcaTexto.textContent = 'Senha ' + nivelTextos[nivel];
         });
     }
 
     /* ----------------------------------------------------------
-       MÁSCARA DE TELEFONE — (99) 99999-9999
+       MÁSCARA DE TELEFONE — (244) 999 999
     ---------------------------------------------------------- */
     if (campoTelefone) {
         campoTelefone.addEventListener('input', function () {
-            let v = campoTelefone.value.replace(/\D/g, '').slice(0, 11);
-            if (v.length > 6) {
-                v = '(' + v.slice(0, 2) + ') ' + v.slice(2, 7) + '-' + v.slice(7);
-            } else if (v.length > 2) {
-                v = '(' + v.slice(0, 2) + ') ' + v.slice(2);
-            } else if (v.length > 0) {
-                v = '(' + v;
+            let v = campoTelefone.value.replace(/\D/g, '');
+
+            // Remove o 244 se o usuário digitar
+            if (v.startsWith('244')) {
+                v = v.slice(3);
             }
+
+            // Limita a 9 dígitos (número angolano)
+            v = v.slice(0, 9);
+
+            // Formata
+            if (v.length > 6) {
+                v = '+244 ' + v.slice(0, 3) + ' ' + v.slice(3, 6) + ' ' + v.slice(6);
+            } else if (v.length > 3) {
+                v = '+244 ' + v.slice(0, 3) + ' ' + v.slice(3);
+            } else if (v.length > 0) {
+                v = '+244 ' + v;
+            }
+
             campoTelefone.value = v;
         });
     }
@@ -225,11 +236,11 @@ document.addEventListener('DOMContentLoaded', function () {
     ---------------------------------------------------------- */
     function definirErro(campoId, mensagem) {
         const erroEl = document.getElementById('erro_' + campoId);
-        const campo  = document.getElementById('campo_' + campoId);
+        const campo = document.getElementById('campo_' + campoId);
         if (erroEl) erroEl.textContent = mensagem;
         if (campo) {
             campo.classList.toggle('campo_invalido', !!mensagem);
-            campo.classList.toggle('campo_valido',   !mensagem && campo.value.trim() !== '');
+            campo.classList.toggle('campo_valido', !mensagem && campo.value.trim() !== '');
         }
         return !!mensagem;
     }
@@ -239,7 +250,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function validarCampo(campo) {
-        const id    = campo.id.replace('campo_', '');
+        const id = campo.id.replace('campo_', '');
         const valor = campo.value.trim();
 
         switch (id) {
@@ -256,7 +267,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             case 'telefone':
                 if (!valor) return definirErro('telefone', 'O telefone é obrigatório.');
-                if (valor.replace(/\D/g, '').length < 10)
+                if (valor.replace(/\D/g, '').length < 12)
                     return definirErro('telefone', 'Digite um telefone válido.');
                 return definirErro('telefone', '');
 
@@ -287,18 +298,18 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Validação em tempo real (blur)
     [campoNome, campoEmail, campoTelefone, campoSenha,
-     campoConfirmarSenha, campoFormacao, campoExperiencia].forEach(function (campo) {
-        if (!campo) return;
-        campo.addEventListener('blur', function () { validarCampo(campo); });
-        campo.addEventListener('input', function () {
-            // Limpa erro enquanto digita se já havia erro
-            if (campo.classList.contains('campo_invalido')) validarCampo(campo);
-            // Re-valida confirmação se alterar a senha
-            if (campo === campoSenha && campoConfirmarSenha && campoConfirmarSenha.value) {
-                validarCampo(campoConfirmarSenha);
-            }
+        campoConfirmarSenha, campoFormacao, campoExperiencia].forEach(function (campo) {
+            if (!campo) return;
+            campo.addEventListener('blur', function () { validarCampo(campo); });
+            campo.addEventListener('input', function () {
+                // Limpa erro enquanto digita se já havia erro
+                if (campo.classList.contains('campo_invalido')) validarCampo(campo);
+                // Re-valida confirmação se alterar a senha
+                if (campo === campoSenha && campoConfirmarSenha && campoConfirmarSenha.value) {
+                    validarCampo(campoConfirmarSenha);
+                }
+            });
         });
-    });
 
     /* ----------------------------------------------------------
        SUBMIT DO FORMULÁRIO
@@ -309,7 +320,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Valida todos os campos obrigatórios
             const campos = [campoNome, campoEmail, campoTelefone, campoSenha,
-                            campoConfirmarSenha, campoFormacao, campoExperiencia];
+                campoConfirmarSenha, campoFormacao, campoExperiencia];
             let temErro = false;
 
             campos.forEach(function (campo) {
