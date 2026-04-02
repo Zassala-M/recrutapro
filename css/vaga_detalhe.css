@@ -644,6 +644,7 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     .sidebar_card_fixo {
         position: sticky;
         top: 6.5rem;
+        z-index: 10;
     }
 }
 

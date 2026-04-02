@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard — Recruta Pro</title>
+    <meta name="description" content="Dashboard do candidato no RecrutaPro.">
+    <meta name="author" content="Zassala Mário">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Estilos da página -->
+    <link rel="stylesheet" href="../css/dashboard_candidato.css">
+</head>
+
+<body>
+
+    <!-- ========== OVERLAY MOBILE (fecha sidebar ao clicar fora) ========== -->
+    <div class="sidebar_overlay" id="sidebar_overlay"></div>
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar_corpo">
+
+            <!-- Logo -->
+            <div class="sidebar_logo_area">
+                <a href="../index.html" class="sidebar_logo">
+                    <div class="sidebar_logo_icone">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="sidebar_logo_texto">Recruta<span class="sidebar_logo_destaque">Pro</span></span>
+                </a>
+            </div>
+
+            <!-- Perfil do usuário -->
+            <div class="sidebar_perfil">
+                <div class="sidebar_avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="sidebar_perfil_info">
+                    <p class="sidebar_perfil_nome">Ivandro Silva</p>
+                    <p class="sidebar_perfil_papel">Candidato</p>
+                </div>
+            </div>
+
+            <!-- Navegação principal -->
+            <nav class="sidebar_nav" aria-label="Navegação do dashboard">
+                <a href="dashboard_candidato.html" class="sidebar_nav_link sidebar_nav_link_ativo">
+                    <i class="fa-solid fa-table-columns"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="sidebar_nav_link">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Buscar Vagas</span>
+                </a>
+                <a href="#" class="sidebar_nav_link">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Minhas Candidaturas</span>
+                </a>
+                <a href="#" class="sidebar_nav_link">
+                    <i class="fa-solid fa-user"></i>
+                    <span>Meu Perfil</span>
+                </a>
+            </nav>
+
+            <!-- Rodapé da sidebar -->
+            <div class="sidebar_rodape">
+                <button class="sidebar_nav_link sidebar_nav_link_btn" id="btn_notificacoes">
+                    <i class="fa-solid fa-bell"></i>
+                    <span>Notificações</span>
+                    <span class="sidebar_badge">3</span>
+                </button>
+                <a href="../index.html" class="sidebar_nav_link sidebar_nav_link_sair">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Botão recolher sidebar (desktop) -->
+        <button class="sidebar_toggle_btn" id="sidebar_toggle_btn" aria-label="Recolher menu">
+            <i class="fa-solid fa-chevron-left" id="sidebar_toggle_icone"></i>
+        </button>
+    </aside>
+
+    <!-- ========== TOPBAR MOBILE ========== -->
+    <header class="topbar_mobile" id="topbar_mobile">
+        <button class="topbar_hamburger" id="btn_sidebar_mobile" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="/" class="topbar_logo">
+            <div class="sidebar_logo_icone topbar_logo_icone">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <span class="sidebar_logo_texto topbar_logo_texto">Recruta<span class="sidebar_logo_destaque">Pro</span></span>
+        </a>
+        <div class="topbar_acoes">
+            <button class="topbar_btn_icone" aria-label="Notificações">
+                <i class="fa-solid fa-bell"></i>
+                <span class="topbar_badge">3</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- ========== CONTEÚDO PRINCIPAL ========== -->
+    <main class="conteudo_principal" id="conteudo_principal">
+        <div class="conteudo_interno">
+
+            <!-- Cabeçalho da página -->
+            <div class="pagina_cabecalho">
+                <h1 class="pagina_titulo">Dashboard</h1>
+                <p class="pagina_subtitulo">Bem-vindo de volta, <strong>Ivandro Silva</strong></p>
+            </div>
+
+            <!-- ========== CARDS DE ESTATÍSTICAS ========== -->
+            <div class="stats_grade">
+
+                <div class="stat_card cartao_hover">
+                    <div class="stat_card_interno">
+                        <div class="stat_info">
+                            <p class="stat_label">Candidaturas Enviadas</p>
+                            <p class="stat_valor">2</p>
+                        </div>
+                        <div class="stat_icone_box">
+                            <i class="fa-solid fa-file-lines stat_icone"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat_card cartao_hover">
+                    <div class="stat_card_interno">
+                        <div class="stat_info">
+                            <p class="stat_label">Em Andamento</p>
+                            <p class="stat_valor">1</p>
+                        </div>
+                        <div class="stat_icone_box">
+                            <i class="fa-regular fa-clock stat_icone"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat_card cartao_hover">
+                    <div class="stat_card_interno">
+                        <div class="stat_info">
+                            <p class="stat_label">Aprovações</p>
+                            <p class="stat_valor">0</p>
+                        </div>
+                        <div class="stat_icone_box">
+                            <i class="fa-solid fa-circle-check stat_icone"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat_card cartao_hover">
+                    <div class="stat_card_interno">
+                        <div class="stat_info">
+                            <p class="stat_label">Vagas Disponíveis</p>
+                            <p class="stat_valor">2</p>
+                        </div>
+                        <div class="stat_icone_box">
+                            <i class="fa-solid fa-magnifying-glass stat_icone"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /stats_grade -->
+
+            <!-- ========== ABAS ========== -->
+            <div class="abas_barra" role="tablist">
+                <button
+                    class="aba_btn aba_btn_ativa"
+                    id="aba_vagas"
+                    role="tab"
+                    aria-selected="true"
+                    aria-controls="painel_vagas"
+                    data-aba="vagas"
+                >
+                    Buscar Vagas
+                </button>
+                <button
+                    class="aba_btn"
+                    id="aba_candidaturas"
+                    role="tab"
+                    aria-selected="false"
+                    aria-controls="painel_candidaturas"
+                    data-aba="candidaturas"
+                >
+                    Minhas Candidaturas
+                    <span class="aba_contagem">2</span>
+                </button>
+            </div>
+
+            <!-- ========== PAINEL: BUSCAR VAGAS ========== -->
+            <div class="aba_painel" id="painel_vagas" role="tabpanel" aria-labelledby="aba_vagas">
+
+                <!-- Filtros -->
+                <div class="filtros_barra">
+                    <div class="busca_campo_wrapper">
+                        <i class="fa-solid fa-magnifying-glass busca_icone"></i>
+                        <input
+                            type="text"
+                            id="busca_vagas"
+                            class="campo_texto busca_input"
+                            placeholder="Buscar vagas por título..."
+                            autocomplete="off"
+                        >
+                    </div>
+                    <select class="campo_select" id="filtro_modalidade_vagas">
+                        <option value="todos">Todas modalidades</option>
+                        <option value="Remoto">Remoto</option>
+                        <option value="Presencial">Presencial</option>
+                        <option value="Híbrido">Híbrido</option>
+                    </select>
+                </div>
+
+                <!-- Lista de vagas disponíveis -->
+                <div class="vagas_lista" id="vagas_lista">
+
+                    <!-- Vaga 1: Marketing Digital -->
+                    <article class="vaga_card cartao_hover" data-modalidade="Presencial">
+                        <div class="vaga_card_topo">
+                            <div class="vaga_info">
+                                <div class="vaga_titulo_linha">
+                                    <a href="#" class="vaga_titulo_link">Analista de Marketing Digital</a>
+                                    <span class="status_emblema status_ativa">Ativa</span>
+                                </div>
+                                <div class="vaga_empresa">
+                                    <i class="fa-solid fa-building"></i>
+                                    <span>Inova Digital</span>
+                                </div>
+                                <p class="vaga_descricao">Vaga para profissional de marketing digital focado em performance e growth.</p>
+                                <div class="vaga_meta">
+                                    <div class="vaga_meta_item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>Uige, UE</span>
+                                    </div>
+                                    <div class="vaga_meta_item">
+                                        <i class="fa-solid fa-briefcase"></i>
+                                        <span>Presencial</span>
+                                    </div>
+                                    <div class="vaga_meta_item">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>CLT</span>
+                                    </div>
+                                    <div class="vaga_meta_item vaga_meta_salario">
+                                        <i class="fa-solid fa-sack-dollar"></i>
+                                        <span>$ 5.000 - $ 8.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vaga_acoes">
+                                <a href="#" class="btn_contorno btn_pequeno">Ver Detalhes</a>
+                                <button class="btn_primario btn_pequeno">Candidatar-se</button>
+                            </div>
+                        </div>
+                        <div class="vaga_tags">
+                            <span class="tag_requisito">Experiência com Google...</span>
+                            <span class="tag_requisito">Conhecimento em Google...</span>
+                            <span class="tag_requisito">Experiência com SEO...</span>
+                            <span class="tag_mais">+2 mais</span>
+                        </div>
+                    </article>
+
+                    <!-- Vaga 2: Analista Financeiro -->
+                    <article class="vaga_card cartao_hover" data-modalidade="Híbrido">
+                        <div class="vaga_card_topo">
+                            <div class="vaga_info">
+                                <div class="vaga_titulo_linha">
+                                    <a href="#" class="vaga_titulo_link">Analista Financeiro Sênior</a>
+                                    <span class="status_emblema status_ativa">Ativa</span>
+                                </div>
+                                <div class="vaga_empresa">
+                                    <i class="fa-solid fa-building"></i>
+                                    <span>FinanceHub</span>
+                                </div>
+                                <p class="vaga_descricao">Oportunidade para analista financeiro experiente em modelagem e análise de dados.</p>
+                                <div class="vaga_meta">
+                                    <div class="vaga_meta_item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>Luanda, LA</span>
+                                    </div>
+                                    <div class="vaga_meta_item">
+                                        <i class="fa-solid fa-briefcase"></i>
+                                        <span>Híbrido</span>
+                                    </div>
+                                    <div class="vaga_meta_item">
+                                        <i class="fa-regular fa-clock"></i>
+                                        <span>CLT</span>
+                                    </div>
+                                    <div class="vaga_meta_item vaga_meta_salario">
+                                        <i class="fa-solid fa-sack-dollar"></i>
+                                        <span>$ 12.000 - $ 18.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vaga_acoes">
+                                <a href="#" class="btn_contorno btn_pequeno">Ver Detalhes</a>
+                                <button class="btn_primario btn_pequeno">Candidatar-se</button>
+                            </div>
+                        </div>
+                        <div class="vaga_tags">
+                            <span class="tag_requisito">Formação em Economia,...</span>
+                            <span class="tag_requisito">Experiência de 5+...</span>
+                            <span class="tag_requisito">Excel avançado e...</span>
+                            <span class="tag_mais">+2 mais</span>
+                        </div>
+                    </article>
+
+                </div>
+                <!-- /vagas_lista -->
+
+                <!-- Sem resultados -->
+                <div class="sem_resultados" id="sem_resultados_vagas">
+                    <i class="fa-solid fa-magnifying-glass sem_resultados_icone"></i>
+                    <p class="sem_resultados_titulo">Nenhuma vaga encontrada</p>
+                    <p class="sem_resultados_texto">Tente ajustar os filtros de busca.</p>
+                </div>
+
+            </div>
+            <!-- /painel_vagas -->
+
+            <!-- ========== PAINEL: MINHAS CANDIDATURAS ========== -->
+            <div class="aba_painel aba_painel_oculto" id="painel_candidaturas" role="tabpanel" aria-labelledby="aba_candidaturas">
+
+                <div class="candidaturas_lista">
+
+                    <!-- Candidatura 1: Full Stack -->
+                    <div class="candidatura_card cartao_hover">
+                        <div class="candidatura_topo">
+                            <div class="candidatura_info">
+                                <div class="candidatura_titulo_linha">
+                                    <a href="#" class="candidatura_titulo_link">Desenvolvedor(a) Full Stack Senior</a>
+                                    <span class="status_emblema status_triagem">Triagem</span>
+                                </div>
+                                <div class="vaga_empresa">
+                                    <i class="fa-solid fa-building"></i>
+                                    <span>TechFlow Solutions</span>
+                                </div>
+                                <div class="candidatura_meta">
+                                    <div class="vaga_meta_item">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <span>Candidatura enviada em 10/01/2026</span>
+                                    </div>
+                                    <div class="vaga_meta_item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>Luanda, LA</span>
+                                    </div>
+                                    <div class="vaga_meta_item vaga_meta_salario">
+                                        <i class="fa-solid fa-sack-dollar"></i>
+                                        <span>$ 15.000 - $ 22.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vaga_acoes">
+                                <a href="#" class="btn_contorno btn_pequeno">Ver Vaga</a>
+                            </div>
+                        </div>
+                        <!-- Trilha de progresso -->
+                        <div class="candidatura_progresso_area">
+                            <div class="processo_trilha">
+                                <div class="processo_etapa">
+                                    <div class="processo_etapa_coluna">
+                                        <div class="processo_passo processo_passo_atual"><span>1</span></div>
+                                        <span class="processo_etapa_label">Triagem</span>
+                                    </div>
+                                    <div class="processo_conector processo_conector_pendente"></div>
+                                </div>
+                                <div class="processo_etapa">
+                                    <div class="processo_etapa_coluna">
+                                        <div class="processo_passo processo_passo_pendente"><span>2</span></div>
+                                        <span class="processo_etapa_label">Teste Técnico</span>
+                                    </div>
+                                    <div class="processo_conector processo_conector_pendente"></div>
+                                </div>
+                                <div class="processo_etapa">
+                                    <div class="processo_etapa_coluna">
+                                        <div class="processo_passo processo_passo_pendente"><span>3</span></div>
+                                        <span class="processo_etapa_label">Entrevista</span>
+                                    </div>
+                                    <div class="processo_conector processo_conector_pendente"></div>
+                                </div>
+                                <div class="processo_etapa processo_etapa_ultima">
+                                    <div class="processo_etapa_coluna">
+                                        <div class="processo_passo processo_passo_pendente"><span>4</span></div>
+                                        <span class="processo_etapa_label">Proposta</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Candidatura 2: Product Designer -->
+                    <div class="candidatura_card cartao_hover">
+                        <div class="candidatura_topo">
+                            <div class="candidatura_info">
+                                <div class="candidatura_titulo_linha">
+                                    <a href="#" class="candidatura_titulo_link">Product Designer Pleno</a>
+                                    <span class="status_emblema status_teste">Teste Técnico</span>
+                                </div>
+                                <div class="vaga_empresa">
+                                    <i class="fa-solid fa-building"></i>
+                                    <span>TechFlow Solutions</span>
+                                </div>
+                                <div class="candidatura_meta">
+                                    <div class="vaga_meta_item">
+                                        <i class="fa-regular fa-calendar"></i>
+                                        <span>Candidatura enviada em 05/01/2026</span>
+                                    </div>
+                                    <div class="vaga_meta_item">
+                                        <i class="fa-solid fa-location-dot"></i>
+                                        <span>Luanda, LA</span>
+                                    </div>
+                                    <div class="vaga_meta_item vaga_meta_salario">
+                                        <i class="fa-solid fa-sack-dollar"></i>
+                                        <span>$ 8.000 - $ 12.000</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="vaga_acoes">
+                                <a href="#" class="btn_contorno btn_pequeno">Ver Vaga</a>
+                            </div>
+                        </div>
+                        <!-- Trilha de progresso -->
+                        <div class="candidatura_progresso_area">
+                            <div class="processo_trilha">
+                                <div class="processo_etapa">
+                                    <div class="processo_etapa_coluna">
+                                        <div class="processo_passo processo_passo_concluido">
+                                            <i class="fa-solid fa-check"></i>
+                                        </div>
+                                        <span class="processo_etapa_label">Triagem</span>
+                                    </div>
+                                    <div class="processo_conector processo_conector_concluido"></div>
+                                </div>
+                                <div class="processo_etapa">
+                                    <div class="processo_etapa_coluna">
+                                        <div class="processo_passo processo_passo_atual"><span>2</span></div>
+                                        <span class="processo_etapa_label">Teste Técnico</span>
+                                    </div>
+                                    <div class="processo_conector processo_conector_pendente"></div>
+                                </div>
+                                <div class="processo_etapa">
+                                    <div class="processo_etapa_coluna">
+                                        <div class="processo_passo processo_passo_pendente"><span>3</span></div>
+                                        <span class="processo_etapa_label">Entrevista</span>
+                                    </div>
+                                    <div class="processo_conector processo_conector_pendente"></div>
+                                </div>
+                                <div class="processo_etapa processo_etapa_ultima">
+                                    <div class="processo_etapa_coluna">
+                                        <div class="processo_passo processo_passo_pendente"><span>4</span></div>
+                                        <span class="processo_etapa_label">Proposta</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /candidaturas_lista -->
+
+            </div>
+            <!-- /painel_candidaturas -->
+
+        </div>
+    </main>
+
+    <script src="../js/dashboard_candidato.js"></script>
+</body>
+
+</html>

@@ -3,7 +3,6 @@
    Estilos completos sem Bootstrap ou Tailwind.
    Nomenclatura em português no padrão snake_case.
    ============================================================ */
-
 /* ---- Variáveis de design ---- */
 :root {
     --fundo: hsl(210, 20%, 98%);
