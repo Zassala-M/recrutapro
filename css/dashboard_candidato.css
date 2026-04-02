@@ -630,13 +630,6 @@ button {
     padding: 1.5rem;
 }
 
-@media (max-width: 378px) {
-    .stats_grade {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-
 .stat_card_interno {
     display: flex;
     align-items: flex-start;

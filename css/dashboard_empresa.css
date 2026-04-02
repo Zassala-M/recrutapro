@@ -644,12 +644,6 @@ button {
     }
 }
 
-@media (max-width: 378px) {
-    .stats_grade {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
 .stat_card {
     background-color: var(--cartao);
     border-radius: var(--raio);
