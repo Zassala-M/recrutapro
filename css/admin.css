@@ -1,6 +1,5 @@
 /* ============================================================
-   dashboard_empresa.css — RecrutaPro / Dashboard Empresa
-   Estilos completos sem Bootstrap ou Tailwind.
+   admin.css — RecrutaPro / Dashboard Admin
    Nomenclatura em português no padrão snake_case.
    ============================================================ */
 
@@ -569,6 +568,7 @@ button {
     justify-content: center;
 }
 
+
 /* ============================================================
    CONTEÚDO PRINCIPAL
    ============================================================ */
@@ -716,454 +716,181 @@ button {
 }
 
 /* ============================================================
-   PAINEL GRADE
+   GRADE DE GRÁFICOS
    ============================================================ */
-.painel_grade {
+.graficos_grade {
     display: grid;
-    gap: 2rem;
+    gap: 1.5rem;
 }
 
 @media (min-width: 1024px) {
-    .painel_grade {
-        grid-template-columns: 1fr 2fr;
+    .graficos_grade {
+        grid-template-columns: 1fr 360px;
         align-items: start;
     }
 }
 
-.painel_card {
+.grafico_card {
     background-color: var(--cartao);
-    border-radius: var(--raio);
     border: 1px solid var(--borda);
+    border-radius: var(--raio);
     padding: 1.5rem;
 }
 
-.painel_titulo {
-    font-size: 1.0625rem;
+.grafico_titulo {
+    font-size: 0.9375rem;
     font-weight: 600;
     color: var(--primeiro_plano);
     margin-bottom: 1rem;
 }
 
-/* Lista de vagas (filtro lateral) */
-.vagas_filtro_lista {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.vaga_filtro_item {
+/* Gráfico de barras */
+.grafico_barras_area {
     width: 100%;
-    text-align: left;
-    padding: 0.75rem;
-    border-radius: 0.5rem;
-    cursor: pointer;
-    transition: background-color 0.2s;
-    border: none;
-    background: none;
-    font-family: inherit;
-}
-
-.vaga_filtro_item:hover {
-    background-color: hsl(172, 66%, 95%, 0.5);
-}
-
-.vaga_filtro_item_ativo {
-    background-color: var(--acento);
-}
-
-.vaga_filtro_cabecalho {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 0.5rem;
-    margin-bottom: 0.25rem;
-}
-
-.vaga_filtro_nome {
-    font-weight: 500;
-    color: var(--primeiro_plano);
-    font-size: 0.9375rem;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-}
-
-.vaga_filtro_count {
-    font-size: 0.8125rem;
-    color: var(--mudo_frente);
-    display: block;
-}
-
-/* ============================================================
-   CANDIDATURAS — cabeçalho com filtros
-   ============================================================ */
-.candidaturas_cabecalho {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
-}
-
-@media (min-width: 640px) {
-    .candidaturas_cabecalho {
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-}
-
-.candidaturas_filtros {
-    display: flex;
-    gap: 0.625rem;
-    flex-wrap: wrap;
-}
-
-.busca_campo_wrapper {
+    height: 280px;
     position: relative;
 }
 
-.busca_icone {
-    position: absolute;
-    left: 0.75rem;
-    top: 50%;
-    transform: translateY(-50%);
-    color: var(--mudo_frente);
-    font-size: 0.8rem;
-    pointer-events: none;
+.grafico_canvas {
+    width: 100% !important;
+    height: 100% !important;
 }
 
-.busca_input {
-    padding-left: 2.25rem;
-}
-
-.campo_texto {
-    width: 100%;
-    padding: 0.5rem 1.75rem;
-    border-radius: var(--raio);
-    border: 1.5px solid var(--borda);
-    background-color: var(--cartao);
-    color: var(--primeiro_plano);
-    font-size: 0.8rem;
-    font-family: inherit;
-    outline: none;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-
-.campo_texto::placeholder {
-    color: var(--mudo_frente);
-}
-
-.campo_texto:focus {
-    border-color: var(--primario);
-    box-shadow: 0 0 0 3px hsl(172 66% 40% / 0.12);
-}
-
-.campo_select {
-    padding: 0.5rem 2rem 0.5rem 0.75rem;
-    border-radius: var(--raio);
-    border: 1.5px solid var(--borda);
-    background-color: var(--cartao);
-    color: var(--primeiro_plano);
-    font-size: 0.8rem;
-    font-family: inherit;
-    appearance: none;
-    -webkit-appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 0.5rem center;
-    background-size: 0.875rem;
-    cursor: pointer;
-    outline: none;
-    transition: border-color 0.2s;
-    white-space: nowrap;
-}
-
-.campo_select:focus {
-    border-color: var(--primario);
-}
-
-/* ============================================================
-   CANDIDATOS — lista e cards
-   ============================================================ */
-.candidatos_lista {
+/* Coluna direita */
+.graficos_coluna_direita {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
-.candidato_card {
-    background-color: var(--cartao);
-    border-radius: var(--raio);
-    border: 1px solid var(--borda);
-    padding: 1.5rem;
-    overflow: hidden;
-}
-
-.candidato_card.oculto {
-    display: none;
-}
-
-.candidato_topo {
+/* ---- Donut ---- */
+.donut_wrapper {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
 }
 
-.candidato_id_grupo {
+.donut_canvas {
+    width: 180px !important;
+    height: 180px !important;
+}
+
+.donut_legenda {
     display: flex;
-    align-items: flex-start;
-    gap: 1rem;
-    flex: 1;
-    min-width: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
 }
 
-.candidato_avatar {
-    width: 3rem;
-    height: 3rem;
+.donut_legenda_item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+}
+
+.donut_cor {
+    width: 0.625rem;
+    height: 0.625rem;
     border-radius: 50%;
-    background-color: var(--acento);
-    color: var(--acento_frente);
+    flex-shrink: 0;
+}
+
+.donut_legenda_texto {
+    color: var(--mudo_frente);
+    flex: 1;
+}
+
+.donut_legenda_valor {
+    font-weight: 600;
+    color: var(--primeiro_plano);
+}
+
+/* ---- Atividade Recente ---- */
+.atividade_lista {
+    display: flex;
+    flex-direction: column;
+}
+
+.atividade_item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.625rem 0;
+    border-bottom: 1px solid var(--borda);
+}
+
+.atividade_item:last-child {
+    border-bottom: none;
+}
+
+.atividade_avatar {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-weight: 600;
-    font-size: 1.0625rem;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: hsl(168, 76%, 42%, 0.12);
+    color: var(--primario);
+    font-size: 0.6875rem;
+    font-weight: 700;
     flex-shrink: 0;
 }
 
-.candidato_avatar_rejeitado {
-    background-color: hsl(0, 84%, 60%, 0.12);
-    color: var(--destructivo);
-}
-
-.candidato_info {
+.atividade_info {
     flex: 1;
     min-width: 0;
 }
 
-.candidato_nome {
-    font-weight: 600;
-    color: var(--primeiro_plano);
-    font-size: 0.9375rem;
-}
-
-.candidato_contatos {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem 1rem;
-    margin-top: 0.375rem;
-}
-
-.candidato_contato_item {
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
+.atividade_texto {
     font-size: 0.8125rem;
-    color: var(--mudo_frente);
-}
-
-.candidato_contato_item i {
-    font-size: 0.75rem;
-    flex-shrink: 0;
-}
-
-/* Status wrapper com dropdown */
-.candidato_status_wrapper {
-    position: relative;
-    flex-shrink: 0;
-}
-
-.candidato_status_btn {
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-}
-
-.status_seta {
-    font-size: 0.75rem;
-    color: var(--mudo_frente);
-    transition: transform 0.2s ease;
-}
-
-.status_seta.aberto {
-    transform: rotate(180deg);
-}
-
-/* Dropdown de status */
-.status_dropdown {
-    display: none;
-    position: absolute;
-    right: 0;
-    top: calc(100% + 0.375rem);
-    background-color: var(--cartao);
-    border: 1px solid var(--borda);
-    border-radius: var(--raio);
-    box-shadow: var(--sombra_lg);
-    z-index: 20;
-    min-width: 10rem;
-    overflow: hidden;
-    animation: dropdown_entrar 0.15s ease;
-}
-
-.status_dropdown.aberto {
-    display: block;
-}
-
-@keyframes dropdown_entrar {
-    from {
-        opacity: 0;
-        transform: translateY(-4px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.status_dropdown_item {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 0.625rem 1rem;
-    font-size: 0.875rem;
-    color: var(--primeiro_plano);
-    border: none;
-    background: none;
-    font-family: inherit;
-    cursor: pointer;
-    transition: background-color 0.15s;
-}
-
-.status_dropdown_item:hover {
-    background-color: var(--acento);
-}
-
-/* Detalhes (grade 2 colunas) */
-.candidato_detalhes_grade {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 0.625rem;
-    margin-top: 1rem;
-    font-size: 0.8125rem;
-}
-
-@media (max-width: 480px) {
-    .candidato_detalhes_grade {
-        grid-template-columns: 1fr;
-    }
-}
-
-.candidato_detalhe_item {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    color: var(--mudo_frente);
-    overflow: hidden;
-}
-
-.candidato_detalhe_item i {
-    font-size: 0.875rem;
-    flex-shrink: 0;
-}
-
-.candidato_detalhe_item span {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-/* Botão "Ver mais detalhes" */
-.candidato_ver_mais_btn {
-    display: flex;
-    align-items: center;
-    gap: 0.375rem;
-    margin-top: 1rem;
-    color: var(--primario);
-    font-size: 0.875rem;
-    font-weight: 500;
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    transition: text-decoration 0.2s;
-}
-
-.candidato_ver_mais_btn:hover {
-    text-decoration: underline;
-}
-
-.candidato_ver_mais_icone {
-    font-size: 0.75rem;
-    transition: transform 0.25s ease;
-}
-
-.candidato_ver_mais_icone.aberto {
-    transform: rotate(180deg);
-}
-
-/* Área de expansão */
-.candidato_expansao {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.35s ease;
-}
-
-.candidato_expansao.aberto {
-    max-height: 10rem;
-}
-
-.candidato_expansao_conteudo {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 0.375rem 0.875rem;
-    padding-top: 1rem;
-    border-top: 1px solid var(--borda);
-    margin-top: 1rem;
-    font-size: 0.875rem;
-}
-
-.candidato_expansao_label {
-    font-weight: 500;
-    color: var(--primeiro_plano);
-    white-space: nowrap;
-}
-
-.candidato_expansao_texto {
+.atividade_descricao {
     color: var(--mudo_frente);
 }
 
-/* Sem resultados */
-.sem_resultados {
-    display: none;
+.atividade_tempo {
+    font-size: 0.6875rem;
+    color: var(--mudo_frente);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+/* ============================================================
+   SEÇÃO PLACEHOLDER (Candidatos / Empresas / Config)
+   ============================================================ */
+.secao_placeholder {
+    display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 3rem 1rem;
-    gap: 0.5rem;
+    padding: 5rem 1.5rem;
+    gap: 1rem;
+    background-color: var(--cartao);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
 }
 
-.sem_resultados.visivel {
-    display: flex;
-}
-
-.sem_resultados_icone {
-    font-size: 2.5rem;
-    color: var(--mudo_frente);
+.secao_placeholder_icone {
+    font-size: 3rem;
+    color: var(--primario);
     opacity: 0.5;
 }
 
-.sem_resultados_titulo {
+.secao_placeholder_titulo {
+    font-size: 1.25rem;
     font-weight: 600;
     color: var(--primeiro_plano);
 }
 
-.sem_resultados_texto {
-    font-size: 0.875rem;
+.secao_placeholder_texto {
+    font-size: 0.9375rem;
     color: var(--mudo_frente);
+    max-width: 36rem;
+    line-height: 1.6;
 }

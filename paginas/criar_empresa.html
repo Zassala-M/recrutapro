@@ -4,11 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Criar Perfil — Recruta Pro</title>
-    <meta name="description" content="Crie seu perfil no RecrutaPro e encontre a vaga ideal para você.">
-    <meta name="author" content="Zassala Mário & Silva">
-    <meta property="og:title" content="Criar Perfil — Recruta Pro">
-    <meta property="og:description" content="Cadastre-se e encontre a vaga ideal para você.">
+    <title>Cadastrar Empresa — Recruta Pro</title>
+    <meta name="description"
+        content="Crie sua conta empresarial no RecrutaPro e comece a recrutar os melhores talentos.">
+    <meta name="author" content="Zassala Mário & Ivandro Silva">
+    <meta property="og:title" content="Cadastrar Empresa — Recruta Pro">
+    <meta property="og:description" content="Crie sua conta e comece a recrutar os melhores talentos.">
     <meta property="og:type" content="website">
 
     <!-- Google Fonts -->
@@ -20,7 +21,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <!-- Estilos da página -->
-    <link rel="stylesheet" href="../css/criar_perfil.css">
+    <link rel="stylesheet" href="../css/criar_empresa.css">
 </head>
 
 <body>
@@ -47,8 +48,8 @@
 
                 <!-- Botões Desktop -->
                 <div class="cabecalho_acoes">
-                    <a href="criar_perfil.html" class="btn_fantasma nav_ativo">Sou Candidato</a>
-                    <a href="criar_empresa.html" class="btn_primario">Sou Empresa</a>
+                    <a href="criar_perfil.html" class="btn_fantasma">Sou Candidato</a>
+                    <a href="criar_empresa.html" class="btn_primario btn_ativo">Sou Empresa</a>
                 </div>
 
                 <!-- Botão Menu Mobile -->
@@ -90,34 +91,34 @@
                     <!-- Cabeçalho do card -->
                     <div class="formulario_cabecalho">
                         <div class="formulario_icone_box">
-                            <i class="fa-solid fa-user"></i>
+                            <i class="fa-solid fa-building-columns"></i>
                         </div>
-                        <h1 class="formulario_titulo">Crie seu Perfil</h1>
-                        <p class="formulario_subtitulo">Cadastre-se e encontre a vaga ideal para você</p>
+                        <h1 class="formulario_titulo">Cadastre sua Empresa</h1>
+                        <p class="formulario_subtitulo">Crie sua conta e comece a recrutar os melhores talentos</p>
                     </div>
 
                     <!-- ---- Formulário ---- -->
-                    <form class="formulario" id="formulario_cadastro" novalidate>
+                    <form class="formulario" id="formulario_empresa" novalidate>
 
                         <div class="campos_grade">
 
-                            <!-- Nome Completo -->
+                            <!-- Nome da Empresa -->
                             <div class="campo_grupo campo_coluna_dupla">
                                 <label class="campo_label" for="campo_nome">
-                                    Nome Completo <span class="campo_obrigatorio">*</span>
+                                    Nome da Empresa <span class="campo_obrigatorio">*</span>
                                 </label>
                                 <input type="text" id="campo_nome" name="nome" class="campo_texto"
-                                    placeholder="Ex: Zassala Mário Domingos Bunga" autocomplete="name" required>
+                                    placeholder="Ex: TechFlow Solutions" autocomplete="organization" required>
                                 <span class="campo_erro" id="erro_nome"></span>
                             </div>
 
-                            <!-- E-mail -->
+                            <!-- E-mail Corporativo -->
                             <div class="campo_grupo">
                                 <label class="campo_label" for="campo_email">
-                                    E-mail <span class="campo_obrigatorio">*</span>
+                                    E-mail Corporativo <span class="campo_obrigatorio">*</span>
                                 </label>
                                 <input type="email" id="campo_email" name="email" class="campo_texto"
-                                    placeholder="seunome@gmail.com" autocomplete="email" required>
+                                    placeholder="contato@empresa.com.ao" autocomplete="email" required>
                                 <span class="campo_erro" id="erro_email"></span>
                             </div>
 
@@ -161,7 +162,7 @@
                                     <input type="password" id="campo_confirmar_senha" name="confirmarSenha"
                                         class="campo_texto campo_com_icone_dir" placeholder="Repita a senha"
                                         autocomplete="new-password" required>
-                                    <button type="button" class="campo_senha_toggle" id="toggle_confirmar_senha"
+                                    <button type="button" class="campo_senha_toggle" id="toggle_confirmar"
                                         aria-label="Mostrar senha">
                                         <i class="fa-regular fa-eye" id="icone_toggle_confirmar"></i>
                                     </button>
@@ -173,55 +174,30 @@
                             <div class="campo_grupo campo_coluna_dupla">
                                 <label class="campo_label" for="campo_endereco">Endereço</label>
                                 <input type="text" id="campo_endereco" name="endereco" class="campo_texto"
-                                    placeholder="Bairro, Província" autocomplete="address-level2">
+                                    placeholder="Bairro, Província" autocomplete="street-address">
                             </div>
 
-                            <!-- Formação Acadêmica -->
+                            <!-- Área de Atuação -->
                             <div class="campo_grupo campo_coluna_dupla">
-                                <label class="campo_label" for="campo_formacao">
-                                    Formação Acadêmica <span class="campo_obrigatorio">*</span>
+                                <label class="campo_label" for="campo_area">
+                                    Área de Atuação <span class="campo_obrigatorio">*</span>
                                 </label>
-                                <input type="text" id="campo_formacao" name="formacao" class="campo_texto"
-                                    placeholder="Ex: Bacharel em Engenharia Informática - IPGEST (2025)" required>
-                                <span class="campo_erro" id="erro_formacao"></span>
-                            </div>
-
-                            <!-- Experiência Profissional -->
-                            <div class="campo_grupo campo_coluna_dupla">
-                                <label class="campo_label" for="campo_experiencia">
-                                    Experiência Profissional <span class="campo_obrigatorio">*</span>
-                                </label>
-                                <textarea id="campo_experiencia" name="experiencia" class="campo_texto campo_textarea"
-                                    placeholder="Descreva brevemente sua experiência profissional, tecnologias que domina e áreas de interesse..."
-                                    required></textarea>
-                                <span class="campo_erro" id="erro_experiencia"></span>
-                            </div>
-
-                            <!-- Upload do Currículo -->
-                            <div class="campo_grupo campo_coluna_dupla">
-                                <label class="campo_label">Upload do Currículo</label>
-
-                                <div class="upload_zona" id="upload_zona" role="button" tabindex="0"
-                                    aria-label="Clique ou arraste um arquivo para fazer upload">
-                                    <input type="file" id="campo_arquivo" name="arquivo" accept=".pdf,.doc,.docx"
-                                        class="upload_input_oculto">
-                                    <i class="fa-solid fa-cloud-arrow-up upload_icone" id="upload_icone_principal"></i>
-                                    <p class="upload_texto">
-                                        Arraste seu currículo ou
-                                        <span class="upload_link">clique para selecionar</span>
-                                    </p>
-                                    <p class="upload_info">PDF, DOC ou DOCX até 5MB</p>
-                                    <p class="upload_nome_arquivo" id="upload_nome_arquivo"></p>
+                                <div class="campo_select_wrapper">
+                                    <select id="campo_area" name="areaAtuacao" class="campo_select" required>
+                                        <option value="">Selecione a área</option>
+                                        <option value="Tecnologia da Informação">Tecnologia da Informação</option>
+                                        <option value="Marketing Digital">Marketing Digital</option>
+                                        <option value="Serviços Financeiros">Serviços Financeiros</option>
+                                        <option value="E-commerce">E-commerce</option>
+                                        <option value="Saúde">Saúde</option>
+                                        <option value="Educação">Educação</option>
+                                        <option value="Consultoria">Consultoria</option>
+                                        <option value="Indústria">Indústria</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down campo_select_icone"></i>
                                 </div>
-
-                                <div class="campo_grupo_interno">
-                                    <label class="campo_label_sm" for="campo_curriculo_link">
-                                        <i class="fa-solid fa-link campo_label_icone"></i>
-                                        Ou cole o link do seu currículo (LinkedIn, Drive, etc)
-                                    </label>
-                                    <input type="url" id="campo_curriculo_link" name="curriculo" class="campo_texto"
-                                        placeholder="https://linkedin.com/in/seu-perfil">
-                                </div>
+                                <span class="campo_erro" id="erro_area"></span>
                             </div>
 
                         </div>
@@ -243,14 +219,14 @@
 
                         <!-- Botão submit -->
                         <button type="submit" class="btn_primario btn_bloco btn_grande" id="btn_submit">
-                            <span id="btn_submit_texto">Criar Perfil</span>
+                            <span id="btn_submit_texto">Criar Conta</span>
                             <i class="fa-solid fa-arrow-right" id="icone_submit"></i>
                         </button>
 
                         <!-- Link login -->
                         <p class="formulario_rodape_texto">
                             Já possui uma conta?
-                            <a href="#" class="formulario_link">Fazer login</a>
+                            <a href="dashboard_empresa.html" class="formulario_link">Fazer login</a>
                         </p>
 
                     </form>
@@ -258,23 +234,23 @@
 
                     <!-- Benefícios -->
                     <div class="beneficios_bloco">
-                        <p class="beneficios_titulo">Com seu perfil, você poderá:</p>
+                        <p class="beneficios_titulo">Ao criar sua conta, você terá acesso a:</p>
                         <div class="beneficios_grade">
                             <div class="beneficio_item">
                                 <i class="fa-solid fa-circle-check beneficio_icone"></i>
-                                <span>Candidatar-se a vagas</span>
+                                <span>Publicação ilimitada de vagas</span>
                             </div>
                             <div class="beneficio_item">
                                 <i class="fa-solid fa-circle-check beneficio_icone"></i>
-                                <span>Acompanhar processos</span>
+                                <span>Dashboard de gestão</span>
                             </div>
                             <div class="beneficio_item">
                                 <i class="fa-solid fa-circle-check beneficio_icone"></i>
-                                <span>Receber notificações</span>
+                                <span>Filtros avançados</span>
                             </div>
                             <div class="beneficio_item">
                                 <i class="fa-solid fa-circle-check beneficio_icone"></i>
-                                <span>Salvar vagas favoritas</span>
+                                <span>Métricas em tempo real</span>
                             </div>
                         </div>
                     </div>
@@ -286,7 +262,7 @@
         </div>
     </main>
 
-    <script src="../js/criar_perfil.js"></script>
+    <script src="../js/criar_empresa.js"></script>
 </body>
 
 </html>

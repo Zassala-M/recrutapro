@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin — Recruta Pro</title>
+    <meta name="description" content="Dashboard administrativa no RecrutaPro. Gerenciamento de empresas e candidatos.">
+    <meta name="author" content="Zassala Mário & Ivandro Silva">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Estilos da página -->
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+    <!-- ========== OVERLAY MOBILE ========== -->
+    <div class="sidebar_overlay" id="sidebar_overlay"></div>
+
+    <!-- ========== SIDEBAR ========== -->
+    <aside class="sidebar" id="sidebar">
+        <div class="sidebar_corpo">
+
+            <!-- Logo -->
+            <div class="sidebar_logo_area">
+                <a href="../index.html" class="sidebar_logo">
+                    <div class="sidebar_logo_icone">
+                        <i class="fa-solid fa-briefcase"></i>
+                    </div>
+                    <span class="sidebar_logo_texto">Recruta<span class="sidebar_logo_destaque">Pro</span></span>
+                </a>
+            </div>
+
+            <!-- Perfil da empresa -->
+            <div class="sidebar_perfil">
+                <div class="sidebar_avatar">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+                <div class="sidebar_perfil_info">
+                    <p class="sidebar_perfil_nome">Zassala Mário</p>
+                    <p class="sidebar_perfil_papel">Admin</p>
+                </div>
+            </div>
+
+            <!-- Navegação principal -->
+            <nav class="sidebar_nav" aria-label="Navegação do dashboard">
+                <a href="admin.html" class="sidebar_nav_link sidebar_nav_link_ativo">
+                    <i class="fa-solid fa-table-columns"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="sidebar_nav_link">
+                    <i class="fa-solid fa-building-columns"></i>
+                    <span>Empresas</span>
+                </a>
+                <a href="#" class="sidebar_nav_link">
+                    <i class="fa-solid fa-users"></i>
+                    <span>Candidatos</span>
+                </a>
+                <a href="#" class="sidebar_nav_link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Configurações</span>
+                </a>
+            </nav>
+
+            <!-- Rodapé da sidebar -->
+            <div class="sidebar_rodape">
+                <button class="sidebar_nav_link sidebar_nav_link_btn" id="btn_notificacoes">
+                    <i class="fa-solid fa-bell"></i>
+                    <span>Notificações</span>
+                    <span class="sidebar_badge">12</span>
+                </button>
+                <a href="../index.html" class="sidebar_nav_link sidebar_nav_link_sair">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Sair</span>
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Botão recolher (desktop) -->
+        <button class="sidebar_toggle_btn" id="sidebar_toggle_btn" aria-label="Recolher menu">
+            <i class="fa-solid fa-chevron-left" id="sidebar_toggle_icone"></i>
+        </button>
+    </aside>
+
+    <!-- ========== TOPBAR MOBILE ========== -->
+    <header class="topbar_mobile" id="topbar_mobile">
+        <button class="topbar_hamburger" id="btn_sidebar_mobile" aria-label="Abrir menu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <a href="../index.html" class="topbar_logo">
+            <div class="sidebar_logo_icone topbar_logo_icone">
+                <i class="fa-solid fa-briefcase"></i>
+            </div>
+            <span class="sidebar_logo_texto topbar_logo_texto">Recruta<span
+                    class="sidebar_logo_destaque">Pro</span></span>
+        </a>
+        <div class="topbar_acoes">
+            <button class="topbar_btn_icone" aria-label="Notificações">
+                <i class="fa-solid fa-bell"></i>
+                <span class="topbar_badge">12</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="conteudo_principal" id="conteudo_principal">
+        <div class="conteudo_interno">
+            <!-- Cabeçalho da página -->
+            <div class="pagina_cabecalho">
+                <div class="pagina_cabecalho_info">
+                    <h1 class="pagina_titulo">Dashboard</h1>
+                    <p class="pagina_subtitulo">Bem-vindo de volta, <strong>Zassala Mário</strong></p>
+                </div>
+            </div>
+
+            <div class="stats_grade">
+
+                <div class="stat_card cartao_hover">
+                    <div class="stat_card_interno">
+                        <div class="stat_info">
+                            <p class="stat_label">Total de Candidatos</p>
+                            <p class="stat_valor">2,877</p>
+                            <p class="stat_variacao stat_variacao_positiva">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                +12% vs mês anterior
+                            </p>
+                        </div>
+                        <div class="stat_icone_box">
+                            <i class="fa-solid fa-users stat_icone"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat_card cartao_hover">
+                    <div class="stat_card_interno">
+                        <div class="stat_info">
+                            <p class="stat_label">Empresas Ativas</p>
+                            <p class="stat_valor">5</p>
+                            <p class="stat_variacao stat_variacao_positiva">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                +23% vs mês anterior
+                            </p>
+                        </div>
+                        <div class="stat_icone_box">
+                            <i class="fa-solid fa-building-columns stat_icone"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat_card cartao_hover">
+                    <div class="stat_card_interno">
+                        <div class="stat_info">
+                            <p class="stat_label">Vagas Abertas</p>
+                            <p class="stat_valor">387</p>
+                            <p class="stat_variacao stat_variacao_positiva">
+                                <i class="fa-solid fa-arrow-trend-up"></i>
+                                +13% vs mês anterior
+                            </p>
+                        </div>
+                        <div class="stat_icone_box">
+                            <i class="fa-solid fa-briefcase stat_icone"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="stat_card cartao_hover">
+                    <div class="stat_card_interno">
+                        <div class="stat_info">
+                            <p class="stat_label">Contratações/Mês</p>
+                            <p class="stat_valor">10%</p>
+                            <p class="stat_variacao stat_variacao_negativa">
+                                <i class="fa-solid fa-arrow-trend-down"></i>
+                                -5% vs mês anterior
+                            </p>
+                        </div>
+                        <div class="stat_icone_box">
+                            <i class="fa-solid fa-chart-line stat_icone"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /stats_grade -->
+
+            <!-- Grade inferior: Gráfico + Donut + Atividade -->
+            <div class="graficos_grade">
+
+                <!-- Gráfico de barras: Candidaturas por Mês -->
+                <div class="grafico_card grafico_card_largo">
+                    <h3 class="grafico_titulo">Candidaturas por Mês</h3>
+                    <div class="grafico_barras_area">
+                        <canvas id="canvas_barras" class="grafico_canvas"
+                            aria-label="Gráfico de candidaturas por mês"></canvas>
+                    </div>
+                </div>
+
+                <!-- Coluna direita: Donut + Atividade -->
+                <div class="graficos_coluna_direita">
+
+                    <!-- Donut: Vagas por Setor -->
+                    <div class="grafico_card">
+                        <h3 class="grafico_titulo">Vagas por Setor</h3>
+                        <div class="donut_wrapper">
+                            <canvas id="canvas_donut" class="donut_canvas"
+                                aria-label="Gráfico de vagas por setor"></canvas>
+                        </div>
+                        <div class="donut_legenda">
+                            <div class="donut_legenda_item">
+                                <span class="donut_cor" style="background: hsl(168, 76%, 42%);"></span>
+                                <span class="donut_legenda_texto">Tecnologia</span>
+                                <span class="donut_legenda_valor">40%</span>
+                            </div>
+                            <div class="donut_legenda_item">
+                                <span class="donut_cor" style="background: hsl(195, 80%, 50%);"></span>
+                                <span class="donut_legenda_texto">Marketing</span>
+                                <span class="donut_legenda_valor">25%</span>
+                            </div>
+                            <div class="donut_legenda_item">
+                                <span class="donut_cor" style="background: hsl(38, 92%, 50%);"></span>
+                                <span class="donut_legenda_texto">Vendas</span>
+                                <span class="donut_legenda_valor">20%</span>
+                            </div>
+                            <div class="donut_legenda_item">
+                                <span class="donut_cor" style="background: hsl(220, 14%, 40%);"></span>
+                                <span class="donut_legenda_texto">Outros</span>
+                                <span class="donut_legenda_valor">15%</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Atividade Recente -->
+                    <div class="grafico_card">
+                        <h3 class="grafico_titulo">Atividade Recente</h3>
+                        <ul class="atividade_lista">
+
+                            <li class="atividade_item">
+                                <div class="atividade_avatar">SC</div>
+                                <div class="atividade_info">
+                                    <p class="atividade_texto">
+                                        <strong>Sandra Cafala</strong>
+                                        <span class="atividade_descricao"> candidatou-se a Dev Frontend</span>
+                                    </p>
+                                </div>
+                                <span class="atividade_tempo">2 min</span>
+                            </li>
+
+                            <li class="atividade_item">
+                                <div class="atividade_avatar">T</div>
+                                <div class="atividade_info">
+                                    <p class="atividade_texto">
+                                        <strong>TechCorp</strong>
+                                        <span class="atividade_descricao"> publicou nova vaga</span>
+                                    </p>
+                                </div>
+                                <span class="atividade_tempo">15 min</span>
+                            </li>
+
+                            <li class="atividade_item">
+                                <div class="atividade_avatar">DB</div>
+                                <div class="atividade_info">
+                                    <p class="atividade_texto">
+                                        <strong>Daniel Bunga</strong>
+                                        <span class="atividade_descricao"> foi contratado</span>
+                                    </p>
+                                </div>
+                                <span class="atividade_tempo">1h</span>
+                            </li>
+
+                            <li class="atividade_item">
+                                <div class="atividade_avatar">S</div>
+                                <div class="atividade_info">
+                                    <p class="atividade_texto">
+                                        <strong>StartupXYZ</strong>
+                                        <span class="atividade_descricao"> atualizou perfil</span>
+                                    </p>
+                                </div>
+                                <span class="atividade_tempo">2h</span>
+                            </li>
+
+                            <li class="atividade_item">
+                                <div class="atividade_avatar">AC</div>
+                                <div class="atividade_info">
+                                    <p class="atividade_texto">
+                                        <strong>Ana Bela Cafala</strong>
+                                        <span class="atividade_descricao"> completou perfil</span>
+                                    </p>
+                                </div>
+                                <span class="atividade_tempo">3h</span>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+                <!-- /graficos_coluna_direita -->
+
+            </div>
+            <!-- /graficos_grade -->
+    </main>
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

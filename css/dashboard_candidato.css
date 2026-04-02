@@ -48,8 +48,10 @@
     --sidebar_borda: hsl(215, 28%, 20%);
 
     /* Largura da sidebar */
-    --sidebar_largura: 16rem;      /* 256px — expandida */
-    --sidebar_largura_recolhida: 5rem; /* 80px — recolhida */
+    --sidebar_largura: 16rem;
+    /* 256px — expandida */
+    --sidebar_largura_recolhida: 5rem;
+    /* 80px — recolhida */
 
     /* Gradientes e sombras */
     --gradiente_primario: linear-gradient(135deg, hsl(172, 66%, 40%) 0%, hsl(199, 89%, 48%) 100%);
@@ -62,7 +64,11 @@
 /* ---- Reset ---- */
 *,
 *::before,
-*::after { box-sizing: border-box; margin: 0; padding: 0; }
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 html {
     line-height: 1.5;
@@ -81,9 +87,22 @@ body {
     display: flex;
 }
 
-a { color: inherit; text-decoration: none; }
-ul, ol { list-style: none; }
-button { cursor: pointer; background: none; font-family: inherit; border: none; }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    font-family: inherit;
+    border: none;
+}
 
 /* ============================================================
    UTILITÁRIOS
@@ -91,6 +110,7 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 .cartao_hover {
     transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
+
 .cartao_hover:hover {
     transform: translateY(-2px);
     box-shadow: var(--sombra_lg);
@@ -116,8 +136,16 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     border: none;
     white-space: nowrap;
 }
-.btn_primario:hover { box-shadow: var(--sombra_brilho); transform: scale(1.02); }
-.btn_primario.btn_pequeno { padding: 0.5rem 1rem; font-size: 0.875rem; }
+
+.btn_primario:hover {
+    box-shadow: var(--sombra_brilho);
+    transform: scale(1.02);
+}
+
+.btn_primario.btn_pequeno {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+}
 
 .btn_contorno {
     display: inline-flex;
@@ -135,8 +163,17 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     cursor: pointer;
     white-space: nowrap;
 }
-.btn_contorno:hover { border-color: var(--primario); background-color: var(--acento); }
-.btn_contorno.btn_pequeno { padding: 0.5rem 1rem; font-size: 0.875rem; border-width: 1.5px; }
+
+.btn_contorno:hover {
+    border-color: var(--primario);
+    background-color: var(--acento);
+}
+
+.btn_contorno.btn_pequeno {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    border-width: 1.5px;
+}
 
 /* ============================================================
    OVERLAY MOBILE
@@ -149,8 +186,20 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     z-index: 39;
     animation: fade_in 0.2s ease;
 }
-.sidebar_overlay.visivel { display: block; }
-@keyframes fade_in { from { opacity: 0; } to { opacity: 1; } }
+
+.sidebar_overlay.visivel {
+    display: block;
+}
+
+@keyframes fade_in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 /* ============================================================
    SIDEBAR
@@ -175,6 +224,7 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
         transform: translateX(-100%);
         box-shadow: var(--sombra_lg);
     }
+
     .sidebar.aberta {
         transform: translateX(0);
     }
@@ -228,7 +278,9 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     transition: opacity 0.2s ease;
 }
 
-.sidebar_logo_destaque { color: var(--sidebar_primario); }
+.sidebar_logo_destaque {
+    color: var(--sidebar_primario);
+}
 
 .sidebar.recolhida .sidebar_logo_texto,
 .sidebar.recolhida .sidebar_perfil_info,
@@ -354,6 +406,7 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 .sidebar_nav_link_sair {
     color: var(--destructivo);
 }
+
 .sidebar_nav_link_sair:hover {
     background-color: hsl(0, 84%, 60%, 0.1);
     color: var(--destructivo);
@@ -372,7 +425,7 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 /* Botão toggle recolher (desktop) */
 .sidebar_toggle_btn {
     position: absolute;
-    right: -0.875rem;
+    right: -0.575rem;
     top: 5rem;
     width: 1.75rem;
     height: 1.75rem;
@@ -396,7 +449,9 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 }
 
 @media (max-width: 767px) {
-    .sidebar_toggle_btn { display: none; }
+    .sidebar_toggle_btn {
+        display: none;
+    }
 }
 
 /* ============================================================
@@ -420,7 +475,9 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 }
 
 @media (max-width: 767px) {
-    .topbar_mobile { display: flex; }
+    .topbar_mobile {
+        display: flex;
+    }
 }
 
 .topbar_hamburger {
@@ -437,7 +494,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     cursor: pointer;
     transition: background-color 0.2s;
 }
-.topbar_hamburger:hover { background-color: var(--mudo); }
+
+.topbar_hamburger:hover {
+    background-color: var(--mudo);
+}
 
 .topbar_logo {
     display: flex;
@@ -476,7 +536,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     cursor: pointer;
     transition: background-color 0.2s;
 }
-.topbar_btn_icone:hover { background-color: var(--mudo); }
+
+.topbar_btn_icone:hover {
+    background-color: var(--mudo);
+}
 
 .topbar_badge {
     position: absolute;
@@ -511,7 +574,8 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 @media (max-width: 767px) {
     .conteudo_principal {
         margin-left: 0;
-        padding-top: 3.75rem; /* altura da topbar mobile */
+        padding-top: 3.75rem;
+        /* altura da topbar mobile */
     }
 }
 
@@ -521,7 +585,9 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 }
 
 @media (min-width: 1024px) {
-    .conteudo_interno { padding: 2rem; }
+    .conteudo_interno {
+        padding: 2rem;
+    }
 }
 
 /* Cabeçalho da página */
@@ -552,7 +618,9 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 }
 
 @media (min-width: 1024px) {
-    .stats_grade { grid-template-columns: repeat(4, 1fr); }
+    .stats_grade {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 .stat_card {
@@ -562,6 +630,13 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     padding: 1.5rem;
 }
 
+@media (max-width: 378px) {
+    .stats_grade {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
 .stat_card_interno {
     display: flex;
     align-items: flex-start;
@@ -569,7 +644,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     gap: 0.75rem;
 }
 
-.stat_info { flex: 1; min-width: 0; }
+.stat_info {
+    flex: 1;
+    min-width: 0;
+}
 
 .stat_label {
     font-size: 0.8125rem;
@@ -628,7 +706,9 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     white-space: nowrap;
 }
 
-.aba_btn:hover { color: var(--primeiro_plano); }
+.aba_btn:hover {
+    color: var(--primeiro_plano);
+}
 
 .aba_btn_ativa {
     color: var(--primario);
@@ -645,8 +725,13 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 }
 
 /* Painéis */
-.aba_painel { display: block; }
-.aba_painel_oculto { display: none; }
+.aba_painel {
+    display: block;
+}
+
+.aba_painel_oculto {
+    display: none;
+}
 
 /* ============================================================
    FILTROS
@@ -659,7 +744,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 }
 
 @media (min-width: 640px) {
-    .filtros_barra { flex-direction: row; align-items: center; }
+    .filtros_barra {
+        flex-direction: row;
+        align-items: center;
+    }
 }
 
 .busca_campo_wrapper {
@@ -694,7 +782,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     transition: border-color 0.2s, box-shadow 0.2s;
 }
 
-.campo_texto::placeholder { color: var(--mudo_frente); }
+.campo_texto::placeholder {
+    color: var(--mudo_frente);
+}
+
 .campo_texto:focus {
     border-color: var(--primario);
     box-shadow: 0 0 0 3px hsl(172 66% 40% / 0.12);
@@ -721,7 +812,9 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     transition: border-color 0.2s;
 }
 
-.campo_select:focus { border-color: var(--primario); }
+.campo_select:focus {
+    border-color: var(--primario);
+}
 
 /* ============================================================
    LISTA DE VAGAS
@@ -739,7 +832,9 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     padding: 1.5rem;
 }
 
-.vaga_card.oculto { display: none; }
+.vaga_card.oculto {
+    display: none;
+}
 
 .vaga_card_topo {
     display: flex;
@@ -748,7 +843,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     gap: 1.25rem;
 }
 
-.vaga_info { flex: 1; min-width: 0; }
+.vaga_info {
+    flex: 1;
+    min-width: 0;
+}
 
 .vaga_titulo_linha {
     display: flex;
@@ -764,7 +862,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     color: var(--primeiro_plano);
     transition: color 0.2s;
 }
-.vaga_titulo_link:hover { color: var(--primario); }
+
+.vaga_titulo_link:hover {
+    color: var(--primario);
+}
 
 /* Status emblemas */
 .status_emblema {
@@ -778,13 +879,40 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     flex-shrink: 0;
 }
 
-.status_ativa    { background: hsl(142 71% 45% / 0.12); color: var(--sucesso); }
-.status_inativa  { background: var(--mudo);              color: var(--mudo_frente); }
-.status_triagem  { background: hsl(199 89% 48% / 0.12); color: var(--info); }
-.status_teste    { background: hsl(38 92% 50% / 0.12);  color: var(--aviso); }
-.status_entrevista { background: hsl(172 66% 40% / 0.12); color: var(--primario); }
-.status_aprovado { background: hsl(142 71% 45% / 0.12); color: var(--sucesso); }
-.status_rejeitado{ background: hsl(0 84% 60% / 0.12);   color: var(--destructivo); }
+.status_ativa {
+    background: hsl(142 71% 45% / 0.12);
+    color: var(--sucesso);
+}
+
+.status_inativa {
+    background: var(--mudo);
+    color: var(--mudo_frente);
+}
+
+.status_triagem {
+    background: hsl(199 89% 48% / 0.12);
+    color: var(--info);
+}
+
+.status_teste {
+    background: hsl(38 92% 50% / 0.12);
+    color: var(--aviso);
+}
+
+.status_entrevista {
+    background: hsl(172 66% 40% / 0.12);
+    color: var(--primario);
+}
+
+.status_aprovado {
+    background: hsl(142 71% 45% / 0.12);
+    color: var(--sucesso);
+}
+
+.status_rejeitado {
+    background: hsl(0 84% 60% / 0.12);
+    color: var(--destructivo);
+}
 
 .vaga_empresa {
     display: flex;
@@ -820,7 +948,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     color: var(--mudo_frente);
 }
 
-.vaga_meta_salario { color: var(--primario); font-weight: 600; }
+.vaga_meta_salario {
+    color: var(--primario);
+    font-weight: 600;
+}
 
 .vaga_acoes {
     display: flex;
@@ -830,9 +961,18 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 }
 
 @media (max-width: 639px) {
-    .vaga_card_topo { flex-direction: column; }
-    .vaga_acoes { flex-direction: row; width: 100%; }
-    .vaga_acoes .btn_pequeno { flex: 1; }
+    .vaga_card_topo {
+        flex-direction: column;
+    }
+
+    .vaga_acoes {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .vaga_acoes .btn_pequeno {
+        flex: 1;
+    }
 }
 
 .vaga_tags {
@@ -868,10 +1008,26 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     padding: 3rem 1rem;
     gap: 0.5rem;
 }
-.sem_resultados.visivel { display: flex; }
-.sem_resultados_icone { font-size: 2.5rem; color: var(--mudo_frente); opacity: 0.5; }
-.sem_resultados_titulo { font-weight: 600; color: var(--primeiro_plano); }
-.sem_resultados_texto  { font-size: 0.875rem; color: var(--mudo_frente); }
+
+.sem_resultados.visivel {
+    display: flex;
+}
+
+.sem_resultados_icone {
+    font-size: 2.5rem;
+    color: var(--mudo_frente);
+    opacity: 0.5;
+}
+
+.sem_resultados_titulo {
+    font-weight: 600;
+    color: var(--primeiro_plano);
+}
+
+.sem_resultados_texto {
+    font-size: 0.875rem;
+    color: var(--mudo_frente);
+}
 
 /* ============================================================
    CANDIDATURAS
@@ -897,7 +1053,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     margin-bottom: 1.25rem;
 }
 
-.candidatura_info { flex: 1; min-width: 0; }
+.candidatura_info {
+    flex: 1;
+    min-width: 0;
+}
 
 .candidatura_titulo_linha {
     display: flex;
@@ -913,7 +1072,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     color: var(--primeiro_plano);
     transition: color 0.2s;
 }
-.candidatura_titulo_link:hover { color: var(--primario); }
+
+.candidatura_titulo_link:hover {
+    color: var(--primario);
+}
 
 .candidatura_meta {
     display: flex;
@@ -924,8 +1086,14 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
 }
 
 @media (max-width: 639px) {
-    .candidatura_topo { flex-direction: column; }
-    .candidatura_topo .vaga_acoes { flex-direction: row; width: 100%; }
+    .candidatura_topo {
+        flex-direction: column;
+    }
+
+    .candidatura_topo .vaga_acoes {
+        flex-direction: row;
+        width: 100%;
+    }
 }
 
 /* ============================================================
@@ -944,7 +1112,10 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
-.processo_trilha::-webkit-scrollbar { display: none; }
+
+.processo_trilha::-webkit-scrollbar {
+    display: none;
+}
 
 .processo_etapa {
     display: flex;
@@ -953,7 +1124,9 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     min-width: 56px;
 }
 
-.processo_etapa_ultima { flex: 0 0 auto; }
+.processo_etapa_ultima {
+    flex: 0 0 auto;
+}
 
 .processo_etapa_coluna {
     display: flex;
@@ -974,9 +1147,20 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     flex-shrink: 0;
 }
 
-.processo_passo_pendente  { background-color: var(--mudo);    color: var(--mudo_frente); }
-.processo_passo_atual     { background-color: var(--primario); color: var(--primario_frente); }
-.processo_passo_concluido { background-color: var(--sucesso);  color: var(--sucesso_frente); }
+.processo_passo_pendente {
+    background-color: var(--mudo);
+    color: var(--mudo_frente);
+}
+
+.processo_passo_atual {
+    background-color: var(--primario);
+    color: var(--primario_frente);
+}
+
+.processo_passo_concluido {
+    background-color: var(--sucesso);
+    color: var(--sucesso_frente);
+}
 
 .processo_etapa_label {
     font-size: 0.6875rem;
@@ -993,5 +1177,11 @@ button { cursor: pointer; background: none; font-family: inherit; border: none; 
     margin: 0.9375rem 0.25rem 0;
     min-width: 0.75rem;
 }
-.processo_conector_pendente  { background-color: var(--mudo); }
-.processo_conector_concluido { background-color: var(--sucesso); }
+
+.processo_conector_pendente {
+    background-color: var(--mudo);
+}
+
+.processo_conector_concluido {
+    background-color: var(--sucesso);
+}
