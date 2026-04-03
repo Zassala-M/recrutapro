@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrar — Recruta Pro</title>
+    <meta name="description" content="Acesse o painel do RecrutaPro com suas credenciais.">
+    <meta name="author" content="Zassala Mário & Ivandro Silva">
+    <meta property="og:title" content="Entrar — Recruta Pro">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Estilos da página -->
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+
+<body>
+
+    <!-- ========== TELA DE LOGIN ========== -->
+    <div class="login_pagina">
+
+        <!-- Wrapper central -->
+        <div class="login_wrapper">
+
+            <!-- Logo -->
+            <a href="/" class="login_logo">
+                <div class="login_logo_icone">
+                    <i class="fa-solid fa-briefcase"></i>
+                </div>
+                <span class="login_logo_texto">Recruta<span class="login_logo_gradiente">Pro</span></span>
+            </a>
+
+            <!-- Card do formulário -->
+            <div class="login_card">
+
+                <!-- Cabeçalho -->
+                <div class="login_cabecalho">
+                    <h1 class="login_titulo">Bem-vindo de volta</h1>
+                    <p class="login_subtitulo">Entre com suas credenciais para acessar o painel</p>
+                </div>
+
+                <!-- Formulário -->
+                <form class="login_formulario" id="login_formulario" novalidate>
+
+                    <!-- Campo: Email -->
+                    <div class="campo_grupo">
+                        <label class="campo_label" for="campo_email">Email</label>
+                        <div class="campo_icone_wrapper">
+                            <i class="fa-regular fa-envelope campo_icone_esq"></i>
+                            <input type="email" id="campo_email" name="email" class="campo_texto"
+                                placeholder="seu@email.com" autocomplete="email" required>
+                        </div>
+                        <span class="campo_erro" id="erro_email"></span>
+                    </div>
+
+                    <!-- Campo: Senha -->
+                    <div class="campo_grupo">
+                        <label class="campo_label" for="campo_senha">Senha</label>
+                        <div class="campo_icone_wrapper">
+                            <i class="fa-solid fa-lock campo_icone_esq"></i>
+                            <input type="password" id="campo_senha" name="senha" class="campo_texto campo_com_icone_dir"
+                                placeholder="••••••••" autocomplete="current-password" required>
+                            <button type="button" class="campo_toggle_senha" id="toggle_senha"
+                                aria-label="Mostrar senha">
+                                <i class="fa-regular fa-eye" id="icone_toggle_senha"></i>
+                            </button>
+                        </div>
+                        <span class="campo_erro" id="erro_senha"></span>
+                    </div>
+
+                    <!-- Lembrar-me + Esqueci a senha -->
+                    <div class="login_opcoes">
+                        <label class="lembrar_label">
+                            <input type="checkbox" id="campo_lembrar" name="lembrar" class="lembrar_checkbox">
+                            <span class="lembrar_texto">Lembrar-me</span>
+                        </label>
+                        <button type="button" class="esqueci_senha_btn" id="btn_esqueci_senha">
+                            Esqueci a senha
+                        </button>
+                    </div>
+
+                    <!-- Botão Entrar -->
+                    <button type="submit" class="btn_entrar" id="btn_entrar">
+                        <span id="btn_entrar_texto">Entrar</span>
+                        <i class="fa-solid fa-arrow-right" id="icone_entrar"></i>
+                    </button>
+
+                    <!-- Erro geral de login -->
+                    <div class="login_erro_geral" id="login_erro_geral">
+                        <i class="fa-solid fa-circle-xmark"></i>
+                        <span id="login_erro_msg">Credenciais inválidas. Tente novamente.</span>
+                    </div>
+
+                </form>
+                <!-- /login_formulario -->
+
+                <!-- Link cadastro -->
+                <p class="login_rodape_texto">
+                    Não tem conta?
+                    <a href="/cadastro/candidato" class="login_link">Cadastre-se gratuitamente</a>
+                </p>
+
+            </div>
+            <!-- /login_card -->
+
+        </div>
+        <!-- /login_wrapper -->
+
+    </div>
+    <!-- /login_pagina -->
+
+    <!-- Modal: Recuperar Senha -->
+    <div class="modal_overlay" id="modal_overlay">
+        <div class="modal_caixa" role="dialog" aria-modal="true" aria-labelledby="modal_titulo">
+            <div class="modal_cabecalho">
+                <h2 class="modal_titulo" id="modal_titulo">Recuperar Senha</h2>
+                <button class="modal_fechar_btn" id="modal_fechar_btn" aria-label="Fechar">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+            <p class="modal_descricao">
+                Informe o e-mail da sua conta e enviaremos um link para redefinir sua senha.
+            </p>
+            <div class="campo_grupo">
+                <label class="campo_label" for="campo_recuperar_email">E-mail</label>
+                <div class="campo_icone_wrapper">
+                    <i class="fa-regular fa-envelope campo_icone_esq"></i>
+                    <input type="email" id="campo_recuperar_email" class="campo_texto" placeholder="seu@email.com"
+                        autocomplete="email">
+                </div>
+                <span class="campo_erro" id="erro_recuperar_email"></span>
+            </div>
+            <div class="modal_confirmacao" id="modal_confirmacao">
+                <i class="fa-solid fa-circle-check modal_confirmacao_icone"></i>
+                <p>Link enviado! Verifique seu e-mail.</p>
+            </div>
+            <button class="btn_entrar" id="btn_enviar_link">
+                <span id="btn_enviar_texto">Enviar Link</span>
+                <i class="fa-solid fa-paper-plane" id="icone_enviar"></i>
+            </button>
+        </div>
+    </div>
+
+    <script src="../js/login.js"></script>
+</body>
+
+</html>
