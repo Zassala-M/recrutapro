@@ -70,11 +70,14 @@ a {
     text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
-img, svg, video {
+img,
+svg,
+video {
     display: block;
     max-width: 100%;
 }
@@ -357,8 +360,15 @@ button {
 }
 
 @keyframes deslizar_baixo {
-    from { opacity: 0; transform: translateY(-8px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ============================================================
@@ -691,10 +701,12 @@ button {
     .vaga_card_topo {
         flex-direction: column;
     }
+
     .vaga_acoes {
         flex-direction: row;
         width: 100%;
     }
+
     .vaga_acoes .btn_pequeno {
         flex: 1;
     }
@@ -831,4 +843,12 @@ button {
     text-align: center;
     font-size: 0.875rem;
     color: hsl(210, 40%, 98%, 0.4);
+}
+
+.rodape_conteudo p {
+    margin-bottom: 1rem;
+}
+
+.rodape_conteudo a:hover {
+    color: var(--primario);
 }

@@ -70,11 +70,14 @@ a {
     text-decoration: none;
 }
 
-ul, ol {
+ul,
+ol {
     list-style: none;
 }
 
-img, svg, video {
+img,
+svg,
+video {
     display: block;
     max-width: 100%;
 }
@@ -430,6 +433,7 @@ button {
         opacity: 0;
         transform: translateY(-8px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -572,9 +576,17 @@ button {
     display: block;
 }
 
-.ponto_vermelho { background-color: var(--destructivo); }
-.ponto_amarelo  { background-color: var(--aviso); }
-.ponto_verde    { background-color: var(--sucesso); }
+.ponto_vermelho {
+    background-color: var(--destructivo);
+}
+
+.ponto_amarelo {
+    background-color: var(--aviso);
+}
+
+.ponto_verde {
+    background-color: var(--sucesso);
+}
 
 .hero_card_corpo {
     display: flex;
@@ -614,9 +626,17 @@ button {
     background-color: hsl(210, 40%, 98%, 0.12);
 }
 
-.mockup_linha_larga  { width: 8rem; }
-.mockup_linha_media  { width: 6rem; }
-.mockup_linha_curta  { width: 4rem; }
+.mockup_linha_larga {
+    width: 8rem;
+}
+
+.mockup_linha_media {
+    width: 6rem;
+}
+
+.mockup_linha_curta {
+    width: 4rem;
+}
 
 .mockup_stats {
     display: grid;
@@ -708,8 +728,15 @@ button {
 }
 
 @keyframes pulsar {
-    0%, 100% { box-shadow: 0 0 0 0 hsl(142, 71%, 45%, 0.4); }
-    50% { box-shadow: 0 0 0 8px hsl(142, 71%, 45%, 0); }
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 hsl(142, 71%, 45%, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px hsl(142, 71%, 45%, 0);
+    }
 }
 
 /* ============================================================
@@ -1077,4 +1104,13 @@ button {
     text-align: center;
     font-size: 0.875rem;
     color: hsl(210, 40%, 98%, 0.4);
+}
+
+
+.rodape_conteudo p{
+    margin-bottom: 1rem;
+}
+
+.rodape_conteudo a:hover {
+    color: var(--primario);
 }

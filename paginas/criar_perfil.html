@@ -21,6 +21,7 @@
 
     <!-- Estilos da página -->
     <link rel="stylesheet" href="../css/criar_perfil.css">
+    <link rel="stylesheet" href="../css/termos_politicas.css">
 </head>
 
 <body>
@@ -233,9 +234,8 @@
                                 <input type="checkbox" id="campo_termos" name="termos" class="termos_checkbox" required>
                                 <span class="termos_texto">
                                     Li e concordo com os
-                                    <a href="#" class="termos_link">Termos de Uso</a>
-                                    e
-                                    <a href="#" class="termos_link">Política de Privacidade</a>
+                                    <a href="#" class="termos_link" id="abrir_termos">Termos de Uso</a> e
+                                    <a href="#" class="termos_link" id="abrir_privacidade">Política de Privacidade</a>
                                 </span>
                             </label>
                             <span class="campo_erro" id="erro_termos"></span>
@@ -286,7 +286,110 @@
         </div>
     </main>
 
+    <!-- ========== MODAL TERMOS DE USO ========== -->
+    <div class="modal" id="modal_termos">
+        <div class="modal_overlay"></div>
+        <div class="modal_conteudo">
+            <button class="modal_fechar" data-fechar><i class="fa-solid fa-times fechar"></i></button>
+
+            <h2>Termos de Uso</h2>
+
+            <p>Bem-vindo ao RecrutaPro. Ao aceder e utilizar esta plataforma, o utilizador concorda com os presentes
+                Termos de Uso. Caso não concorde, deverá abster-se de utilizar os serviços.</p>
+
+            <h4>1. Objeto da Plataforma</h4>
+            <p>O RecrutaPro é uma plataforma digital destinada a facilitar o processo de recrutamento e seleção,
+                conectando empresas e candidatos no mercado angolano.</p>
+
+            <h4>2. Registo e Conta</h4>
+            <p>Para utilizar determinadas funcionalidades, o utilizador deverá criar uma conta, fornecendo informações
+                verdadeiras, atualizadas e completas. O utilizador é responsável pela confidencialidade das suas
+                credenciais.</p>
+
+            <h4>3. Responsabilidade do Utilizador</h4>
+            <p>O utilizador compromete-se a:</p>
+            <ul>
+                <li>Fornecer informações verídicas;</li>
+                <li>Não utilizar a plataforma para fins ilegais ou fraudulentos;</li>
+                <li>Respeitar outros utilizadores e empresas.</li>
+            </ul>
+
+            <h4>4. Responsabilidade das Empresas</h4>
+            <p>As empresas são responsáveis pela veracidade das vagas publicadas e pelo tratamento adequado dos dados
+                dos candidatos.</p>
+
+            <h4>5. Limitação de Responsabilidade</h4>
+            <p>O RecrutaPro atua como intermediário, não sendo responsável por decisões de contratação, veracidade das
+                candidaturas ou relações estabelecidas entre utilizadores.</p>
+
+            <h4>6. Suspensão ou Encerramento de Conta</h4>
+            <p>Reservamo-nos o direito de suspender ou encerrar contas que violem estes termos, sem aviso prévio.</p>
+
+            <h4>7. Alterações aos Termos</h4>
+            <p>Os presentes termos podem ser atualizados a qualquer momento. A continuação do uso da plataforma implica
+                a aceitação das alterações.</p>
+
+            <h4>8. Legislação Aplicável</h4>
+            <p>Os presentes termos são regidos pela legislação vigente na República de Angola.</p>
+        </div>
+    </div>
+
+
+    <!-- ========== MODAL PRIVACIDADE ========== -->
+    <div class="modal" id="modal_privacidade">
+        <div class="modal_overlay"></div>
+        <div class="modal_conteudo">
+            <button class="modal_fechar" data-fechar><i class="fa-solid fa-times fechar"></i></button>
+
+            <h2>Política de Privacidade</h2>
+
+            <p>A sua privacidade é importante para nós. Esta Política de Privacidade descreve como o RecrutaPro coleta,
+                utiliza e protege os dados dos utilizadores.</p>
+
+            <h4>1. Dados Coletados</h4>
+            <p>Podemos coletar as seguintes informações:</p>
+            <ul>
+                <li>Dados pessoais (nome, email, telefone);</li>
+                <li>Informações profissionais (currículo, experiência, habilidades);</li>
+                <li>Dados de utilização da plataforma.</li>
+            </ul>
+
+            <h4>2. Finalidade do Tratamento</h4>
+            <p>Os dados são utilizados para:</p>
+            <ul>
+                <li>Facilitar processos de recrutamento;</li>
+                <li>Melhorar a experiência do utilizador;</li>
+                <li>Comunicação com utilizadores e empresas.</li>
+            </ul>
+
+            <h4>3. Compartilhamento de Dados</h4>
+            <p>Os dados dos candidatos podem ser compartilhados com empresas para fins de recrutamento. Não vendemos
+                dados a terceiros.</p>
+
+            <h4>4. Armazenamento e Segurança</h4>
+            <p>Adotamos medidas técnicas e organizacionais para proteger os dados contra acessos não autorizados, perda
+                ou divulgação indevida.</p>
+
+            <h4>5. Direitos do Utilizador</h4>
+            <p>O utilizador pode, a qualquer momento:</p>
+            <ul>
+                <li>Solicitar acesso aos seus dados;</li>
+                <li>Corrigir informações;</li>
+                <li>Solicitar a exclusão da conta.</li>
+            </ul>
+
+            <h4>6. Retenção de Dados</h4>
+            <p>Os dados serão mantidos apenas pelo tempo necessário para cumprir as finalidades da plataforma.</p>
+
+            <h4>7. Alterações à Política</h4>
+            <p>Esta política pode ser atualizada periodicamente. Recomendamos a consulta regular desta página.</p>
+
+            <h4>8. Contacto</h4>
+            <p>Para questões relacionadas com privacidade, contacte-nos através do email: contato@recrutapro.com.ao</p>
+        </div>
+    </div>
     <script src="../js/criar_perfil.js"></script>
+    <script src="../js/termos_politicas.js"></script>
 </body>
 
 </html>

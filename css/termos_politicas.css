@@ -1,0 +1,76 @@
+/* 
+Tela Modal de Termos de Uso e Privacidade
+
+*/
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+
+.modal.ativo {
+    display: flex;
+}
+
+.modal_overlay {
+    position: absolute;
+    width: 90%;
+    height: 90%;
+}
+
+.modal_conteudo {
+    position: relative;
+    width: 80%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+    z-index: 2;
+    background-color: var(--cartao);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.modal_conteudo:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra_lg);
+    border-color: hsl(172, 66%, 40%, 0.3);
+}
+
+.modal_conteudo h2 {
+    margin-bottom: 1.4rem;
+    color: var(--primario);
+    text-align: center;
+}
+
+.modal_conteudo h4 {
+    margin-top: 1.5rem;
+    color: var(--primario);
+}
+
+.modal_conteudo p,
+li,
+.fechar {
+    color: var(--mudo_frente);
+    text-align: justify;
+}
+
+.modal_conteudo .fechar:hover {
+    color: var(--primario);
+}
+
+.modal_fechar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}

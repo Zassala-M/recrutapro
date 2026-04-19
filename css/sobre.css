@@ -1310,6 +1310,13 @@ button {
     font-size: 0.875rem;
     color: hsl(210, 40%, 98%, 0.4);
 }
+.rodape_conteudo p{
+    margin-bottom: 1rem;
+}
+
+.rodape_conteudo a:hover {
+    color: var(--primario);
+}
 
 .rodape_coracao {
     color: hsl(0, 80%, 65%);

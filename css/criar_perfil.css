@@ -65,12 +65,40 @@ body {
     min-height: 100vh;
 }
 
-a { color: inherit; text-decoration: none; }
-ul, ol { list-style: none; }
-img, svg, video { display: block; max-width: 100%; }
-button { cursor: pointer; background: none; font-family: inherit; border: none; }
-textarea { resize: vertical; font-family: inherit; }
-input, textarea, select { font-family: inherit; }
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+img,
+svg,
+video {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    font-family: inherit;
+    border: none;
+}
+
+textarea {
+    resize: vertical;
+    font-family: inherit;
+}
+
+input,
+textarea,
+select {
+    font-family: inherit;
+}
 
 /* ---- Container ---- */
 .container {
@@ -115,7 +143,9 @@ input, textarea, select { font-family: inherit; }
     transform: scale(1.015);
 }
 
-.btn_primario:active { transform: scale(0.98); }
+.btn_primario:active {
+    transform: scale(0.98);
+}
 
 .btn_primario.btn_grande {
     font-size: 1.0625rem;
@@ -172,7 +202,9 @@ input, textarea, select { font-family: inherit; }
 }
 
 @media (min-width: 768px) {
-    .cabecalho_interno { height: 5rem; }
+    .cabecalho_interno {
+        height: 5rem;
+    }
 }
 
 /* Logo */
@@ -198,7 +230,9 @@ input, textarea, select { font-family: inherit; }
     flex-shrink: 0;
 }
 
-.cabecalho_logo:hover .logo_icone { transform: scale(1.05); }
+.cabecalho_logo:hover .logo_icone {
+    transform: scale(1.05);
+}
 
 .logo_texto {
     font-size: 1.25rem;
@@ -206,7 +240,9 @@ input, textarea, select { font-family: inherit; }
     color: var(--primeiro_plano);
 }
 
-.logo_destaque { color: var(--primario); }
+.logo_destaque {
+    color: var(--primario);
+}
 
 /* Nav Desktop */
 .cabecalho_nav {
@@ -215,7 +251,11 @@ input, textarea, select { font-family: inherit; }
     gap: 2rem;
 }
 
-@media (min-width: 768px) { .cabecalho_nav { display: flex; } }
+@media (min-width: 768px) {
+    .cabecalho_nav {
+        display: flex;
+    }
+}
 
 .nav_link {
     font-weight: 500;
@@ -223,7 +263,9 @@ input, textarea, select { font-family: inherit; }
     transition: color 0.2s ease;
 }
 
-.nav_link:hover { color: var(--primario); }
+.nav_link:hover {
+    color: var(--primario);
+}
 
 /* Ações Desktop */
 .cabecalho_acoes {
@@ -232,7 +274,11 @@ input, textarea, select { font-family: inherit; }
     gap: 0.75rem;
 }
 
-@media (min-width: 768px) { .cabecalho_acoes { display: flex; } }
+@media (min-width: 768px) {
+    .cabecalho_acoes {
+        display: flex;
+    }
+}
 
 /* Botão menu mobile */
 .cabecalho_menu_btn {
@@ -248,9 +294,15 @@ input, textarea, select { font-family: inherit; }
     transition: background-color 0.2s;
 }
 
-.cabecalho_menu_btn:hover { background-color: var(--mudo); }
+.cabecalho_menu_btn:hover {
+    background-color: var(--mudo);
+}
 
-@media (min-width: 768px) { .cabecalho_menu_btn { display: none; } }
+@media (min-width: 768px) {
+    .cabecalho_menu_btn {
+        display: none;
+    }
+}
 
 /* Menu Mobile */
 .menu_mobile {
@@ -263,7 +315,9 @@ input, textarea, select { font-family: inherit; }
     animation: deslizar_baixo 0.25s ease;
 }
 
-.menu_mobile.aberto { display: flex; }
+.menu_mobile.aberto {
+    display: flex;
+}
 
 .menu_mobile_nav {
     display: flex;
@@ -277,7 +331,9 @@ input, textarea, select { font-family: inherit; }
     border-radius: var(--raio);
 }
 
-.menu_mobile_nav .nav_link:hover { background-color: var(--mudo); }
+.menu_mobile_nav .nav_link:hover {
+    background-color: var(--mudo);
+}
 
 .menu_mobile_acoes {
     display: flex;
@@ -289,8 +345,15 @@ input, textarea, select { font-family: inherit; }
 }
 
 @keyframes deslizar_baixo {
-    from { opacity: 0; transform: translateY(-8px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* ============================================================
@@ -302,7 +365,11 @@ input, textarea, select { font-family: inherit; }
     padding-bottom: 4rem;
 }
 
-@media (min-width: 768px) { .pagina_principal { padding-top: 7rem; } }
+@media (min-width: 768px) {
+    .pagina_principal {
+        padding-top: 7rem;
+    }
+}
 
 /* Wrapper centralizado */
 .formulario_wrapper {
@@ -325,7 +392,9 @@ input, textarea, select { font-family: inherit; }
     border-radius: var(--raio);
 }
 
-.link_voltar:hover { color: var(--primeiro_plano); }
+.link_voltar:hover {
+    color: var(--primeiro_plano);
+}
 
 /* ============================================================
    CARD DO FORMULÁRIO
@@ -340,7 +409,9 @@ input, textarea, select { font-family: inherit; }
 }
 
 @media (min-width: 768px) {
-    .formulario_card { padding: 3rem; }
+    .formulario_card {
+        padding: 3rem;
+    }
 }
 
 /* Cabeçalho do card */
@@ -458,7 +529,9 @@ input, textarea, select { font-family: inherit; }
     appearance: none;
 }
 
-.campo_texto::placeholder { color: var(--mudo_frente); }
+.campo_texto::placeholder {
+    color: var(--mudo_frente);
+}
 
 .campo_texto:focus {
     border-color: var(--primario);
@@ -508,7 +581,9 @@ input, textarea, select { font-family: inherit; }
     border-radius: 0.25rem;
 }
 
-.campo_senha_toggle:hover { color: var(--primeiro_plano); }
+.campo_senha_toggle:hover {
+    color: var(--primeiro_plano);
+}
 
 /* Barra de força da senha */
 .forca_senha_barra {
@@ -520,7 +595,9 @@ input, textarea, select { font-family: inherit; }
     display: none;
 }
 
-.forca_senha_barra.visivel { display: block; }
+.forca_senha_barra.visivel {
+    display: block;
+}
 
 .forca_senha_progresso {
     height: 100%;
@@ -529,10 +606,25 @@ input, textarea, select { font-family: inherit; }
     transition: width 0.3s ease, background-color 0.3s ease;
 }
 
-.forca_senha_progresso.nivel_1 { width: 25%; background-color: var(--destructivo); }
-.forca_senha_progresso.nivel_2 { width: 50%; background-color: var(--aviso); }
-.forca_senha_progresso.nivel_3 { width: 75%; background-color: hsl(172, 66%, 50%); }
-.forca_senha_progresso.nivel_4 { width: 100%; background-color: var(--sucesso); }
+.forca_senha_progresso.nivel_1 {
+    width: 25%;
+    background-color: var(--destructivo);
+}
+
+.forca_senha_progresso.nivel_2 {
+    width: 50%;
+    background-color: var(--aviso);
+}
+
+.forca_senha_progresso.nivel_3 {
+    width: 75%;
+    background-color: hsl(172, 66%, 50%);
+}
+
+.forca_senha_progresso.nivel_4 {
+    width: 100%;
+    background-color: var(--sucesso);
+}
 
 .forca_senha_texto {
     font-size: 0.75rem;
@@ -541,11 +633,25 @@ input, textarea, select { font-family: inherit; }
     display: none;
 }
 
-.forca_senha_texto.visivel { display: block; }
-.forca_senha_texto.nivel_1 { color: var(--destructivo); }
-.forca_senha_texto.nivel_2 { color: var(--aviso); }
-.forca_senha_texto.nivel_3 { color: hsl(172, 66%, 40%); }
-.forca_senha_texto.nivel_4 { color: var(--sucesso); }
+.forca_senha_texto.visivel {
+    display: block;
+}
+
+.forca_senha_texto.nivel_1 {
+    color: var(--destructivo);
+}
+
+.forca_senha_texto.nivel_2 {
+    color: var(--aviso);
+}
+
+.forca_senha_texto.nivel_3 {
+    color: hsl(172, 66%, 40%);
+}
+
+.forca_senha_texto.nivel_4 {
+    color: var(--sucesso);
+}
 
 /* Mensagens de erro dos campos */
 .campo_erro {
@@ -649,7 +755,9 @@ input, textarea, select { font-family: inherit; }
     pointer-events: none;
 }
 
-.upload_nome_arquivo:empty { display: none; }
+.upload_nome_arquivo:empty {
+    display: none;
+}
 
 /* ============================================================
    TERMOS
@@ -691,7 +799,9 @@ input, textarea, select { font-family: inherit; }
     transition: text-decoration 0.2s;
 }
 
-.termos_link:hover { text-decoration: underline; }
+.termos_link:hover {
+    text-decoration: underline;
+}
 
 /* ============================================================
    RODAPÉ DO FORMULÁRIO
@@ -709,7 +819,9 @@ input, textarea, select { font-family: inherit; }
     transition: text-decoration 0.2s;
 }
 
-.formulario_link:hover { text-decoration: underline; }
+.formulario_link:hover {
+    text-decoration: underline;
+}
 
 /* ============================================================
    BENEFÍCIOS
@@ -786,6 +898,13 @@ input, textarea, select { font-family: inherit; }
 }
 
 @keyframes toast_entrar {
-    from { opacity: 0; transform: translateY(12px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

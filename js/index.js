@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', function () {
        MENU MOBILE — abrir / fechar
     ---------------------------------------------------------- */
     const btnMenuMobile = document.getElementById('btn_menu_mobile');
-    const menuMobile    = document.getElementById('menu_mobile');
-    const iconeMenu     = document.getElementById('icone_menu');
+    const menuMobile = document.getElementById('menu_mobile');
+    const iconeMenu = document.getElementById('icone_menu');
 
     if (btnMenuMobile && menuMobile) {
         btnMenuMobile.addEventListener('click', function () {
@@ -78,8 +78,8 @@ document.addEventListener('DOMContentLoaded', function () {
         const observer = new IntersectionObserver(function (entradas) {
             entradas.forEach(function (entrada) {
                 if (entrada.isIntersecting) {
-                    entrada.target.style.opacity    = '1';
-                    entrada.target.style.transform  = 'translateY(0)';
+                    entrada.target.style.opacity = '1';
+                    entrada.target.style.transform = 'translateY(0)';
                     observer.unobserve(entrada.target);
                 }
             });
@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', function () {
         });
 
         elementosAnimados.forEach(function (el, i) {
-            el.style.opacity    = '0';
-            el.style.transform  = 'translateY(24px)';
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(24px)';
             el.style.transition = 'opacity 0.5s ease ' + (i * 60) + 'ms, transform 0.5s ease ' + (i * 60) + 'ms';
             observer.observe(el);
         });
