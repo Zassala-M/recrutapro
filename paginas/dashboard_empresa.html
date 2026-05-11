@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard Empresa — Recruta Pro</title>
-    <meta name="description" content="Dashboard da empresa no RecrutaPro. Gerencie vagas e candidatos.">
+    <meta name="description" content="Dashboard da empresa no RecrutaPro.">
     <meta name="author" content="Zassala Mário & Ivandro Silva">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,14 +22,12 @@
     <!-- ========== SIDEBAR ========== -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar_corpo">
-
             <div class="sidebar_logo_area">
                 <a href="../index.html" class="sidebar_logo">
                     <div class="sidebar_logo_icone"><i class="fa-solid fa-briefcase"></i></div>
                     <span class="sidebar_logo_texto">Recruta<span class="sidebar_logo_destaque">Pro</span></span>
                 </a>
             </div>
-
             <div class="sidebar_perfil">
                 <div class="sidebar_avatar"><i class="fa-solid fa-building-columns"></i></div>
                 <div class="sidebar_perfil_info">
@@ -37,39 +35,31 @@
                     <p class="sidebar_perfil_papel">Empresa</p>
                 </div>
             </div>
-
             <nav class="sidebar_nav" aria-label="Navegação do dashboard">
                 <a href="#" class="sidebar_nav_link sidebar_nav_link_ativo" data-secao="dashboard">
-                    <i class="fa-solid fa-table-columns"></i>
-                    <span>Dashboard</span>
+                    <i class="fa-solid fa-table-columns"></i><span>Dashboard</span>
                 </a>
                 <a href="#" class="sidebar_nav_link" data-secao="minhas_vagas">
-                    <i class="fa-solid fa-file-lines"></i>
-                    <span>Minhas Vagas</span>
+                    <i class="fa-solid fa-file-lines"></i><span>Minhas Vagas</span>
                 </a>
                 <a href="#" class="sidebar_nav_link" data-secao="candidatos">
-                    <i class="fa-solid fa-users"></i>
-                    <span>Candidatos</span>
+                    <i class="fa-solid fa-users"></i><span>Candidatos</span>
+                    <span class="sidebar_badge">5</span>
                 </a>
                 <a href="#" class="sidebar_nav_link" data-secao="configuracoes">
-                    <i class="fa-solid fa-gear"></i>
-                    <span>Configurações</span>
+                    <i class="fa-solid fa-gear"></i><span>Configurações</span>
                 </a>
             </nav>
-
             <div class="sidebar_rodape">
                 <button class="sidebar_nav_link sidebar_nav_link_btn" id="btn_notificacoes">
-                    <i class="fa-solid fa-bell"></i>
-                    <span>Notificações</span>
+                    <i class="fa-solid fa-bell"></i><span>Notificações</span>
                     <span class="sidebar_badge">3</span>
                 </button>
                 <a href="../index.html" class="sidebar_nav_link sidebar_nav_link_sair">
-                    <i class="fa-solid fa-right-from-bracket"></i>
-                    <span>Sair</span>
+                    <i class="fa-solid fa-right-from-bracket"></i><span>Sair</span>
                 </a>
             </div>
         </div>
-
         <button class="sidebar_toggle_btn" id="sidebar_toggle_btn" aria-label="Recolher menu">
             <i class="fa-solid fa-chevron-left" id="sidebar_toggle_icone"></i>
         </button>
@@ -82,7 +72,8 @@
         </button>
         <a href="../index.html" class="topbar_logo">
             <div class="sidebar_logo_icone topbar_logo_icone"><i class="fa-solid fa-briefcase"></i></div>
-            <span class="sidebar_logo_texto topbar_logo_texto">Recruta<span class="sidebar_logo_destaque">Pro</span></span>
+            <span class="sidebar_logo_texto topbar_logo_texto">Recruta<span
+                    class="sidebar_logo_destaque">Pro</span></span>
         </a>
         <div class="topbar_acoes">
             <button class="topbar_btn_icone" aria-label="Notificações">
@@ -96,11 +87,10 @@
     <main class="conteudo_principal" id="conteudo_principal">
 
         <!-- ================================================
-             SECÇÃO: DASHBOARD (visível por defeito)
-        ================================================= -->
+         SECÇÃO: DASHBOARD
+    ================================================= -->
         <section class="conteudo_secao" id="secao_dashboard">
             <div class="conteudo_interno">
-
                 <div class="pagina_cabecalho">
                     <div class="pagina_cabecalho_info">
                         <h1 class="pagina_titulo">Dashboard</h1>
@@ -108,18 +98,18 @@
                     </div>
                     <button class="btn_primario" id="btn_nova_vaga">
                         <i class="fa-solid fa-plus"></i>
-                        Nova Vaga
+                        <span>Nova Vaga</span>
                     </button>
                 </div>
 
-                <!-- Stats -->
                 <div class="stats_grade">
                     <div class="stat_card cartao_hover">
                         <div class="stat_card_interno">
                             <div class="stat_info">
                                 <p class="stat_label">Vagas Ativas</p>
                                 <p class="stat_valor">2</p>
-                                <p class="stat_variacao stat_variacao_positiva"><i class="fa-solid fa-arrow-trend-up"></i> +12% vs mês anterior</p>
+                                <p class="stat_variacao stat_variacao_positiva"><i
+                                        class="fa-solid fa-arrow-trend-up"></i> +12% vs mês anterior</p>
                             </div>
                             <div class="stat_icone_box"><i class="fa-solid fa-file-lines stat_icone"></i></div>
                         </div>
@@ -129,7 +119,8 @@
                             <div class="stat_info">
                                 <p class="stat_label">Total de Candidaturas</p>
                                 <p class="stat_valor">5</p>
-                                <p class="stat_variacao stat_variacao_positiva"><i class="fa-solid fa-arrow-trend-up"></i> +23% vs mês anterior</p>
+                                <p class="stat_variacao stat_variacao_positiva"><i
+                                        class="fa-solid fa-arrow-trend-up"></i> +23% vs mês anterior</p>
                             </div>
                             <div class="stat_icone_box"><i class="fa-solid fa-users stat_icone"></i></div>
                         </div>
@@ -148,21 +139,21 @@
                             <div class="stat_info">
                                 <p class="stat_label">Taxa de Conversão</p>
                                 <p class="stat_valor">18%</p>
-                                <p class="stat_variacao stat_variacao_positiva"><i class="fa-solid fa-arrow-trend-up"></i> +5% vs mês anterior</p>
+                                <p class="stat_variacao stat_variacao_positiva"><i
+                                        class="fa-solid fa-arrow-trend-up"></i> +5% vs mês anterior</p>
                             </div>
                             <div class="stat_icone_box"><i class="fa-solid fa-chart-line stat_icone"></i></div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Painel grade: vagas (lateral) + candidaturas -->
                 <div class="painel_grade">
-
                     <div class="painel_coluna_lateral">
                         <div class="painel_card">
                             <div class="painel_card_cabecalho">
                                 <h2 class="painel_titulo">Minhas Vagas</h2>
-                                <button class="btn_ver_todas" data-secao="minhas_vagas">Ver todas <i class="fa-solid fa-arrow-right"></i></button>
+                                <button class="btn_ver_todas" data-secao="minhas_vagas">Ver todas <i
+                                        class="fa-solid fa-arrow-right"></i></button>
                             </div>
                             <div class="vagas_filtro_lista" id="vagas_filtro_lista">
                                 <button class="vaga_filtro_item vaga_filtro_item_ativo" data-vaga="todos">
@@ -197,11 +188,12 @@
                     <div class="painel_coluna_principal">
                         <div class="painel_card">
                             <div class="candidaturas_cabecalho">
-                                <h2 class="painel_titulo">Candidaturas</h2>
+                                <h2 class="painel_titulo">Candidaturas Recentes</h2>
                                 <div class="candidaturas_filtros">
                                     <div class="busca_campo_wrapper">
                                         <i class="fa-solid fa-magnifying-glass busca_icone"></i>
-                                        <input type="text" id="busca_candidatos" class="campo_texto busca_input" placeholder="Buscar candidato..." autocomplete="off">
+                                        <input type="text" id="busca_candidatos" class="campo_texto busca_input"
+                                            placeholder="Buscar candidato..." autocomplete="off">
                                     </div>
                                     <select class="campo_select" id="filtro_status">
                                         <option value="todos">Todos os status</option>
@@ -213,212 +205,291 @@
                                     </select>
                                 </div>
                             </div>
-
                             <div class="candidatos_lista" id="candidatos_lista">
-
-                                <!-- Candidato 1: Sandra Cafala — Entrevista -->
-                                <div class="candidato_card cartao_hover" data-status="entrevista" data-nome="sandra francisco cafala">
+                                <div class="candidato_card cartao_hover" data-status="entrevista"
+                                    data-nome="sandra francisco cafala">
                                     <div class="candidato_topo">
                                         <div class="candidato_id_grupo">
                                             <div class="candidato_avatar">SC</div>
                                             <div class="candidato_info">
                                                 <h3 class="candidato_nome">Sandra Francisco Cafala</h3>
                                                 <div class="candidato_contatos">
-                                                    <div class="candidato_contato_item"><i class="fa-regular fa-envelope"></i><span>sandra.cafala@email.com</span></div>
-                                                    <div class="candidato_contato_item"><i class="fa-solid fa-phone"></i><span>(+244) 948 059 912</span></div>
+                                                    <div class="candidato_contato_item"><i
+                                                            class="fa-regular fa-envelope"></i><span>sandra.cafala@email.com</span>
+                                                    </div>
+                                                    <div class="candidato_contato_item"><i
+                                                            class="fa-solid fa-phone"></i><span>(+244) 948 059
+                                                            912</span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="candidato_status_wrapper">
-                                            <button class="candidato_status_btn" data-candidato="ms">
-                                                <span class="status_emblema status_emblema_md status_entrevista">Entrevista</span>
-                                                <i class="fa-solid fa-chevron-down status_seta" id="seta_ms"></i>
+                                            <button class="candidato_status_btn" data-candidato="sc">
+                                                <span
+                                                    class="status_emblema status_emblema_md status_entrevista">Entrevista</span>
+                                                <i class="fa-solid fa-chevron-down status_seta" id="seta_sc"></i>
                                             </button>
-                                            <div class="status_dropdown" id="dropdown_ms">
-                                                <button class="status_dropdown_item" data-status-valor="triagem" data-alvo="ms">Triagem</button>
-                                                <button class="status_dropdown_item" data-status-valor="teste" data-alvo="ms">Teste Técnico</button>
-                                                <button class="status_dropdown_item" data-status-valor="entrevista" data-alvo="ms">Entrevista</button>
-                                                <button class="status_dropdown_item" data-status-valor="aprovado" data-alvo="ms">Aprovado</button>
-                                                <button class="status_dropdown_item" data-status-valor="rejeitado" data-alvo="ms">Rejeitado</button>
+                                            <div class="status_dropdown" id="dropdown_sc">
+                                                <button class="status_dropdown_item" data-status-valor="triagem"
+                                                    data-alvo="sc">Triagem</button>
+                                                <button class="status_dropdown_item" data-status-valor="teste"
+                                                    data-alvo="sc">Teste Técnico</button>
+                                                <button class="status_dropdown_item" data-status-valor="entrevista"
+                                                    data-alvo="sc">Entrevista</button>
+                                                <button class="status_dropdown_item" data-status-valor="aprovado"
+                                                    data-alvo="sc">Aprovado</button>
+                                                <button class="status_dropdown_item" data-status-valor="rejeitado"
+                                                    data-alvo="sc">Rejeitado</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="candidato_detalhes_grade">
-                                        <div class="candidato_detalhe_item"><i class="fa-solid fa-location-dot"></i><span>Estalagem, Luanda, LA</span></div>
-                                        <div class="candidato_detalhe_item"><i class="fa-solid fa-graduation-cap"></i><span>Bacharel em Engenharia Informática</span></div>
+                                        <div class="candidato_detalhe_item"><i
+                                                class="fa-solid fa-location-dot"></i><span>Estalagem, Luanda, LA</span>
+                                        </div>
+                                        <div class="candidato_detalhe_item"><i
+                                                class="fa-solid fa-graduation-cap"></i><span>Bacharel em Engenharia
+                                                Informática</span></div>
                                     </div>
-                                    <button class="candidato_ver_mais_btn" data-candidato="ms">Ver mais detalhes <i class="fa-solid fa-chevron-down candidato_ver_mais_icone" id="icone_ver_ms"></i></button>
-                                    <div class="candidato_expansao" id="expansao_ms">
+                                    <button class="candidato_ver_mais_btn" data-candidato="sc">Ver mais detalhes <i
+                                            class="fa-solid fa-chevron-down candidato_ver_mais_icone"
+                                            id="icone_ver_sc"></i></button>
+                                    <div class="candidato_expansao" id="expansao_sc">
                                         <div class="candidato_expansao_conteudo">
-                                            <p class="candidato_expansao_label">Vaga candidatada:</p><p class="candidato_expansao_texto">Desenvolvedor(a) Full Stack Senior</p>
-                                            <p class="candidato_expansao_label">Data da candidatura:</p><p class="candidato_expansao_texto">10/01/2026</p>
+                                            <p class="candidato_expansao_label">Vaga:</p>
+                                            <p class="candidato_expansao_texto">Desenvolvedor(a) Full Stack Senior</p>
+                                            <p class="candidato_expansao_label">Data:</p>
+                                            <p class="candidato_expansao_texto">10/01/2026</p>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Candidato 2: Daniel Bunga — Teste -->
-                                <div class="candidato_card cartao_hover" data-status="teste" data-nome="daniel domingos bunga">
+                                <div class="candidato_card cartao_hover" data-status="teste"
+                                    data-nome="daniel domingos bunga">
                                     <div class="candidato_topo">
                                         <div class="candidato_id_grupo">
                                             <div class="candidato_avatar">DB</div>
                                             <div class="candidato_info">
                                                 <h3 class="candidato_nome">Daniel Domingos Bunga</h3>
                                                 <div class="candidato_contatos">
-                                                    <div class="candidato_contato_item"><i class="fa-regular fa-envelope"></i><span>daniel.bunga@email.com</span></div>
-                                                    <div class="candidato_contato_item"><i class="fa-solid fa-phone"></i><span>(+244) 957 434 855</span></div>
+                                                    <div class="candidato_contato_item"><i
+                                                            class="fa-regular fa-envelope"></i><span>daniel.bunga@email.com</span>
+                                                    </div>
+                                                    <div class="candidato_contato_item"><i
+                                                            class="fa-solid fa-phone"></i><span>(+244) 957 434
+                                                            855</span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="candidato_status_wrapper">
-                                            <button class="candidato_status_btn" data-candidato="jp">
+                                            <button class="candidato_status_btn" data-candidato="db">
                                                 <span class="status_emblema status_emblema_md status_teste">Teste</span>
-                                                <i class="fa-solid fa-chevron-down status_seta" id="seta_jp"></i>
+                                                <i class="fa-solid fa-chevron-down status_seta" id="seta_db"></i>
                                             </button>
-                                            <div class="status_dropdown" id="dropdown_jp">
-                                                <button class="status_dropdown_item" data-status-valor="triagem" data-alvo="jp">Triagem</button>
-                                                <button class="status_dropdown_item" data-status-valor="teste" data-alvo="jp">Teste Técnico</button>
-                                                <button class="status_dropdown_item" data-status-valor="entrevista" data-alvo="jp">Entrevista</button>
-                                                <button class="status_dropdown_item" data-status-valor="aprovado" data-alvo="jp">Aprovado</button>
-                                                <button class="status_dropdown_item" data-status-valor="rejeitado" data-alvo="jp">Rejeitado</button>
+                                            <div class="status_dropdown" id="dropdown_db">
+                                                <button class="status_dropdown_item" data-status-valor="triagem"
+                                                    data-alvo="db">Triagem</button>
+                                                <button class="status_dropdown_item" data-status-valor="teste"
+                                                    data-alvo="db">Teste Técnico</button>
+                                                <button class="status_dropdown_item" data-status-valor="entrevista"
+                                                    data-alvo="db">Entrevista</button>
+                                                <button class="status_dropdown_item" data-status-valor="aprovado"
+                                                    data-alvo="db">Aprovado</button>
+                                                <button class="status_dropdown_item" data-status-valor="rejeitado"
+                                                    data-alvo="db">Rejeitado</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="candidato_detalhes_grade">
-                                        <div class="candidato_detalhe_item"><i class="fa-solid fa-location-dot"></i><span>Golf 2, Luanda, LA</span></div>
-                                        <div class="candidato_detalhe_item"><i class="fa-solid fa-graduation-cap"></i><span>MBA em Gestão de Projetos</span></div>
+                                        <div class="candidato_detalhe_item"><i
+                                                class="fa-solid fa-location-dot"></i><span>Golf 2, Luanda, LA</span>
+                                        </div>
+                                        <div class="candidato_detalhe_item"><i
+                                                class="fa-solid fa-graduation-cap"></i><span>MBA em Gestão de
+                                                Projetos</span></div>
                                     </div>
-                                    <button class="candidato_ver_mais_btn" data-candidato="jp">Ver mais detalhes <i class="fa-solid fa-chevron-down candidato_ver_mais_icone" id="icone_ver_jp"></i></button>
-                                    <div class="candidato_expansao" id="expansao_jp">
+                                    <button class="candidato_ver_mais_btn" data-candidato="db">Ver mais detalhes <i
+                                            class="fa-solid fa-chevron-down candidato_ver_mais_icone"
+                                            id="icone_ver_db"></i></button>
+                                    <div class="candidato_expansao" id="expansao_db">
                                         <div class="candidato_expansao_conteudo">
-                                            <p class="candidato_expansao_label">Vaga candidatada:</p><p class="candidato_expansao_texto">Product Designer Pleno</p>
-                                            <p class="candidato_expansao_label">Data da candidatura:</p><p class="candidato_expansao_texto">05/01/2026</p>
+                                            <p class="candidato_expansao_label">Vaga:</p>
+                                            <p class="candidato_expansao_texto">Product Designer Pleno</p>
+                                            <p class="candidato_expansao_label">Data:</p>
+                                            <p class="candidato_expansao_texto">05/01/2026</p>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Candidato 3: Doneta da Cruz — Aprovado -->
-                                <div class="candidato_card cartao_hover" data-status="aprovado" data-nome="doneta matos da cruz">
+                                <div class="candidato_card cartao_hover" data-status="aprovado"
+                                    data-nome="doneta matos da cruz">
                                     <div class="candidato_topo">
                                         <div class="candidato_id_grupo">
                                             <div class="candidato_avatar">DC</div>
                                             <div class="candidato_info">
                                                 <h3 class="candidato_nome">Doneta Matos da Cruz</h3>
                                                 <div class="candidato_contatos">
-                                                    <div class="candidato_contato_item"><i class="fa-regular fa-envelope"></i><span>doneta.cruz@email.com</span></div>
-                                                    <div class="candidato_contato_item"><i class="fa-solid fa-phone"></i><span>(+244) 923 387 654</span></div>
+                                                    <div class="candidato_contato_item"><i
+                                                            class="fa-regular fa-envelope"></i><span>doneta.cruz@email.com</span>
+                                                    </div>
+                                                    <div class="candidato_contato_item"><i
+                                                            class="fa-solid fa-phone"></i><span>(+244) 923 387
+                                                            654</span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="candidato_status_wrapper">
-                                            <button class="candidato_status_btn" data-candidato="ac">
-                                                <span class="status_emblema status_emblema_md status_aprovado">Aprovado</span>
-                                                <i class="fa-solid fa-chevron-down status_seta" id="seta_ac"></i>
+                                            <button class="candidato_status_btn" data-candidato="dc">
+                                                <span
+                                                    class="status_emblema status_emblema_md status_aprovado">Aprovado</span>
+                                                <i class="fa-solid fa-chevron-down status_seta" id="seta_dc"></i>
                                             </button>
-                                            <div class="status_dropdown" id="dropdown_ac">
-                                                <button class="status_dropdown_item" data-status-valor="triagem" data-alvo="ac">Triagem</button>
-                                                <button class="status_dropdown_item" data-status-valor="teste" data-alvo="ac">Teste Técnico</button>
-                                                <button class="status_dropdown_item" data-status-valor="entrevista" data-alvo="ac">Entrevista</button>
-                                                <button class="status_dropdown_item" data-status-valor="aprovado" data-alvo="ac">Aprovado</button>
-                                                <button class="status_dropdown_item" data-status-valor="rejeitado" data-alvo="ac">Rejeitado</button>
+                                            <div class="status_dropdown" id="dropdown_dc">
+                                                <button class="status_dropdown_item" data-status-valor="triagem"
+                                                    data-alvo="dc">Triagem</button>
+                                                <button class="status_dropdown_item" data-status-valor="teste"
+                                                    data-alvo="dc">Teste Técnico</button>
+                                                <button class="status_dropdown_item" data-status-valor="entrevista"
+                                                    data-alvo="dc">Entrevista</button>
+                                                <button class="status_dropdown_item" data-status-valor="aprovado"
+                                                    data-alvo="dc">Aprovado</button>
+                                                <button class="status_dropdown_item" data-status-valor="rejeitado"
+                                                    data-alvo="dc">Rejeitado</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="candidato_detalhes_grade">
-                                        <div class="candidato_detalhe_item"><i class="fa-solid fa-location-dot"></i><span>Maianga, Luanda, LA</span></div>
-                                        <div class="candidato_detalhe_item"><i class="fa-solid fa-graduation-cap"></i><span>Bacharel em Design</span></div>
+                                        <div class="candidato_detalhe_item"><i
+                                                class="fa-solid fa-location-dot"></i><span>Maianga, Luanda, LA</span>
+                                        </div>
+                                        <div class="candidato_detalhe_item"><i
+                                                class="fa-solid fa-graduation-cap"></i><span>Bacharel em Design</span>
+                                        </div>
                                     </div>
-                                    <button class="candidato_ver_mais_btn" data-candidato="ac">Ver mais detalhes <i class="fa-solid fa-chevron-down candidato_ver_mais_icone" id="icone_ver_ac"></i></button>
-                                    <div class="candidato_expansao" id="expansao_ac">
+                                    <button class="candidato_ver_mais_btn" data-candidato="dc">Ver mais detalhes <i
+                                            class="fa-solid fa-chevron-down candidato_ver_mais_icone"
+                                            id="icone_ver_dc"></i></button>
+                                    <div class="candidato_expansao" id="expansao_dc">
                                         <div class="candidato_expansao_conteudo">
-                                            <p class="candidato_expansao_label">Vaga candidatada:</p><p class="candidato_expansao_texto">Product Designer Pleno</p>
-                                            <p class="candidato_expansao_label">Data da candidatura:</p><p class="candidato_expansao_texto">03/01/2026</p>
+                                            <p class="candidato_expansao_label">Vaga:</p>
+                                            <p class="candidato_expansao_texto">Product Designer Pleno</p>
+                                            <p class="candidato_expansao_label">Data:</p>
+                                            <p class="candidato_expansao_texto">03/01/2026</p>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Candidato 4: Samara Bunga — Triagem -->
-                                <div class="candidato_card cartao_hover" data-status="triagem" data-nome="samara octhale bunga">
+                                <div class="candidato_card cartao_hover" data-status="triagem"
+                                    data-nome="samara octhale bunga">
                                     <div class="candidato_topo">
                                         <div class="candidato_id_grupo">
                                             <div class="candidato_avatar">SB</div>
                                             <div class="candidato_info">
                                                 <h3 class="candidato_nome">Samara Octhale Bunga</h3>
                                                 <div class="candidato_contatos">
-                                                    <div class="candidato_contato_item"><i class="fa-regular fa-envelope"></i><span>samara.bunga@email.com</span></div>
-                                                    <div class="candidato_contato_item"><i class="fa-solid fa-phone"></i><span>(+244) 939 894 626</span></div>
+                                                    <div class="candidato_contato_item"><i
+                                                            class="fa-regular fa-envelope"></i><span>samara.bunga@email.com</span>
+                                                    </div>
+                                                    <div class="candidato_contato_item"><i
+                                                            class="fa-solid fa-phone"></i><span>(+244) 939 894
+                                                            626</span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="candidato_status_wrapper">
-                                            <button class="candidato_status_btn" data-candidato="ce">
-                                                <span class="status_emblema status_emblema_md status_triagem">Triagem</span>
-                                                <i class="fa-solid fa-chevron-down status_seta" id="seta_ce"></i>
+                                            <button class="candidato_status_btn" data-candidato="sb">
+                                                <span
+                                                    class="status_emblema status_emblema_md status_triagem">Triagem</span>
+                                                <i class="fa-solid fa-chevron-down status_seta" id="seta_sb"></i>
                                             </button>
-                                            <div class="status_dropdown" id="dropdown_ce">
-                                                <button class="status_dropdown_item" data-status-valor="triagem" data-alvo="ce">Triagem</button>
-                                                <button class="status_dropdown_item" data-status-valor="teste" data-alvo="ce">Teste Técnico</button>
-                                                <button class="status_dropdown_item" data-status-valor="entrevista" data-alvo="ce">Entrevista</button>
-                                                <button class="status_dropdown_item" data-status-valor="aprovado" data-alvo="ce">Aprovado</button>
-                                                <button class="status_dropdown_item" data-status-valor="rejeitado" data-alvo="ce">Rejeitado</button>
+                                            <div class="status_dropdown" id="dropdown_sb">
+                                                <button class="status_dropdown_item" data-status-valor="triagem"
+                                                    data-alvo="sb">Triagem</button>
+                                                <button class="status_dropdown_item" data-status-valor="teste"
+                                                    data-alvo="sb">Teste Técnico</button>
+                                                <button class="status_dropdown_item" data-status-valor="entrevista"
+                                                    data-alvo="sb">Entrevista</button>
+                                                <button class="status_dropdown_item" data-status-valor="aprovado"
+                                                    data-alvo="sb">Aprovado</button>
+                                                <button class="status_dropdown_item" data-status-valor="rejeitado"
+                                                    data-alvo="sb">Rejeitado</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="candidato_detalhes_grade">
-                                        <div class="candidato_detalhe_item"><i class="fa-solid fa-location-dot"></i><span>Condomínio Interland, Luanda, LA</span></div>
-                                        <div class="candidato_detalhe_item"><i class="fa-solid fa-graduation-cap"></i><span>Engenharia de Software</span></div>
+                                        <div class="candidato_detalhe_item"><i
+                                                class="fa-solid fa-location-dot"></i><span>Condomínio Interland, Luanda,
+                                                LA</span></div>
+                                        <div class="candidato_detalhe_item"><i
+                                                class="fa-solid fa-graduation-cap"></i><span>Engenharia de
+                                                Software</span></div>
                                     </div>
-                                    <button class="candidato_ver_mais_btn" data-candidato="ce">Ver mais detalhes <i class="fa-solid fa-chevron-down candidato_ver_mais_icone" id="icone_ver_ce"></i></button>
-                                    <div class="candidato_expansao" id="expansao_ce">
+                                    <button class="candidato_ver_mais_btn" data-candidato="sb">Ver mais detalhes <i
+                                            class="fa-solid fa-chevron-down candidato_ver_mais_icone"
+                                            id="icone_ver_sb"></i></button>
+                                    <div class="candidato_expansao" id="expansao_sb">
                                         <div class="candidato_expansao_conteudo">
-                                            <p class="candidato_expansao_label">Vaga candidatada:</p><p class="candidato_expansao_texto">Desenvolvedor(a) Full Stack Senior</p>
-                                            <p class="candidato_expansao_label">Data da candidatura:</p><p class="candidato_expansao_texto">12/01/2026</p>
+                                            <p class="candidato_expansao_label">Vaga:</p>
+                                            <p class="candidato_expansao_texto">Desenvolvedor(a) Full Stack Senior</p>
+                                            <p class="candidato_expansao_label">Data:</p>
+                                            <p class="candidato_expansao_texto">12/01/2026</p>
                                         </div>
                                     </div>
                                 </div>
-
-                                <!-- Candidato 5: Maria Santos — Rejeitado -->
-                                <div class="candidato_card cartao_hover" data-status="rejeitado" data-nome="maria silva santos">
+                                <div class="candidato_card cartao_hover" data-status="rejeitado"
+                                    data-nome="maria silva santos">
                                     <div class="candidato_topo">
                                         <div class="candidato_id_grupo">
                                             <div class="candidato_avatar candidato_avatar_rejeitado">MS</div>
                                             <div class="candidato_info">
                                                 <h3 class="candidato_nome">Maria Silva Santos</h3>
                                                 <div class="candidato_contatos">
-                                                    <div class="candidato_contato_item"><i class="fa-regular fa-envelope"></i><span>maria.santos@email.com</span></div>
-                                                    <div class="candidato_contato_item"><i class="fa-solid fa-phone"></i><span>(+244) 957 434 859</span></div>
+                                                    <div class="candidato_contato_item"><i
+                                                            class="fa-regular fa-envelope"></i><span>maria.santos@email.com</span>
+                                                    </div>
+                                                    <div class="candidato_contato_item"><i
+                                                            class="fa-solid fa-phone"></i><span>(+244) 957 434
+                                                            859</span></div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="candidato_status_wrapper">
-                                            <button class="candidato_status_btn" data-candidato="ms2">
-                                                <span class="status_emblema status_emblema_md status_rejeitado">Rejeitado</span>
-                                                <i class="fa-solid fa-chevron-down status_seta" id="seta_ms2"></i>
+                                            <button class="candidato_status_btn" data-candidato="ms">
+                                                <span
+                                                    class="status_emblema status_emblema_md status_rejeitado">Rejeitado</span>
+                                                <i class="fa-solid fa-chevron-down status_seta" id="seta_ms"></i>
                                             </button>
-                                            <div class="status_dropdown" id="dropdown_ms2">
-                                                <button class="status_dropdown_item" data-status-valor="triagem" data-alvo="ms2">Triagem</button>
-                                                <button class="status_dropdown_item" data-status-valor="teste" data-alvo="ms2">Teste Técnico</button>
-                                                <button class="status_dropdown_item" data-status-valor="entrevista" data-alvo="ms2">Entrevista</button>
-                                                <button class="status_dropdown_item" data-status-valor="aprovado" data-alvo="ms2">Aprovado</button>
-                                                <button class="status_dropdown_item" data-status-valor="rejeitado" data-alvo="ms2">Rejeitado</button>
+                                            <div class="status_dropdown" id="dropdown_ms">
+                                                <button class="status_dropdown_item" data-status-valor="triagem"
+                                                    data-alvo="ms">Triagem</button>
+                                                <button class="status_dropdown_item" data-status-valor="teste"
+                                                    data-alvo="ms">Teste Técnico</button>
+                                                <button class="status_dropdown_item" data-status-valor="entrevista"
+                                                    data-alvo="ms">Entrevista</button>
+                                                <button class="status_dropdown_item" data-status-valor="aprovado"
+                                                    data-alvo="ms">Aprovado</button>
+                                                <button class="status_dropdown_item" data-status-valor="rejeitado"
+                                                    data-alvo="ms">Rejeitado</button>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="candidato_detalhes_grade">
-                                        <div class="candidato_detalhe_item"><i class="fa-solid fa-location-dot"></i><span>Rua das Flores, Uige, UE</span></div>
-                                        <div class="candidato_detalhe_item"><i class="fa-solid fa-graduation-cap"></i><span>Bacharel em Ciência da Computação</span></div>
+                                        <div class="candidato_detalhe_item"><i
+                                                class="fa-solid fa-location-dot"></i><span>Uíge, Angola</span></div>
+                                        <div class="candidato_detalhe_item"><i
+                                                class="fa-solid fa-graduation-cap"></i><span>Ciência da
+                                                Computação</span></div>
                                     </div>
-                                    <button class="candidato_ver_mais_btn" data-candidato="ms2">Ver mais detalhes <i class="fa-solid fa-chevron-down candidato_ver_mais_icone" id="icone_ver_ms2"></i></button>
-                                    <div class="candidato_expansao" id="expansao_ms2">
+                                    <button class="candidato_ver_mais_btn" data-candidato="ms">Ver mais detalhes <i
+                                            class="fa-solid fa-chevron-down candidato_ver_mais_icone"
+                                            id="icone_ver_ms"></i></button>
+                                    <div class="candidato_expansao" id="expansao_ms">
                                         <div class="candidato_expansao_conteudo">
-                                            <p class="candidato_expansao_label">Vaga candidatada:</p><p class="candidato_expansao_texto">DevOps Engineer</p>
-                                            <p class="candidato_expansao_label">Data da candidatura:</p><p class="candidato_expansao_texto">18/11/2025</p>
+                                            <p class="candidato_expansao_label">Vaga:</p>
+                                            <p class="candidato_expansao_texto">DevOps Engineer</p>
+                                            <p class="candidato_expansao_label">Data:</p>
+                                            <p class="candidato_expansao_texto">18/11/2025</p>
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
-                            <!-- /candidatos_lista -->
-
                             <div class="sem_resultados" id="sem_resultados">
                                 <i class="fa-solid fa-magnifying-glass sem_resultados_icone"></i>
                                 <p class="sem_resultados_titulo">Nenhum candidato encontrado</p>
@@ -426,32 +497,24 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
-                <!-- /painel_grade -->
-
             </div>
         </section>
-        <!-- /secao_dashboard -->
 
         <!-- ================================================
-             SECÇÃO: MINHAS VAGAS (oculta por defeito)
-        ================================================= -->
+         SECÇÃO: MINHAS VAGAS
+    ================================================= -->
         <section class="conteudo_secao conteudo_secao_oculta" id="secao_minhas_vagas">
             <div class="conteudo_interno">
-
                 <div class="pagina_cabecalho">
                     <div class="pagina_cabecalho_info">
                         <h1 class="pagina_titulo">Minhas Vagas</h1>
-                        <p class="pagina_subtitulo">Gerencie todas as oportunidades publicadas pela sua empresa</p>
+                        <p class="pagina_subtitulo">Gerencie todas as oportunidades publicadas</p>
                     </div>
                     <button class="btn_primario" id="btn_nova_vaga_vagas">
-                        <i class="fa-solid fa-plus"></i>
-                        Nova Vaga
+                        <i class="fa-solid fa-plus"></i><span>Nova Vaga</span>
                     </button>
                 </div>
-
-                <!-- Stats rápidos -->
                 <div class="vagas_stats">
                     <div class="vaga_stat_item">
                         <div class="vaga_stat_icone_box"><i class="fa-solid fa-briefcase"></i></div>
@@ -461,7 +524,8 @@
                         </div>
                     </div>
                     <div class="vaga_stat_item">
-                        <div class="vaga_stat_icone_box vaga_stat_icone_box_ativo"><i class="fa-solid fa-circle-check"></i></div>
+                        <div class="vaga_stat_icone_box vaga_stat_icone_box_ativo"><i
+                                class="fa-solid fa-circle-check"></i></div>
                         <div>
                             <p class="vaga_stat_valor">2</p>
                             <p class="vaga_stat_label">Vagas ativas</p>
@@ -475,12 +539,11 @@
                         </div>
                     </div>
                 </div>
-
-                <!-- Filtros e busca -->
                 <div class="vagas_filtros_barra">
                     <div class="busca_campo_wrapper">
                         <i class="fa-solid fa-magnifying-glass busca_icone"></i>
-                        <input type="text" id="busca_minhas_vagas" class="campo_texto busca_input" placeholder="Buscar vaga por título ou localização..." autocomplete="off">
+                        <input type="text" id="busca_minhas_vagas" class="campo_texto busca_input"
+                            placeholder="Buscar vaga..." autocomplete="off">
                     </div>
                     <select class="campo_select campo_select_filtro" id="filtro_status_vagas">
                         <option value="todos">Todos os status</option>
@@ -488,8 +551,6 @@
                         <option value="inativa">Inativas</option>
                     </select>
                 </div>
-
-                <!-- Tabela -->
                 <div class="vagas_tabela_wrapper">
                     <table class="vagas_tabela" id="tabela_vagas">
                         <thead>
@@ -503,26 +564,41 @@
                             </tr>
                         </thead>
                         <tbody id="tbody_vagas">
-
-                            <tr class="tabela_tr" data-status="ativa" data-titulo="desenvolvedor full stack senior">
+                            <tr class="tabela_tr" data-status="ativa" data-titulo="desenvolvedor full stack senior"
+                                data-vaga-titulo="Desenvolvedor(a) Full Stack Senior"
+                                data-vaga-localizacao="Luanda, Angola" data-vaga-modalidade="Presencial"
+                                data-vaga-tipo="CLT" data-vaga-salario="500.000 - 800.000 Kz"
+                                data-vaga-descricao="Procuramos um desenvolvedor experiente para actuar em projectos web modernos, com foco em performance e escalabilidade."
+                                data-vaga-area="Tecnologia" data-vaga-status="ativa">
                                 <td class="tabela_td">
                                     <div class="vaga_tabela_info">
                                         <p class="vaga_tabela_titulo">Desenvolvedor(a) Full Stack Senior</p>
-                                        <p class="vaga_tabela_local"><i class="fa-solid fa-location-dot"></i> Luanda, Angola &middot; Presencial</p>
+                                        <p class="vaga_tabela_local"><i class="fa-solid fa-location-dot"></i> Luanda,
+                                            Angola &middot; Presencial</p>
                                     </div>
                                 </td>
                                 <td class="tabela_td tabela_col_oculta"><span class="tabela_tag">Presencial</span></td>
                                 <td class="tabela_td tabela_col_oculta"><span class="tabela_tag">CLT</span></td>
-                                <td class="tabela_td tabela_col_oculta"><span class="tabela_candidatos"><i class="fa-solid fa-users"></i> 2</span></td>
+                                <td class="tabela_td tabela_col_oculta"><span class="tabela_candidatos"><i
+                                            class="fa-solid fa-users"></i> 2</span></td>
                                 <td class="tabela_td"><span class="status_emblema status_ativa">Ativa</span></td>
                                 <td class="tabela_td tabela_td_acoes">
-                                    <button class="tabela_btn_icone tabela_btn_editar" title="Editar vaga" data-id="vaga1"><i class="fa-solid fa-pen-to-square"></i></button>
-                                    <button class="tabela_btn_icone tabela_btn_candidatos" title="Ver candidatos" data-id="vaga1"><i class="fa-solid fa-users"></i></button>
-                                    <button class="tabela_btn_icone tabela_btn_excluir" title="Excluir vaga" data-id="vaga1" data-titulo="Desenvolvedor(a) Full Stack Senior"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="tabela_btn_icone tabela_btn_editar" title="Editar" data-id="vaga1"><i
+                                            class="fa-solid fa-pen-to-square"></i></button>
+                                    <button class="tabela_btn_icone tabela_btn_candidatos_ver" title="Ver candidatos"
+                                        data-id="vaga1" data-secao="candidatos"><i
+                                            class="fa-solid fa-users"></i></button>
+                                    <button class="tabela_btn_icone tabela_btn_excluir" title="Excluir" data-id="vaga1"
+                                        data-titulo="Desenvolvedor(a) Full Stack Senior"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                 </td>
                             </tr>
-
-                            <tr class="tabela_tr" data-status="ativa" data-titulo="product designer pleno">
+                            <tr class="tabela_tr" data-status="ativa" data-titulo="product designer pleno"
+                                data-vaga-titulo="Product Designer Pleno" data-vaga-localizacao="Remoto"
+                                data-vaga-modalidade="Remoto" data-vaga-tipo="Freelance"
+                                data-vaga-salario="300.000 Kz/mês"
+                                data-vaga-descricao="Buscamos um designer criativo para melhorar a experiência do utilizador e criar interfaces modernas."
+                                data-vaga-area="Design" data-vaga-status="ativa">
                                 <td class="tabela_td">
                                     <div class="vaga_tabela_info">
                                         <p class="vaga_tabela_titulo">Product Designer Pleno</p>
@@ -531,81 +607,700 @@
                                 </td>
                                 <td class="tabela_td tabela_col_oculta"><span class="tabela_tag">Remoto</span></td>
                                 <td class="tabela_td tabela_col_oculta"><span class="tabela_tag">Freelance</span></td>
-                                <td class="tabela_td tabela_col_oculta"><span class="tabela_candidatos"><i class="fa-solid fa-users"></i> 2</span></td>
+                                <td class="tabela_td tabela_col_oculta"><span class="tabela_candidatos"><i
+                                            class="fa-solid fa-users"></i> 2</span></td>
                                 <td class="tabela_td"><span class="status_emblema status_ativa">Ativa</span></td>
                                 <td class="tabela_td tabela_td_acoes">
-                                    <button class="tabela_btn_icone tabela_btn_editar" title="Editar vaga" data-id="vaga2"><i class="fa-solid fa-pen-to-square"></i></button>
-                                    <button class="tabela_btn_icone tabela_btn_candidatos" title="Ver candidatos" data-id="vaga2"><i class="fa-solid fa-users"></i></button>
-                                    <button class="tabela_btn_icone tabela_btn_excluir" title="Excluir vaga" data-id="vaga2" data-titulo="Product Designer Pleno"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="tabela_btn_icone tabela_btn_editar" title="Editar" data-id="vaga2"><i
+                                            class="fa-solid fa-pen-to-square"></i></button>
+                                    <button class="tabela_btn_icone tabela_btn_candidatos_ver" title="Ver candidatos"
+                                        data-id="vaga2" data-secao="candidatos"><i
+                                            class="fa-solid fa-users"></i></button>
+                                    <button class="tabela_btn_icone tabela_btn_excluir" title="Excluir" data-id="vaga2"
+                                        data-titulo="Product Designer Pleno"><i
+                                            class="fa-solid fa-trash-can"></i></button>
                                 </td>
                             </tr>
-
-                            <tr class="tabela_tr" data-status="inativa" data-titulo="devops engineer">
+                            <tr class="tabela_tr" data-status="inativa" data-titulo="devops engineer"
+                                data-vaga-titulo="DevOps Engineer" data-vaga-localizacao="Luanda, Angola"
+                                data-vaga-modalidade="Híbrido" data-vaga-tipo="CLT"
+                                data-vaga-salario="600.000 - 900.000 Kz"
+                                data-vaga-descricao="Procuramos um profissional experiente em DevOps para gerir infraestrutura cloud e pipelines de CI/CD."
+                                data-vaga-area="Tecnologia" data-vaga-status="inativa">
                                 <td class="tabela_td">
                                     <div class="vaga_tabela_info">
                                         <p class="vaga_tabela_titulo">DevOps Engineer</p>
-                                        <p class="vaga_tabela_local"><i class="fa-solid fa-location-dot"></i> Luanda, Angola &middot; Híbrido</p>
+                                        <p class="vaga_tabela_local"><i class="fa-solid fa-location-dot"></i> Luanda,
+                                            Angola &middot; Híbrido</p>
                                     </div>
                                 </td>
                                 <td class="tabela_td tabela_col_oculta"><span class="tabela_tag">Híbrido</span></td>
                                 <td class="tabela_td tabela_col_oculta"><span class="tabela_tag">CLT</span></td>
-                                <td class="tabela_td tabela_col_oculta"><span class="tabela_candidatos"><i class="fa-solid fa-users"></i> 1</span></td>
+                                <td class="tabela_td tabela_col_oculta"><span class="tabela_candidatos"><i
+                                            class="fa-solid fa-users"></i> 1</span></td>
                                 <td class="tabela_td"><span class="status_emblema status_inativa">Inativa</span></td>
                                 <td class="tabela_td tabela_td_acoes">
-                                    <button class="tabela_btn_icone tabela_btn_editar" title="Editar vaga" data-id="vaga3"><i class="fa-solid fa-pen-to-square"></i></button>
-                                    <button class="tabela_btn_icone tabela_btn_candidatos" title="Ver candidatos" data-id="vaga3"><i class="fa-solid fa-users"></i></button>
-                                    <button class="tabela_btn_icone tabela_btn_excluir" title="Excluir vaga" data-id="vaga3" data-titulo="DevOps Engineer"><i class="fa-solid fa-trash-can"></i></button>
+                                    <button class="tabela_btn_icone tabela_btn_editar" title="Editar" data-id="vaga3"><i
+                                            class="fa-solid fa-pen-to-square"></i></button>
+                                    <button class="tabela_btn_icone tabela_btn_candidatos_ver" title="Ver candidatos"
+                                        data-id="vaga3" data-secao="candidatos"><i
+                                            class="fa-solid fa-users"></i></button>
+                                    <button class="tabela_btn_icone tabela_btn_excluir" title="Excluir" data-id="vaga3"
+                                        data-titulo="DevOps Engineer"><i class="fa-solid fa-trash-can"></i></button>
                                 </td>
                             </tr>
-
                         </tbody>
                     </table>
-
-                    <!-- Estado vazio -->
                     <div class="tabela_vazia" id="tabela_vazia">
                         <i class="fa-solid fa-briefcase tabela_vazia_icone"></i>
                         <p class="tabela_vazia_titulo">Nenhuma vaga encontrada</p>
                         <p class="tabela_vazia_texto">Tente ajustar os filtros ou adicione uma nova vaga.</p>
-                        <button class="btn_primario" id="btn_nova_vaga_vazio">
-                            <i class="fa-solid fa-plus"></i>
-                            Criar primeira vaga
+                        <button class="btn_primario" id="btn_nova_vaga_vazio"><i class="fa-solid fa-plus"></i> Criar
+                            vaga</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================
+         SECÇÃO: CANDIDATOS
+    ================================================= -->
+        <section class="conteudo_secao conteudo_secao_oculta" id="secao_candidatos">
+            <div class="conteudo_interno">
+                <div class="pagina_cabecalho">
+                    <div class="pagina_cabecalho_info">
+                        <h1 class="pagina_titulo">Candidatos</h1>
+                        <p class="pagina_subtitulo">Gerencie todos os candidatos e o seu progresso no processo selectivo
+                        </p>
+                    </div>
+                    <button class="btn_primario" id="btn_exportar_candidatos">
+                        <i class="fa-solid fa-file-arrow-down"></i><span>Exportar</span>
+                    </button>
+                </div>
+
+                <!-- Stats candidatos -->
+                <div class="stats_grade stats_grade_candidatos">
+                    <div class="stat_card">
+                        <div class="stat_card_interno">
+                            <div class="stat_info">
+                                <p class="stat_label">Total</p>
+                                <p class="stat_valor">5</p>
+                            </div>
+                            <div class="stat_icone_box"><i class="fa-solid fa-users stat_icone"></i></div>
+                        </div>
+                    </div>
+                    <div class="stat_card">
+                        <div class="stat_card_interno">
+                            <div class="stat_info">
+                                <p class="stat_label">Em Triagem</p>
+                                <p class="stat_valor">1</p>
+                            </div>
+                            <div class="stat_icone_box stat_icone_box_info"><i
+                                    class="fa-solid fa-filter stat_icone stat_icone_info"></i></div>
+                        </div>
+                    </div>
+                    <div class="stat_card">
+                        <div class="stat_card_interno">
+                            <div class="stat_info">
+                                <p class="stat_label">Em Entrevista</p>
+                                <p class="stat_valor">1</p>
+                            </div>
+                            <div class="stat_icone_box stat_icone_box_aviso"><i
+                                    class="fa-solid fa-comments stat_icone stat_icone_aviso"></i></div>
+                        </div>
+                    </div>
+                    <div class="stat_card">
+                        <div class="stat_card_interno">
+                            <div class="stat_info">
+                                <p class="stat_label">Aprovados</p>
+                                <p class="stat_valor">1</p>
+                            </div>
+                            <div class="stat_icone_box stat_icone_box_sucesso"><i
+                                    class="fa-solid fa-circle-check stat_icone stat_icone_sucesso"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Filtros avançados -->
+                <div class="candidatos_filtros_avancados">
+                    <div class="busca_campo_wrapper candidatos_busca">
+                        <i class="fa-solid fa-magnifying-glass busca_icone"></i>
+                        <input type="text" id="busca_candidatos_secao" class="campo_texto busca_input"
+                            placeholder="Buscar por nome ou e-mail..." autocomplete="off">
+                    </div>
+                    <div class="candidatos_filtros_linha">
+                        <select class="campo_select" id="filtro_status_candidatos">
+                            <option value="todos">Todos os status</option>
+                            <option value="triagem">Triagem</option>
+                            <option value="teste">Teste Técnico</option>
+                            <option value="entrevista">Entrevista</option>
+                            <option value="aprovado">Aprovado</option>
+                            <option value="rejeitado">Rejeitado</option>
+                        </select>
+                        <select class="campo_select" id="filtro_vaga_candidatos">
+                            <option value="todos">Todas as vagas</option>
+                            <option value="full-stack">Full Stack Senior</option>
+                            <option value="designer">Product Designer</option>
+                            <option value="devops">DevOps Engineer</option>
+                        </select>
+                        <button class="btn_contorno btn_sm" id="btn_limpar_filtros_cand">
+                            <i class="fa-solid fa-rotate-left"></i> Limpar
                         </button>
                     </div>
                 </div>
 
-            </div>
-        </section>
-        <!-- /secao_minhas_vagas -->
+                <!-- Lista de candidatos -->
+                <div class="candidatos_secao_lista" id="candidatos_secao_lista">
 
-        <!-- ================================================
-             SECÇÃO: CANDIDATOS (placeholder)
-        ================================================= -->
-        <section class="conteudo_secao conteudo_secao_oculta" id="secao_candidatos">
-            <div class="conteudo_interno">
-                <div class="secao_placeholder">
-                    <i class="fa-solid fa-users secao_placeholder_icone"></i>
-                    <h2 class="secao_placeholder_titulo">Gestão de Candidatos</h2>
-                    <p class="secao_placeholder_texto">Módulo em construção. Em breve terá a lista completa de candidatos.</p>
+                    <!-- Candidato 1 -->
+                    <div class="candidato_secao_card" data-nome="sandra francisco cafala" data-status-cand="entrevista"
+                        data-vaga-cand="full-stack">
+                        <div class="candidato_secao_topo">
+                            <div class="candidato_secao_id">
+                                <div class="candidato_secao_avatar">SC</div>
+                                <div>
+                                    <h3 class="candidato_secao_nome">Sandra Francisco Cafala</h3>
+                                    <div class="candidato_secao_meta">
+                                        <span><i class="fa-regular fa-envelope"></i> sandra.cafala@email.com</span>
+                                        <span><i class="fa-solid fa-phone"></i> (+244) 948 059 912</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> Luanda, LA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidato_secao_acoes_topo">
+                                <div class="candidato_status_wrapper">
+                                    <button class="candidato_status_btn" data-candidato="cand_sc">
+                                        <span
+                                            class="status_emblema status_emblema_md status_entrevista">Entrevista</span>
+                                        <i class="fa-solid fa-chevron-down status_seta" id="seta_cand_sc"></i>
+                                    </button>
+                                    <div class="status_dropdown" id="dropdown_cand_sc">
+                                        <button class="status_dropdown_item" data-status-valor="triagem"
+                                            data-alvo="cand_sc">Triagem</button>
+                                        <button class="status_dropdown_item" data-status-valor="teste"
+                                            data-alvo="cand_sc">Teste Técnico</button>
+                                        <button class="status_dropdown_item" data-status-valor="entrevista"
+                                            data-alvo="cand_sc">Entrevista</button>
+                                        <button class="status_dropdown_item" data-status-valor="aprovado"
+                                            data-alvo="cand_sc">Aprovado</button>
+                                        <button class="status_dropdown_item" data-status-valor="rejeitado"
+                                            data-alvo="cand_sc">Rejeitado</button>
+                                    </div>
+                                </div>
+                                <button class="tabela_btn_icone tabela_btn_editar candidato_btn_ver_detalhe"
+                                    title="Ver perfil completo" data-cand="sc_detalhe"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="candidato_secao_corpo">
+                            <div class="candidato_secao_vaga">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Desenvolvedor(a) Full Stack Senior</span>
+                                <span class="candidato_secao_data"><i class="fa-regular fa-calendar"></i>
+                                    10/01/2026</span>
+                            </div>
+                            <!-- Trilha de progresso -->
+                            <div class="candidatura_trilha_mini">
+                                <div class="trilha_mini_etapa trilha_mini_concluida" title="Triagem">
+                                    <div class="trilha_mini_ponto"><i class="fa-solid fa-check"></i></div>
+                                    <span>Triagem</span>
+                                </div>
+                                <div class="trilha_mini_linha trilha_mini_linha_ativa"></div>
+                                <div class="trilha_mini_etapa trilha_mini_concluida" title="Teste Técnico">
+                                    <div class="trilha_mini_ponto"><i class="fa-solid fa-check"></i></div>
+                                    <span>Teste</span>
+                                </div>
+                                <div class="trilha_mini_linha trilha_mini_linha_ativa"></div>
+                                <div class="trilha_mini_etapa trilha_mini_atual" title="Entrevista">
+                                    <div class="trilha_mini_ponto"><i class="fa-solid fa-circle"></i></div>
+                                    <span>Entrevista</span>
+                                </div>
+                                <div class="trilha_mini_linha"></div>
+                                <div class="trilha_mini_etapa" title="Contratação">
+                                    <div class="trilha_mini_ponto trilha_mini_vazio"></div>
+                                    <span>Contratação</span>
+                                </div>
+                            </div>
+                            <div class="candidato_secao_botoes">
+                                <button class="btn_contorno btn_sm"><i class="fa-solid fa-envelope"></i> Enviar
+                                    e-mail</button>
+                                <button class="btn_contorno btn_sm"><i class="fa-regular fa-calendar"></i> Agendar
+                                    entrevista</button>
+                                <button class="btn_contorno btn_sm btn_sm_danger"><i class="fa-solid fa-xmark"></i>
+                                    Rejeitar</button>
+                                <button class="btn_primario btn_sm"><i class="fa-solid fa-circle-check"></i>
+                                    Aprovar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Candidato 2 -->
+                    <div class="candidato_secao_card" data-nome="daniel domingos bunga" data-status-cand="teste"
+                        data-vaga-cand="designer">
+                        <div class="candidato_secao_topo">
+                            <div class="candidato_secao_id">
+                                <div class="candidato_secao_avatar">DB</div>
+                                <div>
+                                    <h3 class="candidato_secao_nome">Daniel Domingos Bunga</h3>
+                                    <div class="candidato_secao_meta">
+                                        <span><i class="fa-regular fa-envelope"></i> daniel.bunga@email.com</span>
+                                        <span><i class="fa-solid fa-phone"></i> (+244) 957 434 855</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> Luanda, LA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidato_secao_acoes_topo">
+                                <div class="candidato_status_wrapper">
+                                    <button class="candidato_status_btn" data-candidato="cand_db">
+                                        <span class="status_emblema status_emblema_md status_teste">Teste</span>
+                                        <i class="fa-solid fa-chevron-down status_seta" id="seta_cand_db"></i>
+                                    </button>
+                                    <div class="status_dropdown" id="dropdown_cand_db">
+                                        <button class="status_dropdown_item" data-status-valor="triagem"
+                                            data-alvo="cand_db">Triagem</button>
+                                        <button class="status_dropdown_item" data-status-valor="teste"
+                                            data-alvo="cand_db">Teste Técnico</button>
+                                        <button class="status_dropdown_item" data-status-valor="entrevista"
+                                            data-alvo="cand_db">Entrevista</button>
+                                        <button class="status_dropdown_item" data-status-valor="aprovado"
+                                            data-alvo="cand_db">Aprovado</button>
+                                        <button class="status_dropdown_item" data-status-valor="rejeitado"
+                                            data-alvo="cand_db">Rejeitado</button>
+                                    </div>
+                                </div>
+                                <button class="tabela_btn_icone tabela_btn_editar" title="Ver perfil"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="candidato_secao_corpo">
+                            <div class="candidato_secao_vaga">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Product Designer Pleno</span>
+                                <span class="candidato_secao_data"><i class="fa-regular fa-calendar"></i>
+                                    05/01/2026</span>
+                            </div>
+                            <div class="candidatura_trilha_mini">
+                                <div class="trilha_mini_etapa trilha_mini_concluida">
+                                    <div class="trilha_mini_ponto"><i class="fa-solid fa-check"></i></div>
+                                    <span>Triagem</span>
+                                </div>
+                                <div class="trilha_mini_linha trilha_mini_linha_ativa"></div>
+                                <div class="trilha_mini_etapa trilha_mini_atual">
+                                    <div class="trilha_mini_ponto"><i class="fa-solid fa-circle"></i></div>
+                                    <span>Teste</span>
+                                </div>
+                                <div class="trilha_mini_linha"></div>
+                                <div class="trilha_mini_etapa">
+                                    <div class="trilha_mini_ponto trilha_mini_vazio"></div><span>Entrevista</span>
+                                </div>
+                                <div class="trilha_mini_linha"></div>
+                                <div class="trilha_mini_etapa">
+                                    <div class="trilha_mini_ponto trilha_mini_vazio"></div><span>Contratação</span>
+                                </div>
+                            </div>
+                            <div class="candidato_secao_botoes">
+                                <button class="btn_contorno btn_sm"><i class="fa-solid fa-envelope"></i> Enviar
+                                    e-mail</button>
+                                <button class="btn_contorno btn_sm"><i class="fa-solid fa-file-circle-check"></i> Enviar
+                                    teste</button>
+                                <button class="btn_contorno btn_sm btn_sm_danger"><i class="fa-solid fa-xmark"></i>
+                                    Rejeitar</button>
+                                <button class="btn_primario btn_sm"><i class="fa-solid fa-arrow-right"></i>
+                                    Avançar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Candidato 3 -->
+                    <div class="candidato_secao_card candidato_card_aprovado" data-nome="doneta matos da cruz"
+                        data-status-cand="aprovado" data-vaga-cand="designer">
+                        <div class="candidato_secao_topo">
+                            <div class="candidato_secao_id">
+                                <div class="candidato_secao_avatar candidato_secao_avatar_aprovado">DC</div>
+                                <div>
+                                    <h3 class="candidato_secao_nome">Doneta Matos da Cruz</h3>
+                                    <div class="candidato_secao_meta">
+                                        <span><i class="fa-regular fa-envelope"></i> doneta.cruz@email.com</span>
+                                        <span><i class="fa-solid fa-phone"></i> (+244) 923 387 654</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> Luanda, LA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidato_secao_acoes_topo">
+                                <div class="candidato_status_wrapper">
+                                    <button class="candidato_status_btn" data-candidato="cand_dc">
+                                        <span class="status_emblema status_emblema_md status_aprovado">Aprovado</span>
+                                        <i class="fa-solid fa-chevron-down status_seta" id="seta_cand_dc"></i>
+                                    </button>
+                                    <div class="status_dropdown" id="dropdown_cand_dc">
+                                        <button class="status_dropdown_item" data-status-valor="triagem"
+                                            data-alvo="cand_dc">Triagem</button>
+                                        <button class="status_dropdown_item" data-status-valor="teste"
+                                            data-alvo="cand_dc">Teste Técnico</button>
+                                        <button class="status_dropdown_item" data-status-valor="entrevista"
+                                            data-alvo="cand_dc">Entrevista</button>
+                                        <button class="status_dropdown_item" data-status-valor="aprovado"
+                                            data-alvo="cand_dc">Aprovado</button>
+                                        <button class="status_dropdown_item" data-status-valor="rejeitado"
+                                            data-alvo="cand_dc">Rejeitado</button>
+                                    </div>
+                                </div>
+                                <button class="tabela_btn_icone tabela_btn_editar" title="Ver perfil"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="candidato_secao_corpo">
+                            <div class="candidato_secao_vaga">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Product Designer Pleno</span>
+                                <span class="candidato_secao_data"><i class="fa-regular fa-calendar"></i>
+                                    03/01/2026</span>
+                            </div>
+                            <div class="candidatura_trilha_mini">
+                                <div class="trilha_mini_etapa trilha_mini_concluida">
+                                    <div class="trilha_mini_ponto"><i class="fa-solid fa-check"></i></div>
+                                    <span>Triagem</span>
+                                </div>
+                                <div class="trilha_mini_linha trilha_mini_linha_ativa"></div>
+                                <div class="trilha_mini_etapa trilha_mini_concluida">
+                                    <div class="trilha_mini_ponto"><i class="fa-solid fa-check"></i></div>
+                                    <span>Teste</span>
+                                </div>
+                                <div class="trilha_mini_linha trilha_mini_linha_ativa"></div>
+                                <div class="trilha_mini_etapa trilha_mini_concluida">
+                                    <div class="trilha_mini_ponto"><i class="fa-solid fa-check"></i></div>
+                                    <span>Entrevista</span>
+                                </div>
+                                <div class="trilha_mini_linha trilha_mini_linha_ativa"></div>
+                                <div class="trilha_mini_etapa trilha_mini_concluida">
+                                    <div class="trilha_mini_ponto"><i class="fa-solid fa-check"></i></div>
+                                    <span>Contratação</span>
+                                </div>
+                            </div>
+                            <div class="candidato_secao_botoes">
+                                <button class="btn_contorno btn_sm"><i class="fa-solid fa-envelope"></i> Enviar
+                                    proposta</button>
+                                <button class="btn_primario btn_sm"><i class="fa-solid fa-file-signature"></i> Gerar
+                                    contrato</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Candidato 4 -->
+                    <div class="candidato_secao_card" data-nome="samara octhale bunga" data-status-cand="triagem"
+                        data-vaga-cand="full-stack">
+                        <div class="candidato_secao_topo">
+                            <div class="candidato_secao_id">
+                                <div class="candidato_secao_avatar">SB</div>
+                                <div>
+                                    <h3 class="candidato_secao_nome">Samara Octhale Bunga</h3>
+                                    <div class="candidato_secao_meta">
+                                        <span><i class="fa-regular fa-envelope"></i> samara.bunga@email.com</span>
+                                        <span><i class="fa-solid fa-phone"></i> (+244) 939 894 626</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> Luanda, LA</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidato_secao_acoes_topo">
+                                <div class="candidato_status_wrapper">
+                                    <button class="candidato_status_btn" data-candidato="cand_sb">
+                                        <span class="status_emblema status_emblema_md status_triagem">Triagem</span>
+                                        <i class="fa-solid fa-chevron-down status_seta" id="seta_cand_sb"></i>
+                                    </button>
+                                    <div class="status_dropdown" id="dropdown_cand_sb">
+                                        <button class="status_dropdown_item" data-status-valor="triagem"
+                                            data-alvo="cand_sb">Triagem</button>
+                                        <button class="status_dropdown_item" data-status-valor="teste"
+                                            data-alvo="cand_sb">Teste Técnico</button>
+                                        <button class="status_dropdown_item" data-status-valor="entrevista"
+                                            data-alvo="cand_sb">Entrevista</button>
+                                        <button class="status_dropdown_item" data-status-valor="aprovado"
+                                            data-alvo="cand_sb">Aprovado</button>
+                                        <button class="status_dropdown_item" data-status-valor="rejeitado"
+                                            data-alvo="cand_sb">Rejeitado</button>
+                                    </div>
+                                </div>
+                                <button class="tabela_btn_icone tabela_btn_editar" title="Ver perfil"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="candidato_secao_corpo">
+                            <div class="candidato_secao_vaga">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>Desenvolvedor(a) Full Stack Senior</span>
+                                <span class="candidato_secao_data"><i class="fa-regular fa-calendar"></i>
+                                    12/01/2026</span>
+                            </div>
+                            <div class="candidatura_trilha_mini">
+                                <div class="trilha_mini_etapa trilha_mini_atual">
+                                    <div class="trilha_mini_ponto"><i class="fa-solid fa-circle"></i></div>
+                                    <span>Triagem</span>
+                                </div>
+                                <div class="trilha_mini_linha"></div>
+                                <div class="trilha_mini_etapa">
+                                    <div class="trilha_mini_ponto trilha_mini_vazio"></div><span>Teste</span>
+                                </div>
+                                <div class="trilha_mini_linha"></div>
+                                <div class="trilha_mini_etapa">
+                                    <div class="trilha_mini_ponto trilha_mini_vazio"></div><span>Entrevista</span>
+                                </div>
+                                <div class="trilha_mini_linha"></div>
+                                <div class="trilha_mini_etapa">
+                                    <div class="trilha_mini_ponto trilha_mini_vazio"></div><span>Contratação</span>
+                                </div>
+                            </div>
+                            <div class="candidato_secao_botoes">
+                                <button class="btn_contorno btn_sm"><i class="fa-solid fa-envelope"></i> Enviar
+                                    e-mail</button>
+                                <button class="btn_contorno btn_sm btn_sm_danger"><i class="fa-solid fa-xmark"></i>
+                                    Rejeitar</button>
+                                <button class="btn_primario btn_sm"><i class="fa-solid fa-arrow-right"></i>
+                                    Avançar</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Candidato 5 -->
+                    <div class="candidato_secao_card candidato_card_rejeitado" data-nome="maria silva santos"
+                        data-status-cand="rejeitado" data-vaga-cand="devops">
+                        <div class="candidato_secao_topo">
+                            <div class="candidato_secao_id">
+                                <div class="candidato_secao_avatar candidato_secao_avatar_rejeitado">MS</div>
+                                <div>
+                                    <h3 class="candidato_secao_nome">Maria Silva Santos</h3>
+                                    <div class="candidato_secao_meta">
+                                        <span><i class="fa-regular fa-envelope"></i> maria.santos@email.com</span>
+                                        <span><i class="fa-solid fa-phone"></i> (+244) 957 434 859</span>
+                                        <span><i class="fa-solid fa-location-dot"></i> Uíge, Angola</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="candidato_secao_acoes_topo">
+                                <div class="candidato_status_wrapper">
+                                    <button class="candidato_status_btn" data-candidato="cand_ms">
+                                        <span class="status_emblema status_emblema_md status_rejeitado">Rejeitado</span>
+                                        <i class="fa-solid fa-chevron-down status_seta" id="seta_cand_ms"></i>
+                                    </button>
+                                    <div class="status_dropdown" id="dropdown_cand_ms">
+                                        <button class="status_dropdown_item" data-status-valor="triagem"
+                                            data-alvo="cand_ms">Triagem</button>
+                                        <button class="status_dropdown_item" data-status-valor="teste"
+                                            data-alvo="cand_ms">Teste Técnico</button>
+                                        <button class="status_dropdown_item" data-status-valor="entrevista"
+                                            data-alvo="cand_ms">Entrevista</button>
+                                        <button class="status_dropdown_item" data-status-valor="aprovado"
+                                            data-alvo="cand_ms">Aprovado</button>
+                                        <button class="status_dropdown_item" data-status-valor="rejeitado"
+                                            data-alvo="cand_ms">Rejeitado</button>
+                                    </div>
+                                </div>
+                                <button class="tabela_btn_icone tabela_btn_editar" title="Ver perfil"><i
+                                        class="fa-solid fa-eye"></i></button>
+                            </div>
+                        </div>
+                        <div class="candidato_secao_corpo">
+                            <div class="candidato_secao_vaga">
+                                <i class="fa-solid fa-briefcase"></i>
+                                <span>DevOps Engineer</span>
+                                <span class="candidato_secao_data"><i class="fa-regular fa-calendar"></i>
+                                    18/11/2025</span>
+                            </div>
+                            <div class="candidato_secao_botoes">
+                                <button class="btn_contorno btn_sm"><i class="fa-solid fa-envelope"></i> Enviar
+                                    feedback</button>
+                                <button class="btn_contorno btn_sm"><i class="fa-solid fa-rotate-left"></i>
+                                    Reconsiderar</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
+
+                <!-- Estado vazio -->
+                <div class="sem_resultados" id="sem_resultados_candidatos">
+                    <i class="fa-solid fa-users sem_resultados_icone"></i>
+                    <p class="sem_resultados_titulo">Nenhum candidato encontrado</p>
+                    <p class="sem_resultados_texto">Tente ajustar os filtros de busca.</p>
+                </div>
+
             </div>
         </section>
 
         <!-- ================================================
-             SECÇÃO: CONFIGURAÇÕES (placeholder)
-        ================================================= -->
+         SECÇÃO: CONFIGURAÇÕES
+    ================================================= -->
         <section class="conteudo_secao conteudo_secao_oculta" id="secao_configuracoes">
             <div class="conteudo_interno">
-                <div class="secao_placeholder">
-                    <i class="fa-solid fa-gear secao_placeholder_icone"></i>
-                    <h2 class="secao_placeholder_titulo">Configurações</h2>
-                    <p class="secao_placeholder_texto">Módulo em construção. Em breve poderá ajustar as configurações da sua empresa.</p>
+                <div class="pagina_cabecalho">
+                    <div class="pagina_cabecalho_info">
+                        <h1 class="pagina_titulo">Configurações</h1>
+                        <p class="pagina_subtitulo">Personalize o perfil e as preferências da sua empresa</p>
+                    </div>
+                    <button class="btn_primario" id="btn_salvar_config">
+                        <i class="fa-solid fa-floppy-disk"></i><span>Guardar</span>
+                    </button>
+                </div>
+
+                <div class="config_grade">
+
+                    <!-- Perfil da empresa -->
+                    <div class="painel_card config_card_largo">
+                        <h2 class="painel_titulo"><i class="fa-solid fa-building-columns icone_secao"></i> Perfil da
+                            Empresa</h2>
+                        <div class="config_logo_zona">
+                            <div class="config_logo_avatar">TF</div>
+                            <div>
+                                <p class="config_logo_nome">TechFlow Solutions</p>
+                                <p class="config_logo_sub">Tecnologia da Informação · Luanda, Angola</p>
+                                <button class="btn_contorno btn_sm"><i class="fa-solid fa-camera"></i> Alterar
+                                    logótipo</button>
+                            </div>
+                        </div>
+                        <div class="campos_grade">
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="cfg_nome">Nome da empresa</label>
+                                <input type="text" id="cfg_nome" class="campo_texto" value="TechFlow Solutions">
+                            </div>
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="cfg_email">E-mail corporativo</label>
+                                <input type="email" id="cfg_email" class="campo_texto" value="contato@techflow.ao">
+                            </div>
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="cfg_telefone">Telefone</label>
+                                <input type="tel" id="cfg_telefone" class="campo_texto" value="(+244) 923 000 000">
+                            </div>
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="cfg_site">Website</label>
+                                <input type="url" id="cfg_site" class="campo_texto" placeholder="https://techflow.ao">
+                            </div>
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="cfg_localizacao">Localização</label>
+                                <input type="text" id="cfg_localizacao" class="campo_texto" value="Luanda, Angola">
+                            </div>
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="cfg_area">Área de Atuação</label>
+                                <div class="campo_select_wrapper">
+                                    <select id="cfg_area" class="campo_select">
+                                        <option value="Tecnologia" selected>Tecnologia da Informação</option>
+                                        <option value="Marketing">Marketing Digital</option>
+                                        <option value="Financas">Serviços Financeiros</option>
+                                        <option value="Design">Design &amp; Produto</option>
+                                        <option value="Outro">Outro</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down campo_select_icone"></i>
+                                </div>
+                            </div>
+                            <div class="campo_grupo campo_coluna_dupla">
+                                <label class="campo_label" for="cfg_descricao">Descrição da empresa</label>
+                                <textarea id="cfg_descricao" class="campo_texto campo_textarea"
+                                    placeholder="Descreva a sua empresa, cultura e missão...">Somos uma empresa de tecnologia angolana focada em desenvolver soluções digitais inovadoras para o mercado africano.</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Notificações -->
+                    <div class="painel_card">
+                        <h2 class="painel_titulo"><i class="fa-solid fa-bell icone_secao"></i> Notificações</h2>
+                        <div class="config_toggle_lista">
+                            <div class="config_toggle_item">
+                                <div>
+                                    <p class="config_toggle_titulo">Nova candidatura</p>
+                                    <p class="config_toggle_sub">Receber alerta quando alguém se candidatar</p>
+                                </div>
+                                <label class="toggle_switch">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle_slider"></span>
+                                </label>
+                            </div>
+                            <div class="config_toggle_item">
+                                <div>
+                                    <p class="config_toggle_titulo">Resumo semanal</p>
+                                    <p class="config_toggle_sub">Relatório de candidaturas toda segunda-feira</p>
+                                </div>
+                                <label class="toggle_switch">
+                                    <input type="checkbox" checked>
+                                    <span class="toggle_slider"></span>
+                                </label>
+                            </div>
+                            <div class="config_toggle_item">
+                                <div>
+                                    <p class="config_toggle_titulo">Vagas prestes a expirar</p>
+                                    <p class="config_toggle_sub">Aviso 7 dias antes do prazo da vaga</p>
+                                </div>
+                                <label class="toggle_switch">
+                                    <input type="checkbox">
+                                    <span class="toggle_slider"></span>
+                                </label>
+                            </div>
+                            <div class="config_toggle_item">
+                                <div>
+                                    <p class="config_toggle_titulo">Newsletter do RecrutaPro</p>
+                                    <p class="config_toggle_sub">Dicas e novidades da plataforma</p>
+                                </div>
+                                <label class="toggle_switch">
+                                    <input type="checkbox">
+                                    <span class="toggle_slider"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Segurança -->
+                    <div class="painel_card">
+                        <h2 class="painel_titulo"><i class="fa-solid fa-shield-halved icone_secao"></i> Segurança</h2>
+                        <div class="campo_grupo" style="margin-bottom:1rem;">
+                            <label class="campo_label" for="cfg_senha_atual">Senha atual</label>
+                            <input type="password" id="cfg_senha_atual" class="campo_texto" placeholder="••••••••">
+                        </div>
+                        <div class="campo_grupo" style="margin-bottom:1rem;">
+                            <label class="campo_label" for="cfg_senha_nova">Nova senha</label>
+                            <input type="password" id="cfg_senha_nova" class="campo_texto"
+                                placeholder="Mínimo 8 caracteres">
+                        </div>
+                        <div class="campo_grupo" style="margin-bottom:1.5rem;">
+                            <label class="campo_label" for="cfg_senha_confirmar">Confirmar nova senha</label>
+                            <input type="password" id="cfg_senha_confirmar" class="campo_texto"
+                                placeholder="Repita a nova senha">
+                        </div>
+                        <button class="btn_contorno btn_sm">
+                            <i class="fa-solid fa-lock"></i> Alterar senha
+                        </button>
+                    </div>
+
+                    <!-- Zona de perigo -->
+                    <div class="painel_card config_card_largo config_card_perigo">
+                        <h2 class="painel_titulo painel_titulo_perigo"><i class="fa-solid fa-triangle-exclamation"></i>
+                            Zona de Perigo</h2>
+                        <div class="config_perigo_item">
+                            <div>
+                                <p class="config_toggle_titulo">Desactivar conta</p>
+                                <p class="config_toggle_sub">As suas vagas ficarão ocultas temporariamente. Pode
+                                    reactivar a qualquer momento.</p>
+                            </div>
+                            <button class="btn_contorno btn_sm btn_sm_danger">Desactivar</button>
+                        </div>
+                        <div class="config_perigo_item">
+                            <div>
+                                <p class="config_toggle_titulo">Eliminar conta permanentemente</p>
+                                <p class="config_toggle_sub">Todos os dados da empresa, vagas e candidaturas serão
+                                    removidos. Ação irreversível.</p>
+                            </div>
+                            <button class="btn_excluir btn_sm">
+                                <i class="fa-solid fa-trash-can"></i> Eliminar
+                            </button>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
     </main>
 
-    <!-- ========== MODAL NOVA VAGA ========== -->
+    <!-- TOAST -->
+    <div class="toast_empresa" id="toast_empresa"></div>
+
+    <!-- ========== MODAL NOVA / EDITAR VAGA ========== -->
     <div class="modal_overlay" id="modal_overlay"></div>
     <div class="modal" id="modal_nova_vaga" role="dialog" aria-modal="true" aria-labelledby="modal_titulo_texto">
         <div class="modal_conteudo">
@@ -614,26 +1309,29 @@
                     <div class="modal_icone_box"><i class="fa-solid fa-briefcase"></i></div>
                     <div>
                         <h2 class="modal_titulo" id="modal_titulo_texto">Nova Vaga</h2>
-                        <p class="modal_subtitulo">Preencha os dados para publicar uma nova oportunidade</p>
+                        <p class="modal_subtitulo" id="modal_subtitulo_texto">Preencha os dados para publicar uma nova
+                            oportunidade</p>
                     </div>
                 </div>
-                <button class="modal_fechar_btn" id="modal_fechar" aria-label="Fechar modal"><i class="fa-solid fa-xmark"></i></button>
+                <button class="modal_fechar_btn" id="modal_fechar" aria-label="Fechar modal"><i
+                        class="fa-solid fa-xmark"></i></button>
             </div>
-
             <form class="modal_formulario" id="form_nova_vaga" novalidate>
-
                 <div class="campo_grupo campo_coluna_dupla">
-                    <label class="campo_label" for="vaga_titulo">Título da Vaga <span class="campo_obrigatorio">*</span></label>
-                    <input type="text" id="vaga_titulo" name="titulo" class="campo_texto" placeholder="Ex: Desenvolvedor(a) Full Stack Senior" required autocomplete="off">
+                    <label class="campo_label" for="vaga_titulo">Título da Vaga <span
+                            class="campo_obrigatorio">*</span></label>
+                    <input type="text" id="vaga_titulo" name="titulo" class="campo_texto"
+                        placeholder="Ex: Desenvolvedor(a) Full Stack Senior" required autocomplete="off">
                     <span class="campo_erro" id="erro_vaga_titulo"></span>
                 </div>
-
                 <div class="campos_grade">
                     <div class="campo_grupo">
-                        <label class="campo_label" for="vaga_localizacao">Localização <span class="campo_obrigatorio">*</span></label>
+                        <label class="campo_label" for="vaga_localizacao">Localização <span
+                                class="campo_obrigatorio">*</span></label>
                         <div class="campo_icone_wrapper">
                             <i class="fa-solid fa-location-dot campo_icone_esq"></i>
-                            <input type="text" id="vaga_localizacao" name="localizacao" class="campo_texto campo_com_icone" placeholder="Ex: Luanda, LA" required>
+                            <input type="text" id="vaga_localizacao" name="localizacao"
+                                class="campo_texto campo_com_icone" placeholder="Ex: Luanda, Angola" required>
                         </div>
                         <span class="campo_erro" id="erro_vaga_localizacao"></span>
                     </div>
@@ -649,7 +1347,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="campos_grade">
                     <div class="campo_grupo">
                         <label class="campo_label" for="vaga_tipo">Tipo de Contrato</label>
@@ -664,20 +1361,22 @@
                         </div>
                     </div>
                     <div class="campo_grupo">
-                        <label class="campo_label" for="vaga_salario">Faixa Salarial <span class="campo_opcional">(opcional)</span></label>
+                        <label class="campo_label" for="vaga_salario">Faixa Salarial <span
+                                class="campo_opcional">(opcional)</span></label>
                         <div class="campo_icone_wrapper">
                             <i class="fa-solid fa-sack-dollar campo_icone_esq"></i>
-                            <input type="text" id="vaga_salario" name="salario" class="campo_texto campo_com_icone" placeholder="Ex: 300.000 - 500.000 Kz">
+                            <input type="text" id="vaga_salario" name="salario" class="campo_texto campo_com_icone"
+                                placeholder="Ex: 300.000 - 500.000 Kz">
                         </div>
                     </div>
                 </div>
-
                 <div class="campo_grupo campo_coluna_dupla">
-                    <label class="campo_label" for="vaga_descricao">Descrição da Vaga <span class="campo_obrigatorio">*</span></label>
-                    <textarea id="vaga_descricao" name="descricao" class="campo_texto campo_textarea" placeholder="Descreva as responsabilidades, o perfil ideal e o que a empresa oferece..." required></textarea>
+                    <label class="campo_label" for="vaga_descricao">Descrição da Vaga <span
+                            class="campo_obrigatorio">*</span></label>
+                    <textarea id="vaga_descricao" name="descricao" class="campo_texto campo_textarea"
+                        placeholder="Descreva as responsabilidades e o perfil ideal..." required></textarea>
                     <span class="campo_erro" id="erro_vaga_descricao"></span>
                 </div>
-
                 <div class="campos_grade">
                     <div class="campo_grupo">
                         <label class="campo_label" for="vaga_area">Área de Atuação</label>
@@ -696,103 +1395,97 @@
                         </div>
                     </div>
                     <div class="campo_grupo">
-                        <label class="campo_label" for="vaga_status_modal">Status da Publicação</label>
+                        <label class="campo_label" for="vaga_status_modal">Status</label>
                         <div class="campo_select_wrapper">
                             <select id="vaga_status_modal" name="status" class="campo_select">
                                 <option value="ativa">Ativa — publicar agora</option>
-                                <option value="inativa">Rascunho — salvar sem publicar</option>
+                                <option value="inativa">Rascunho — não publicar</option>
                             </select>
                             <i class="fa-solid fa-chevron-down campo_select_icone"></i>
                         </div>
                     </div>
                 </div>
-
-                <!-- Requisitos -->
                 <div class="campo_grupo campo_coluna_dupla">
                     <label class="campo_label">Requisitos <span class="campo_obrigatorio">*</span></label>
                     <div class="campo_lista_wrapper" id="lista_requisitos">
                         <div class="campo_lista_item">
-                            <input type="text" class="campo_texto campo_lista_input" placeholder="Ex: Experiência mínima de 3 anos com React" name="requisitos[]">
-                            <button type="button" class="campo_lista_remover" aria-label="Remover"><i class="fa-solid fa-xmark"></i></button>
+                            <input type="text" class="campo_texto campo_lista_input"
+                                placeholder="Ex: Experiência mínima de 3 anos com React" name="requisitos[]">
+                            <button type="button" class="campo_lista_remover" aria-label="Remover"><i
+                                    class="fa-solid fa-xmark"></i></button>
                         </div>
                     </div>
-                    <button type="button" class="btn_lista_adicionar" id="btn_add_requisito"><i class="fa-solid fa-plus"></i> Adicionar requisito</button>
+                    <button type="button" class="btn_lista_adicionar" id="btn_add_requisito"><i
+                            class="fa-solid fa-plus"></i> Adicionar requisito</button>
                     <span class="campo_erro" id="erro_vaga_requisitos"></span>
                 </div>
-
-                <!-- Benefícios -->
                 <div class="campo_grupo campo_coluna_dupla">
                     <label class="campo_label">Benefícios <span class="campo_opcional">(opcional)</span></label>
                     <div class="campo_lista_wrapper" id="lista_beneficios">
                         <div class="campo_lista_item">
-                            <input type="text" class="campo_texto campo_lista_input" placeholder="Ex: Plano de saúde e odontológico" name="beneficios[]">
-                            <button type="button" class="campo_lista_remover" aria-label="Remover"><i class="fa-solid fa-xmark"></i></button>
+                            <input type="text" class="campo_texto campo_lista_input" placeholder="Ex: Plano de saúde"
+                                name="beneficios[]">
+                            <button type="button" class="campo_lista_remover" aria-label="Remover"><i
+                                    class="fa-solid fa-xmark"></i></button>
                         </div>
                     </div>
-                    <button type="button" class="btn_lista_adicionar" id="btn_add_beneficio"><i class="fa-solid fa-plus"></i> Adicionar benefício</button>
+                    <button type="button" class="btn_lista_adicionar" id="btn_add_beneficio"><i
+                            class="fa-solid fa-plus"></i> Adicionar benefício</button>
                 </div>
-
-                <!-- Etapas -->
                 <div class="campo_grupo campo_coluna_dupla">
-                    <label class="campo_label">Etapas do Processo Seletivo <span class="campo_obrigatorio">*</span></label>
+                    <label class="campo_label">Etapas do Processo <span class="campo_obrigatorio">*</span></label>
                     <div class="etapas_lista" id="lista_etapas">
                         <div class="etapa_item">
-                            <div class="etapa_numero">1</div>
-                            <input type="text" class="campo_texto campo_lista_input" placeholder="Ex: Triagem de currículos" name="etapas[]" value="Triagem">
-                            <button type="button" class="campo_lista_remover" aria-label="Remover etapa"><i class="fa-solid fa-xmark"></i></button>
+                            <div class="etapa_numero">1</div><input type="text" class="campo_texto campo_lista_input"
+                                name="etapas[]" value="Triagem"><button type="button" class="campo_lista_remover"><i
+                                    class="fa-solid fa-xmark"></i></button>
                         </div>
                         <div class="etapa_item">
-                            <div class="etapa_numero">2</div>
-                            <input type="text" class="campo_texto campo_lista_input" placeholder="Ex: Teste técnico" name="etapas[]" value="Teste Técnico">
-                            <button type="button" class="campo_lista_remover" aria-label="Remover etapa"><i class="fa-solid fa-xmark"></i></button>
+                            <div class="etapa_numero">2</div><input type="text" class="campo_texto campo_lista_input"
+                                name="etapas[]" value="Teste Técnico"><button type="button"
+                                class="campo_lista_remover"><i class="fa-solid fa-xmark"></i></button>
                         </div>
                         <div class="etapa_item">
-                            <div class="etapa_numero">3</div>
-                            <input type="text" class="campo_texto campo_lista_input" placeholder="Ex: Entrevista com RH" name="etapas[]" value="Entrevista">
-                            <button type="button" class="campo_lista_remover" aria-label="Remover etapa"><i class="fa-solid fa-xmark"></i></button>
+                            <div class="etapa_numero">3</div><input type="text" class="campo_texto campo_lista_input"
+                                name="etapas[]" value="Entrevista"><button type="button" class="campo_lista_remover"><i
+                                    class="fa-solid fa-xmark"></i></button>
                         </div>
                     </div>
-                    <button type="button" class="btn_lista_adicionar" id="btn_add_etapa"><i class="fa-solid fa-plus"></i> Adicionar etapa</button>
+                    <button type="button" class="btn_lista_adicionar" id="btn_add_etapa"><i
+                            class="fa-solid fa-plus"></i> Adicionar etapa</button>
                     <span class="campo_erro" id="erro_vaga_etapas"></span>
                 </div>
-
                 <div class="modal_erro_geral" id="modal_erro_geral">
                     <i class="fa-solid fa-circle-xmark"></i>
                     <span>Preencha todos os campos obrigatórios antes de continuar.</span>
                 </div>
-
                 <div class="modal_acoes">
-                    <button type="button" class="btn_contorno" id="modal_cancelar"><i class="fa-solid fa-xmark"></i> Cancelar</button>
+                    <button type="button" class="btn_contorno" id="modal_cancelar"><i class="fa-solid fa-xmark"></i>
+                        Cancelar</button>
                     <button type="submit" class="btn_primario" id="btn_publicar">
                         <span id="btn_publicar_texto">Publicar Vaga</span>
                         <i class="fa-solid fa-arrow-right" id="icone_publicar"></i>
                     </button>
                 </div>
-
             </form>
         </div>
     </div>
 
-    <!-- ========== MODAL CONFIRMAÇÃO EXCLUSÃO ========== -->
+    <!-- MODAL CONFIRMAÇÃO EXCLUSÃO -->
     <div class="modal_excluir_overlay" id="modal_excluir_overlay"></div>
     <div class="modal_confirmacao_excluir" id="modal_confirmacao_excluir">
-        <div class="modal_confirmacao_icone_box">
-            <i class="fa-solid fa-triangle-exclamation"></i>
-        </div>
+        <div class="modal_confirmacao_icone_box"><i class="fa-solid fa-triangle-exclamation"></i></div>
         <h3 class="modal_confirmacao_titulo">Excluir vaga?</h3>
-        <p class="modal_confirmacao_texto">
-            Tem certeza que deseja excluir a vaga <strong id="nome_vaga_excluir"></strong>?
-            Esta ação não pode ser desfeita.
-        </p>
+        <p class="modal_confirmacao_texto">Tem certeza que deseja excluir <strong id="nome_vaga_excluir"></strong>? Esta
+            ação não pode ser desfeita.</p>
         <div class="modal_confirmacao_acoes">
             <button class="btn_contorno" id="btn_cancelar_excluir">Cancelar</button>
-            <button class="btn_excluir" id="btn_confirmar_excluir">
-                <i class="fa-solid fa-trash-can"></i>
-                Excluir
-            </button>
+            <button class="btn_excluir" id="btn_confirmar_excluir"><i class="fa-solid fa-trash-can"></i>
+                Excluir</button>
         </div>
     </div>
 
     <script src="../js/dashboard_empresa.js"></script>
 </body>
+
 </html>

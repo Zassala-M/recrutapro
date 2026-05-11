@@ -4,73 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard — Recruta Pro</title>
-    <meta name="description" content="Dashboard do candidato no RecrutaPro.">
+    <title>Dashboard Candidato — Recruta Pro</title>
+    <meta name="description" content="Painel do candidato no RecrutaPro. Busque vagas e acompanhe candidaturas.">
     <meta name="author" content="Zassala Mário & Ivandro Silva">
-
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-    <!-- Estilos da página -->
     <link rel="stylesheet" href="../css/dashboard_candidato.css">
 </head>
 
 <body>
 
-    <!-- ========== OVERLAY MOBILE (fecha sidebar ao clicar fora) ========== -->
+    <!-- OVERLAY MOBILE -->
     <div class="sidebar_overlay" id="sidebar_overlay"></div>
 
     <!-- ========== SIDEBAR ========== -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar_corpo">
 
-            <!-- Logo -->
             <div class="sidebar_logo_area">
-                <a href="../index.html" class="sidebar_logo">
-                    <div class="sidebar_logo_icone">
-                        <i class="fa-solid fa-briefcase"></i>
-                    </div>
+                <a href="index.html" class="sidebar_logo">
+                    <div class="sidebar_logo_icone"><i class="fa-solid fa-briefcase"></i></div>
                     <span class="sidebar_logo_texto">Recruta<span class="sidebar_logo_destaque">Pro</span></span>
                 </a>
             </div>
 
-            <!-- Perfil do usuário -->
             <div class="sidebar_perfil">
-                <div class="sidebar_avatar">
-                    <i class="fa-solid fa-user"></i>
-                </div>
+                <div class="sidebar_avatar"><i class="fa-solid fa-user"></i></div>
                 <div class="sidebar_perfil_info">
-                    <p class="sidebar_perfil_nome">Ivandro Silva</p>
+                    <p class="sidebar_perfil_nome">Sandra Cafala</p>
                     <p class="sidebar_perfil_papel">Candidato</p>
                 </div>
             </div>
 
-            <!-- Navegação principal -->
             <nav class="sidebar_nav" aria-label="Navegação do dashboard">
-                <a href="dashboard_candidato.html" class="sidebar_nav_link sidebar_nav_link_ativo">
+                <a href="#" class="sidebar_nav_link sidebar_nav_link_ativo" data-secao="dashboard">
                     <i class="fa-solid fa-table-columns"></i>
                     <span>Dashboard</span>
                 </a>
-                <a href="#" class="sidebar_nav_link">
+                <a href="#" class="sidebar_nav_link" data-secao="buscar_vagas">
                     <i class="fa-solid fa-magnifying-glass"></i>
                     <span>Buscar Vagas</span>
                 </a>
-                <a href="#" class="sidebar_nav_link">
+                <a href="#" class="sidebar_nav_link" data-secao="candidaturas">
                     <i class="fa-solid fa-file-lines"></i>
                     <span>Minhas Candidaturas</span>
+                    <span class="sidebar_badge">2</span>
                 </a>
-                <a href="#" class="sidebar_nav_link">
-                    <i class="fa-solid fa-user"></i>
+                <a href="#" class="sidebar_nav_link" data-secao="meu_perfil">
+                    <i class="fa-solid fa-user-pen"></i>
                     <span>Meu Perfil</span>
                 </a>
             </nav>
 
-            <!-- Rodapé da sidebar -->
             <div class="sidebar_rodape">
                 <button class="sidebar_nav_link sidebar_nav_link_btn" id="btn_notificacoes">
                     <i class="fa-solid fa-bell"></i>
@@ -82,24 +69,20 @@
                     <span>Sair</span>
                 </a>
             </div>
-
         </div>
 
-        <!-- Botão recolher sidebar (desktop) -->
         <button class="sidebar_toggle_btn" id="sidebar_toggle_btn" aria-label="Recolher menu">
             <i class="fa-solid fa-chevron-left" id="sidebar_toggle_icone"></i>
         </button>
     </aside>
 
-    <!-- ========== TOPBAR MOBILE ========== -->
+    <!-- TOPBAR MOBILE -->
     <header class="topbar_mobile" id="topbar_mobile">
         <button class="topbar_hamburger" id="btn_sidebar_mobile" aria-label="Abrir menu">
             <i class="fa-solid fa-bars"></i>
         </button>
-        <a href="/" class="topbar_logo">
-            <div class="sidebar_logo_icone topbar_logo_icone">
-                <i class="fa-solid fa-briefcase"></i>
-            </div>
+        <a href="index.html" class="topbar_logo">
+            <div class="sidebar_logo_icone topbar_logo_icone"><i class="fa-solid fa-briefcase"></i></div>
             <span class="sidebar_logo_texto topbar_logo_texto">Recruta<span class="sidebar_logo_destaque">Pro</span></span>
         </a>
         <div class="topbar_acoes">
@@ -112,369 +95,575 @@
 
     <!-- ========== CONTEÚDO PRINCIPAL ========== -->
     <main class="conteudo_principal" id="conteudo_principal">
-        <div class="conteudo_interno">
 
-            <!-- Cabeçalho da página -->
-            <div class="pagina_cabecalho">
-                <h1 class="pagina_titulo">Dashboard</h1>
-                <p class="pagina_subtitulo">Bem-vindo de volta, <strong>Ivandro Silva</strong></p>
+        <!-- ================================================
+             SECÇÃO: DASHBOARD (visível por defeito)
+        ================================================= -->
+        <section class="conteudo_secao" id="secao_dashboard">
+            <div class="conteudo_interno">
+
+                <div class="pagina_cabecalho">
+                    <div class="pagina_cabecalho_info">
+                        <h1 class="pagina_titulo">Dashboard</h1>
+                        <p class="pagina_subtitulo">Bem-vinda de volta, <strong>Sandra Cafala</strong></p>
+                    </div>
+                    <button class="btn_primario" data-secao="buscar_vagas" id="btn_explorar_vagas">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Explorar Vagas
+                    </button>
+                </div>
+
+                <!-- Stats -->
+                <div class="stats_grade">
+                    <div class="stat_card cartao_hover">
+                        <div class="stat_card_interno">
+                            <div class="stat_info">
+                                <p class="stat_label">Candidaturas Enviadas</p>
+                                <p class="stat_valor">2</p>
+                            </div>
+                            <div class="stat_icone_box"><i class="fa-solid fa-file-lines stat_icone"></i></div>
+                        </div>
+                    </div>
+                    <div class="stat_card cartao_hover">
+                        <div class="stat_card_interno">
+                            <div class="stat_info">
+                                <p class="stat_label">Em Andamento</p>
+                                <p class="stat_valor">1</p>
+                            </div>
+                            <div class="stat_icone_box"><i class="fa-regular fa-clock stat_icone"></i></div>
+                        </div>
+                    </div>
+                    <div class="stat_card cartao_hover">
+                        <div class="stat_card_interno">
+                            <div class="stat_info">
+                                <p class="stat_label">Aprovações</p>
+                                <p class="stat_valor">0</p>
+                            </div>
+                            <div class="stat_icone_box"><i class="fa-solid fa-circle-check stat_icone"></i></div>
+                        </div>
+                    </div>
+                    <div class="stat_card cartao_hover">
+                        <div class="stat_card_interno">
+                            <div class="stat_info">
+                                <p class="stat_label">Vagas Disponíveis</p>
+                                <p class="stat_valor">342</p>
+                            </div>
+                            <div class="stat_icone_box"><i class="fa-solid fa-briefcase stat_icone"></i></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Resumo: candidaturas recentes + acesso rápido -->
+                <div class="dashboard_grade">
+
+                    <!-- Candidaturas recentes -->
+                    <div class="painel_card">
+                        <div class="painel_card_cabecalho">
+                            <h2 class="painel_titulo">Candidaturas Recentes</h2>
+                            <button class="btn_ver_todas" data-secao="candidaturas">Ver todas <i class="fa-solid fa-arrow-right"></i></button>
+                        </div>
+
+                        <div class="candidatura_resumo_lista">
+
+                            <div class="candidatura_resumo_item">
+                                <div class="candidatura_resumo_empresa_inicial">TF</div>
+                                <div class="candidatura_resumo_info">
+                                    <p class="candidatura_resumo_titulo">Desenvolvedor(a) Full Stack Senior</p>
+                                    <p class="candidatura_resumo_empresa">TechFlow Solutions</p>
+                                </div>
+                                <span class="status_emblema status_entrevista">Entrevista</span>
+                            </div>
+
+                            <div class="candidatura_resumo_item">
+                                <div class="candidatura_resumo_empresa_inicial">ID</div>
+                                <div class="candidatura_resumo_info">
+                                    <p class="candidatura_resumo_titulo">Analista de Marketing Digital</p>
+                                    <p class="candidatura_resumo_empresa">Inova Digital</p>
+                                </div>
+                                <span class="status_emblema status_triagem">Triagem</span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- Acesso rápido -->
+                    <div class="painel_card">
+                        <h2 class="painel_titulo">Acesso Rápido</h2>
+                        <div class="acesso_rapido_lista">
+                            <button class="acesso_rapido_item" data-secao="buscar_vagas">
+                                <div class="acesso_rapido_icone"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                <div>
+                                    <p class="acesso_rapido_titulo">Buscar Vagas</p>
+                                    <p class="acesso_rapido_sub">342 vagas disponíveis</p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right acesso_rapido_seta"></i>
+                            </button>
+                            <button class="acesso_rapido_item" data-secao="candidaturas">
+                                <div class="acesso_rapido_icone"><i class="fa-solid fa-file-lines"></i></div>
+                                <div>
+                                    <p class="acesso_rapido_titulo">Minhas Candidaturas</p>
+                                    <p class="acesso_rapido_sub">2 candidaturas activas</p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right acesso_rapido_seta"></i>
+                            </button>
+                            <button class="acesso_rapido_item" data-secao="meu_perfil">
+                                <div class="acesso_rapido_icone"><i class="fa-solid fa-user-pen"></i></div>
+                                <div>
+                                    <p class="acesso_rapido_titulo">Completar Perfil</p>
+                                    <p class="acesso_rapido_sub">Perfil 75% completo</p>
+                                </div>
+                                <i class="fa-solid fa-chevron-right acesso_rapido_seta"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
             </div>
+        </section>
 
-            <!-- ========== CARDS DE ESTATÍSTICAS ========== -->
-            <div class="stats_grade">
+        <!-- ================================================
+             SECÇÃO: BUSCAR VAGAS
+        ================================================= -->
+        <section class="conteudo_secao conteudo_secao_oculta" id="secao_buscar_vagas">
+            <div class="conteudo_interno">
 
-                <div class="stat_card cartao_hover">
-                    <div class="stat_card_interno">
-                        <div class="stat_info">
-                            <p class="stat_label">Candidaturas Enviadas</p>
-                            <p class="stat_valor">2</p>
-                        </div>
-                        <div class="stat_icone_box">
-                            <i class="fa-solid fa-file-lines stat_icone"></i>
-                        </div>
+                <div class="pagina_cabecalho">
+                    <div class="pagina_cabecalho_info">
+                        <h1 class="pagina_titulo">Buscar Vagas</h1>
+                        <p class="pagina_subtitulo">Encontre a oportunidade certa para a sua carreira</p>
                     </div>
                 </div>
-
-                <div class="stat_card cartao_hover">
-                    <div class="stat_card_interno">
-                        <div class="stat_info">
-                            <p class="stat_label">Em Andamento</p>
-                            <p class="stat_valor">1</p>
-                        </div>
-                        <div class="stat_icone_box">
-                            <i class="fa-regular fa-clock stat_icone"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="stat_card cartao_hover">
-                    <div class="stat_card_interno">
-                        <div class="stat_info">
-                            <p class="stat_label">Aprovações</p>
-                            <p class="stat_valor">0</p>
-                        </div>
-                        <div class="stat_icone_box">
-                            <i class="fa-solid fa-circle-check stat_icone"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="stat_card cartao_hover">
-                    <div class="stat_card_interno">
-                        <div class="stat_info">
-                            <p class="stat_label">Vagas Disponíveis</p>
-                            <p class="stat_valor">2</p>
-                        </div>
-                        <div class="stat_icone_box">
-                            <i class="fa-solid fa-magnifying-glass stat_icone"></i>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- /stats_grade -->
-
-            <!-- ========== ABAS ========== -->
-            <div class="abas_barra" role="tablist">
-                <button
-                    class="aba_btn aba_btn_ativa"
-                    id="aba_vagas"
-                    role="tab"
-                    aria-selected="true"
-                    aria-controls="painel_vagas"
-                    data-aba="vagas"
-                >
-                    Buscar Vagas
-                </button>
-                <button
-                    class="aba_btn"
-                    id="aba_candidaturas"
-                    role="tab"
-                    aria-selected="false"
-                    aria-controls="painel_candidaturas"
-                    data-aba="candidaturas"
-                >
-                    Minhas Candidaturas
-                    <span class="aba_contagem">2</span>
-                </button>
-            </div>
-
-            <!-- ========== PAINEL: BUSCAR VAGAS ========== -->
-            <div class="aba_painel" id="painel_vagas" role="tabpanel" aria-labelledby="aba_vagas">
 
                 <!-- Filtros -->
-                <div class="filtros_barra">
+                <div class="vagas_filtros_barra">
                     <div class="busca_campo_wrapper">
                         <i class="fa-solid fa-magnifying-glass busca_icone"></i>
-                        <input
-                            type="text"
-                            id="busca_vagas"
-                            class="campo_texto busca_input"
-                            placeholder="Buscar vagas por título..."
-                            autocomplete="off"
-                        >
+                        <input type="text" id="busca_vagas" class="campo_texto busca_input" placeholder="Buscar por título, empresa ou palavra-chave..." autocomplete="off">
                     </div>
-                    <select class="campo_select" id="filtro_modalidade_vagas">
+                    <select class="campo_select" id="filtro_modalidade">
                         <option value="todos">Todas modalidades</option>
                         <option value="Remoto">Remoto</option>
                         <option value="Presencial">Presencial</option>
                         <option value="Híbrido">Híbrido</option>
                     </select>
+                    <select class="campo_select" id="filtro_tipo">
+                        <option value="todos">Todos os tipos</option>
+                        <option value="CLT">CLT</option>
+                        <option value="PJ">PJ</option>
+                        <option value="Estágio">Estágio</option>
+                        <option value="Freelance">Freelance</option>
+                    </select>
                 </div>
 
-                <!-- Lista de vagas disponíveis -->
+                <!-- Contador de resultados -->
+                <p class="vagas_contador" id="vagas_contador">Mostrando <strong id="num_vagas">4</strong> vagas</p>
+
+                <!-- Lista de vagas -->
                 <div class="vagas_lista" id="vagas_lista">
 
-                    <!-- Vaga 1: Marketing Digital -->
-                    <article class="vaga_card cartao_hover" data-modalidade="Presencial">
+                    <!-- Vaga 1 -->
+                    <div class="vaga_card cartao_hover" data-titulo="desenvolvedor full stack senior" data-modalidade="Presencial" data-tipo="CLT">
                         <div class="vaga_card_topo">
-                            <div class="vaga_info">
-                                <div class="vaga_titulo_linha">
-                                    <a href="#" class="vaga_titulo_link">Analista de Marketing Digital</a>
+                            <div class="vaga_empresa_inicial">TF</div>
+                            <div class="vaga_card_info">
+                                <div class="vaga_card_cabecalho">
+                                    <h3 class="vaga_card_titulo">Desenvolvedor(a) Full Stack Senior</h3>
                                     <span class="status_emblema status_ativa">Ativa</span>
                                 </div>
-                                <div class="vaga_empresa">
-                                    <i class="fa-solid fa-building"></i>
-                                    <span>Inova Digital</span>
-                                </div>
-                                <p class="vaga_descricao">Vaga para profissional de marketing digital focado em performance e growth.</p>
-                                <div class="vaga_meta">
-                                    <div class="vaga_meta_item">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <span>Uige, UE</span>
-                                    </div>
-                                    <div class="vaga_meta_item">
-                                        <i class="fa-solid fa-briefcase"></i>
-                                        <span>Presencial</span>
-                                    </div>
-                                    <div class="vaga_meta_item">
-                                        <i class="fa-regular fa-clock"></i>
-                                        <span>CLT</span>
-                                    </div>
-                                    <div class="vaga_meta_item vaga_meta_salario">
-                                        <i class="fa-solid fa-sack-dollar"></i>
-                                        <span>$ 5.000 - $ 8.000</span>
-                                    </div>
+                                <p class="vaga_card_empresa"><i class="fa-solid fa-building"></i> TechFlow Solutions</p>
+                                <div class="vaga_card_meta">
+                                    <span><i class="fa-solid fa-location-dot"></i> Luanda, LA</span>
+                                    <span><i class="fa-solid fa-briefcase"></i> Presencial</span>
+                                    <span><i class="fa-regular fa-clock"></i> CLT</span>
+                                    <span class="vaga_salario"><i class="fa-solid fa-sack-dollar"></i> 500.000 - 800.000 Kz</span>
                                 </div>
                             </div>
-                            <div class="vaga_acoes">
-                                <a href="#" class="btn_contorno btn_pequeno">Ver Detalhes</a>
-                                <button class="btn_primario btn_pequeno">Candidatar-se</button>
-                            </div>
                         </div>
-                        <div class="vaga_tags">
-                            <span class="tag_requisito">Experiência com Google...</span>
-                            <span class="tag_requisito">Conhecimento em Google...</span>
-                            <span class="tag_requisito">Experiência com SEO...</span>
-                            <span class="tag_mais">+2 mais</span>
+                        <p class="vaga_card_descricao">Procuramos um desenvolvedor experiente para actuar em projectos web modernos, com foco em performance, escalabilidade e boas práticas de desenvolvimento.</p>
+                        <div class="vaga_card_acoes">
+                            <a href="vaga_detalhe.html" class="btn_contorno btn_sm">Ver Detalhes</a>
+                            <button class="btn_primario btn_sm btn_candidatar" data-vaga="vaga1">
+                                <i class="fa-solid fa-paper-plane"></i> Candidatar-se
+                            </button>
                         </div>
-                    </article>
+                    </div>
 
-                    <!-- Vaga 2: Analista Financeiro -->
-                    <article class="vaga_card cartao_hover" data-modalidade="Híbrido">
+                    <!-- Vaga 2 -->
+                    <div class="vaga_card cartao_hover" data-titulo="analista de marketing digital" data-modalidade="Presencial" data-tipo="CLT">
                         <div class="vaga_card_topo">
-                            <div class="vaga_info">
-                                <div class="vaga_titulo_linha">
-                                    <a href="#" class="vaga_titulo_link">Analista Financeiro Sênior</a>
+                            <div class="vaga_empresa_inicial">ID</div>
+                            <div class="vaga_card_info">
+                                <div class="vaga_card_cabecalho">
+                                    <h3 class="vaga_card_titulo">Analista de Marketing Digital</h3>
                                     <span class="status_emblema status_ativa">Ativa</span>
                                 </div>
-                                <div class="vaga_empresa">
-                                    <i class="fa-solid fa-building"></i>
-                                    <span>FinanceHub</span>
-                                </div>
-                                <p class="vaga_descricao">Oportunidade para analista financeiro experiente em modelagem e análise de dados.</p>
-                                <div class="vaga_meta">
-                                    <div class="vaga_meta_item">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <span>Luanda, LA</span>
-                                    </div>
-                                    <div class="vaga_meta_item">
-                                        <i class="fa-solid fa-briefcase"></i>
-                                        <span>Híbrido</span>
-                                    </div>
-                                    <div class="vaga_meta_item">
-                                        <i class="fa-regular fa-clock"></i>
-                                        <span>CLT</span>
-                                    </div>
-                                    <div class="vaga_meta_item vaga_meta_salario">
-                                        <i class="fa-solid fa-sack-dollar"></i>
-                                        <span>$ 12.000 - $ 18.000</span>
-                                    </div>
+                                <p class="vaga_card_empresa"><i class="fa-solid fa-building"></i> Inova Digital</p>
+                                <div class="vaga_card_meta">
+                                    <span><i class="fa-solid fa-location-dot"></i> Luanda, LA</span>
+                                    <span><i class="fa-solid fa-briefcase"></i> Presencial</span>
+                                    <span><i class="fa-regular fa-clock"></i> CLT</span>
+                                    <span class="vaga_salario"><i class="fa-solid fa-sack-dollar"></i> 250.000 - 400.000 Kz</span>
                                 </div>
                             </div>
-                            <div class="vaga_acoes">
-                                <a href="#" class="btn_contorno btn_pequeno">Ver Detalhes</a>
-                                <button class="btn_primario btn_pequeno">Candidatar-se</button>
+                        </div>
+                        <p class="vaga_card_descricao">Vaga para profissional de marketing digital focado em performance e growth. Experiência com Google Ads e Meta Ads é essencial.</p>
+                        <div class="vaga_card_acoes">
+                            <a href="vaga_detalhe.html" class="btn_contorno btn_sm">Ver Detalhes</a>
+                            <button class="btn_primario btn_sm btn_candidatar" data-vaga="vaga2">
+                                <i class="fa-solid fa-paper-plane"></i> Candidatar-se
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Vaga 3 -->
+                    <div class="vaga_card cartao_hover" data-titulo="product designer pleno" data-modalidade="Remoto" data-tipo="Freelance">
+                        <div class="vaga_card_topo">
+                            <div class="vaga_empresa_inicial">TC</div>
+                            <div class="vaga_card_info">
+                                <div class="vaga_card_cabecalho">
+                                    <h3 class="vaga_card_titulo">Product Designer Pleno</h3>
+                                    <span class="status_emblema status_ativa">Ativa</span>
+                                </div>
+                                <p class="vaga_card_empresa"><i class="fa-solid fa-building"></i> TechCorp Angola</p>
+                                <div class="vaga_card_meta">
+                                    <span><i class="fa-solid fa-location-dot"></i> Remoto</span>
+                                    <span><i class="fa-solid fa-briefcase"></i> Remoto</span>
+                                    <span><i class="fa-regular fa-clock"></i> Freelance</span>
+                                    <span class="vaga_salario"><i class="fa-solid fa-sack-dollar"></i> 300.000 Kz/mês</span>
+                                </div>
                             </div>
                         </div>
-                        <div class="vaga_tags">
-                            <span class="tag_requisito">Formação em Economia,...</span>
-                            <span class="tag_requisito">Experiência de 5+...</span>
-                            <span class="tag_requisito">Excel avançado e...</span>
-                            <span class="tag_mais">+2 mais</span>
+                        <p class="vaga_card_descricao">Buscamos um designer criativo para melhorar a experiência do utilizador e criar interfaces modernas e intuitivas para os nossos produtos.</p>
+                        <div class="vaga_card_acoes">
+                            <a href="vaga_detalhe.html" class="btn_contorno btn_sm">Ver Detalhes</a>
+                            <button class="btn_primario btn_sm btn_candidatar" data-vaga="vaga3">
+                                <i class="fa-solid fa-paper-plane"></i> Candidatar-se
+                            </button>
                         </div>
-                    </article>
+                    </div>
+
+                    <!-- Vaga 4 -->
+                    <div class="vaga_card cartao_hover" data-titulo="devops engineer" data-modalidade="Híbrido" data-tipo="CLT">
+                        <div class="vaga_card_topo">
+                            <div class="vaga_empresa_inicial">FH</div>
+                            <div class="vaga_card_info">
+                                <div class="vaga_card_cabecalho">
+                                    <h3 class="vaga_card_titulo">DevOps Engineer</h3>
+                                    <span class="status_emblema status_ativa">Ativa</span>
+                                </div>
+                                <p class="vaga_card_empresa"><i class="fa-solid fa-building"></i> FinanceHub Angola</p>
+                                <div class="vaga_card_meta">
+                                    <span><i class="fa-solid fa-location-dot"></i> Luanda, LA</span>
+                                    <span><i class="fa-solid fa-briefcase"></i> Híbrido</span>
+                                    <span><i class="fa-regular fa-clock"></i> CLT</span>
+                                    <span class="vaga_salario"><i class="fa-solid fa-sack-dollar"></i> 600.000 - 900.000 Kz</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="vaga_card_descricao">Procuramos um profissional experiente em DevOps para gerir a nossa infraestrutura cloud e pipelines de CI/CD em ambiente de alta disponibilidade.</p>
+                        <div class="vaga_card_acoes">
+                            <a href="vaga_detalhe.html" class="btn_contorno btn_sm">Ver Detalhes</a>
+                            <button class="btn_primario btn_sm btn_candidatar" data-vaga="vaga4">
+                                <i class="fa-solid fa-paper-plane"></i> Candidatar-se
+                            </button>
+                        </div>
+                    </div>
 
                 </div>
-                <!-- /vagas_lista -->
 
-                <!-- Sem resultados -->
+                <!-- Estado vazio -->
                 <div class="sem_resultados" id="sem_resultados_vagas">
                     <i class="fa-solid fa-magnifying-glass sem_resultados_icone"></i>
                     <p class="sem_resultados_titulo">Nenhuma vaga encontrada</p>
-                    <p class="sem_resultados_texto">Tente ajustar os filtros de busca.</p>
+                    <p class="sem_resultados_texto">Tente ajustar os filtros ou o termo de busca.</p>
                 </div>
 
             </div>
-            <!-- /painel_vagas -->
+        </section>
 
-            <!-- ========== PAINEL: MINHAS CANDIDATURAS ========== -->
-            <div class="aba_painel aba_painel_oculto" id="painel_candidaturas" role="tabpanel" aria-labelledby="aba_candidaturas">
+        <!-- ================================================
+             SECÇÃO: MINHAS CANDIDATURAS
+        ================================================= -->
+        <section class="conteudo_secao conteudo_secao_oculta" id="secao_candidaturas">
+            <div class="conteudo_interno">
 
-                <div class="candidaturas_lista">
+                <div class="pagina_cabecalho">
+                    <div class="pagina_cabecalho_info">
+                        <h1 class="pagina_titulo">Minhas Candidaturas</h1>
+                        <p class="pagina_subtitulo">Acompanhe o estado de todas as suas candidaturas</p>
+                    </div>
+                    <button class="btn_primario" data-secao="buscar_vagas">
+                        <i class="fa-solid fa-plus"></i>
+                        Nova Candidatura
+                    </button>
+                </div>
 
-                    <!-- Candidatura 1: Full Stack -->
-                    <div class="candidatura_card cartao_hover">
-                        <div class="candidatura_topo">
-                            <div class="candidatura_info">
-                                <div class="candidatura_titulo_linha">
-                                    <a href="#" class="candidatura_titulo_link">Desenvolvedor(a) Full Stack Senior</a>
+                <!-- Filtro por status -->
+                <div class="candidaturas_filtros_barra">
+                    <button class="filtro_pill filtro_pill_ativo" data-filtro="todos">Todas <span class="filtro_pill_count">2</span></button>
+                    <button class="filtro_pill" data-filtro="triagem">Triagem</button>
+                    <button class="filtro_pill" data-filtro="teste">Teste</button>
+                    <button class="filtro_pill" data-filtro="entrevista">Entrevista <span class="filtro_pill_count">1</span></button>
+                    <button class="filtro_pill" data-filtro="aprovado">Aprovado</button>
+                    <button class="filtro_pill" data-filtro="rejeitado">Rejeitado</button>
+                </div>
+
+                <div class="candidaturas_lista" id="candidaturas_lista">
+
+                    <!-- Candidatura 1 -->
+                    <div class="candidatura_card cartao_hover" data-status="entrevista">
+                        <div class="candidatura_card_topo">
+                            <div class="candidatura_empresa_inicial">TF</div>
+                            <div class="candidatura_card_info">
+                                <div class="candidatura_cabecalho_linha">
+                                    <h3 class="candidatura_titulo">Desenvolvedor(a) Full Stack Senior</h3>
+                                    <span class="status_emblema status_entrevista">Entrevista</span>
+                                </div>
+                                <p class="candidatura_empresa"><i class="fa-solid fa-building"></i> TechFlow Solutions</p>
+                                <div class="candidatura_meta">
+                                    <span><i class="fa-solid fa-location-dot"></i> Luanda, LA · Presencial</span>
+                                    <span><i class="fa-regular fa-calendar"></i> Candidatou-se em 10/01/2026</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trilha de progresso -->
+                        <div class="candidatura_trilha">
+                            <div class="trilha_etapa trilha_etapa_concluida">
+                                <div class="trilha_ponto"><i class="fa-solid fa-check"></i></div>
+                                <p class="trilha_rotulo">Triagem</p>
+                            </div>
+                            <div class="trilha_linha trilha_linha_ativa"></div>
+                            <div class="trilha_etapa trilha_etapa_concluida">
+                                <div class="trilha_ponto"><i class="fa-solid fa-check"></i></div>
+                                <p class="trilha_rotulo">Teste Técnico</p>
+                            </div>
+                            <div class="trilha_linha trilha_linha_ativa"></div>
+                            <div class="trilha_etapa trilha_etapa_atual">
+                                <div class="trilha_ponto"><i class="fa-solid fa-circle"></i></div>
+                                <p class="trilha_rotulo">Entrevista</p>
+                            </div>
+                            <div class="trilha_linha"></div>
+                            <div class="trilha_etapa">
+                                <div class="trilha_ponto trilha_ponto_vazio"></div>
+                                <p class="trilha_rotulo">Contratação</p>
+                            </div>
+                        </div>
+
+                        <div class="candidatura_card_acoes">
+                            <a href="vaga_detalhe.html" class="btn_contorno btn_sm">Ver Vaga</a>
+                        </div>
+                    </div>
+
+                    <!-- Candidatura 2 -->
+                    <div class="candidatura_card cartao_hover" data-status="triagem">
+                        <div class="candidatura_card_topo">
+                            <div class="candidatura_empresa_inicial">ID</div>
+                            <div class="candidatura_card_info">
+                                <div class="candidatura_cabecalho_linha">
+                                    <h3 class="candidatura_titulo">Analista de Marketing Digital</h3>
                                     <span class="status_emblema status_triagem">Triagem</span>
                                 </div>
-                                <div class="vaga_empresa">
-                                    <i class="fa-solid fa-building"></i>
-                                    <span>TechFlow Solutions</span>
-                                </div>
+                                <p class="candidatura_empresa"><i class="fa-solid fa-building"></i> Inova Digital</p>
                                 <div class="candidatura_meta">
-                                    <div class="vaga_meta_item">
-                                        <i class="fa-regular fa-calendar"></i>
-                                        <span>Candidatura enviada em 10/01/2026</span>
-                                    </div>
-                                    <div class="vaga_meta_item">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <span>Luanda, LA</span>
-                                    </div>
-                                    <div class="vaga_meta_item vaga_meta_salario">
-                                        <i class="fa-solid fa-sack-dollar"></i>
-                                        <span>$ 15.000 - $ 22.000</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="vaga_acoes">
-                                <a href="#" class="btn_contorno btn_pequeno">Ver Vaga</a>
-                            </div>
-                        </div>
-                        <!-- Trilha de progresso -->
-                        <div class="candidatura_progresso_area">
-                            <div class="processo_trilha">
-                                <div class="processo_etapa">
-                                    <div class="processo_etapa_coluna">
-                                        <div class="processo_passo processo_passo_atual"><span>1</span></div>
-                                        <span class="processo_etapa_label">Triagem</span>
-                                    </div>
-                                    <div class="processo_conector processo_conector_pendente"></div>
-                                </div>
-                                <div class="processo_etapa">
-                                    <div class="processo_etapa_coluna">
-                                        <div class="processo_passo processo_passo_pendente"><span>2</span></div>
-                                        <span class="processo_etapa_label">Teste Técnico</span>
-                                    </div>
-                                    <div class="processo_conector processo_conector_pendente"></div>
-                                </div>
-                                <div class="processo_etapa">
-                                    <div class="processo_etapa_coluna">
-                                        <div class="processo_passo processo_passo_pendente"><span>3</span></div>
-                                        <span class="processo_etapa_label">Entrevista</span>
-                                    </div>
-                                    <div class="processo_conector processo_conector_pendente"></div>
-                                </div>
-                                <div class="processo_etapa processo_etapa_ultima">
-                                    <div class="processo_etapa_coluna">
-                                        <div class="processo_passo processo_passo_pendente"><span>4</span></div>
-                                        <span class="processo_etapa_label">Proposta</span>
-                                    </div>
+                                    <span><i class="fa-solid fa-location-dot"></i> Luanda, LA · Presencial</span>
+                                    <span><i class="fa-regular fa-calendar"></i> Candidatou-se em 15/01/2026</span>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <!-- Candidatura 2: Product Designer -->
-                    <div class="candidatura_card cartao_hover">
-                        <div class="candidatura_topo">
-                            <div class="candidatura_info">
-                                <div class="candidatura_titulo_linha">
-                                    <a href="#" class="candidatura_titulo_link">Product Designer Pleno</a>
-                                    <span class="status_emblema status_teste">Teste Técnico</span>
-                                </div>
-                                <div class="vaga_empresa">
-                                    <i class="fa-solid fa-building"></i>
-                                    <span>TechFlow Solutions</span>
-                                </div>
-                                <div class="candidatura_meta">
-                                    <div class="vaga_meta_item">
-                                        <i class="fa-regular fa-calendar"></i>
-                                        <span>Candidatura enviada em 05/01/2026</span>
-                                    </div>
-                                    <div class="vaga_meta_item">
-                                        <i class="fa-solid fa-location-dot"></i>
-                                        <span>Luanda, LA</span>
-                                    </div>
-                                    <div class="vaga_meta_item vaga_meta_salario">
-                                        <i class="fa-solid fa-sack-dollar"></i>
-                                        <span>$ 8.000 - $ 12.000</span>
-                                    </div>
-                                </div>
+                        <div class="candidatura_trilha">
+                            <div class="trilha_etapa trilha_etapa_atual">
+                                <div class="trilha_ponto"><i class="fa-solid fa-circle"></i></div>
+                                <p class="trilha_rotulo">Triagem</p>
                             </div>
-                            <div class="vaga_acoes">
-                                <a href="#" class="btn_contorno btn_pequeno">Ver Vaga</a>
+                            <div class="trilha_linha"></div>
+                            <div class="trilha_etapa">
+                                <div class="trilha_ponto trilha_ponto_vazio"></div>
+                                <p class="trilha_rotulo">Entrevista</p>
+                            </div>
+                            <div class="trilha_linha"></div>
+                            <div class="trilha_etapa">
+                                <div class="trilha_ponto trilha_ponto_vazio"></div>
+                                <p class="trilha_rotulo">Contratação</p>
                             </div>
                         </div>
-                        <!-- Trilha de progresso -->
-                        <div class="candidatura_progresso_area">
-                            <div class="processo_trilha">
-                                <div class="processo_etapa">
-                                    <div class="processo_etapa_coluna">
-                                        <div class="processo_passo processo_passo_concluido">
-                                            <i class="fa-solid fa-check"></i>
-                                        </div>
-                                        <span class="processo_etapa_label">Triagem</span>
-                                    </div>
-                                    <div class="processo_conector processo_conector_concluido"></div>
-                                </div>
-                                <div class="processo_etapa">
-                                    <div class="processo_etapa_coluna">
-                                        <div class="processo_passo processo_passo_atual"><span>2</span></div>
-                                        <span class="processo_etapa_label">Teste Técnico</span>
-                                    </div>
-                                    <div class="processo_conector processo_conector_pendente"></div>
-                                </div>
-                                <div class="processo_etapa">
-                                    <div class="processo_etapa_coluna">
-                                        <div class="processo_passo processo_passo_pendente"><span>3</span></div>
-                                        <span class="processo_etapa_label">Entrevista</span>
-                                    </div>
-                                    <div class="processo_conector processo_conector_pendente"></div>
-                                </div>
-                                <div class="processo_etapa processo_etapa_ultima">
-                                    <div class="processo_etapa_coluna">
-                                        <div class="processo_passo processo_passo_pendente"><span>4</span></div>
-                                        <span class="processo_etapa_label">Proposta</span>
-                                    </div>
-                                </div>
-                            </div>
+
+                        <div class="candidatura_card_acoes">
+                            <a href="vaga_detalhe.html" class="btn_contorno btn_sm">Ver Vaga</a>
                         </div>
                     </div>
 
                 </div>
-                <!-- /candidaturas_lista -->
+
+                <!-- Estado vazio -->
+                <div class="sem_resultados" id="sem_resultados_candidaturas">
+                    <i class="fa-solid fa-file-circle-xmark sem_resultados_icone"></i>
+                    <p class="sem_resultados_titulo">Nenhuma candidatura encontrada</p>
+                    <p class="sem_resultados_texto">Explore as vagas disponíveis e candidate-se à que mais se adequa ao seu perfil.</p>
+                    <button class="btn_primario" data-secao="buscar_vagas">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Buscar Vagas
+                    </button>
+                </div>
 
             </div>
-            <!-- /painel_candidaturas -->
+        </section>
 
-        </div>
+        <!-- ================================================
+             SECÇÃO: MEU PERFIL
+        ================================================= -->
+        <section class="conteudo_secao conteudo_secao_oculta" id="secao_meu_perfil">
+            <div class="conteudo_interno">
+
+                <div class="pagina_cabecalho">
+                    <div class="pagina_cabecalho_info">
+                        <h1 class="pagina_titulo">Meu Perfil</h1>
+                        <p class="pagina_subtitulo">Mantenha o seu perfil actualizado para aumentar as suas hipóteses</p>
+                    </div>
+                    <button class="btn_primario" id="btn_salvar_perfil">
+                        <i class="fa-solid fa-floppy-disk"></i>
+                        Guardar Alterações
+                    </button>
+                </div>
+
+                <!-- Barra de completude -->
+                <div class="perfil_completude_card">
+                    <div class="perfil_completude_topo">
+                        <div>
+                            <p class="perfil_completude_titulo">Completude do Perfil</p>
+                            <p class="perfil_completude_sub">Complete o seu perfil para ter mais visibilidade junto das empresas</p>
+                        </div>
+                        <span class="perfil_completude_pct">75%</span>
+                    </div>
+                    <div class="perfil_completude_barra">
+                        <div class="perfil_completude_progresso" style="width: 75%;"></div>
+                    </div>
+                    <p class="perfil_completude_dica"><i class="fa-solid fa-lightbulb"></i> Adicione o seu currículo e uma foto para completar o perfil.</p>
+                </div>
+
+                <div class="perfil_grade">
+
+                    <!-- Dados pessoais -->
+                    <div class="painel_card perfil_card_largo">
+                        <h2 class="painel_titulo"><i class="fa-solid fa-user icone_secao"></i> Dados Pessoais</h2>
+                        <div class="perfil_avatar_zona">
+                            <div class="perfil_avatar_grande">SC</div>
+                            <div>
+                                <p class="perfil_avatar_nome">Sandra Francisco Cafala</p>
+                                <p class="perfil_avatar_sub">Engenheira Informática · Luanda, Angola</p>
+                                <button class="btn_contorno btn_sm perfil_foto_btn">
+                                    <i class="fa-solid fa-camera"></i> Alterar foto
+                                </button>
+                            </div>
+                        </div>
+                        <div class="campos_grade">
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="perfil_nome">Nome completo</label>
+                                <input type="text" id="perfil_nome" class="campo_texto" value="Sandra Francisco Cafala">
+                            </div>
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="perfil_email">E-mail</label>
+                                <input type="email" id="perfil_email" class="campo_texto" value="sandracafala2109@email.com">
+                            </div>
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="perfil_telefone">Telefone</label>
+                                <input type="tel" id="perfil_telefone" class="campo_texto" value="(+244) 948 059 912">
+                            </div>
+                            <div class="campo_grupo">
+                                <label class="campo_label" for="perfil_localizacao">Localização</label>
+                                <input type="text" id="perfil_localizacao" class="campo_texto" value="Estalagem, Luanda, LA">
+                            </div>
+                            <div class="campo_grupo campo_coluna_dupla">
+                                <label class="campo_label" for="perfil_bio">Bio / Resumo profissional</label>
+                                <textarea id="perfil_bio" class="campo_texto campo_textarea" placeholder="Descreva a sua experiência, competências e o que procura...">Engenheira Informática com 4 anos de experiência em desenvolvimento full stack. Apaixonada por criar soluções digitais de impacto. Procuro oportunidades desafiantes em ambiente colaborativo.</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formação académica -->
+                    <div class="painel_card">
+                        <h2 class="painel_titulo"><i class="fa-solid fa-graduation-cap icone_secao"></i> Formação</h2>
+                        <div class="perfil_item_lista">
+                            <div class="perfil_item">
+                                <div class="perfil_item_icone_box"><i class="fa-solid fa-graduation-cap"></i></div>
+                                <div class="perfil_item_info">
+                                    <p class="perfil_item_titulo">Bacharel em Engenharia Informática</p>
+                                    <p class="perfil_item_sub">Universidade de Luanda · 2022 – 2025</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn_lista_adicionar perfil_btn_add">
+                            <i class="fa-solid fa-plus"></i> Adicionar formação
+                        </button>
+                    </div>
+
+                    <!-- Experiência profissional -->
+                    <div class="painel_card">
+                        <h2 class="painel_titulo"><i class="fa-solid fa-briefcase icone_secao"></i> Experiência</h2>
+                        <div class="perfil_item_lista">
+                            <div class="perfil_item">
+                                <div class="perfil_item_icone_box"><i class="fa-solid fa-building"></i></div>
+                                <div class="perfil_item_info">
+                                    <p class="perfil_item_titulo">Desenvolvedora Frontend</p>
+                                    <p class="perfil_item_sub">StartupXYZ · Jan 2022 – Presente</p>
+                                </div>
+                            </div>
+                            <div class="perfil_item">
+                                <div class="perfil_item_icone_box"><i class="fa-solid fa-building"></i></div>
+                                <div class="perfil_item_info">
+                                    <p class="perfil_item_titulo">Estagiária de TI</p>
+                                    <p class="perfil_item_sub">TechCorp Angola · Jun 2021 – Dez 2021</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn_lista_adicionar perfil_btn_add">
+                            <i class="fa-solid fa-plus"></i> Adicionar experiência
+                        </button>
+                    </div>
+
+                    <!-- Competências -->
+                    <div class="painel_card">
+                        <h2 class="painel_titulo"><i class="fa-solid fa-star icone_secao"></i> Competências</h2>
+                        <div class="perfil_skills_grade">
+                            <span class="skill_tag">React</span>
+                            <span class="skill_tag">Node.js</span>
+                            <span class="skill_tag">TypeScript</span>
+                            <span class="skill_tag">CSS / SASS</span>
+                            <span class="skill_tag">PostgreSQL</span>
+                            <span class="skill_tag">Git</span>
+                            <span class="skill_tag">Figma</span>
+                            <span class="skill_tag">REST APIs</span>
+                        </div>
+                        <button class="btn_lista_adicionar perfil_btn_add">
+                            <i class="fa-solid fa-plus"></i> Adicionar competência
+                        </button>
+                    </div>
+
+                    <!-- Currículo -->
+                    <div class="painel_card perfil_card_largo">
+                        <h2 class="painel_titulo"><i class="fa-solid fa-file-pdf icone_secao"></i> Currículo</h2>
+                        <div class="curriculo_zona" id="curriculo_zona">
+                            <i class="fa-solid fa-cloud-arrow-up curriculo_zona_icone"></i>
+                            <p class="curriculo_zona_titulo">Arraste o seu currículo aqui</p>
+                            <p class="curriculo_zona_sub">ou clique para seleccionar um ficheiro PDF (máx. 5MB)</p>
+                            <button class="btn_contorno btn_sm">
+                                <i class="fa-solid fa-folder-open"></i> Escolher ficheiro
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
     </main>
+
+    <!-- TOAST DE FEEDBACK -->
+    <div class="toast" id="toast"></div>
 
     <script src="../js/dashboard_candidato.js"></script>
 </body>
-
 </html>
